@@ -1,0 +1,83 @@
+{
+  "escopo": "treino; validação e teste não orientam hipóteses",
+  "linhas": 1112203,
+  "nao_alfabetizados": 446952,
+  "ausencias_pct": {
+    "rede": 0.0,
+    "sigla_uf": 0.0,
+    "regiao_brasil": 0.0,
+    "taxa_alfabetizacao_municipio_anterior": 23.172388493827118,
+    "taxa_presenca_municipio_anterior": 23.1684323814987,
+    "alunos_avaliados_municipio_anterior": 23.172388493827118,
+    "total_pagamentos_bolsa_familia_anterior": 0.0,
+    "valor_total_bolsa_familia_anterior": 0.0,
+    "valor_medio_pagamento_bolsa_familia_anterior": 0.0
+  },
+  "numericas": {
+    "taxa_alfabetizacao_municipio_anterior": {
+      "count": 854479.0,
+      "mean": 58.414,
+      "std": 16.161,
+      "min": 4.545,
+      "25%": 48.013,
+      "50%": 57.716,
+      "75%": 68.611,
+      "max": 100.0
+    },
+    "taxa_presenca_municipio_anterior": {
+      "count": 854523.0,
+      "mean": 86.588,
+      "std": 6.984,
+      "min": 0.0,
+      "25%": 82.258,
+      "50%": 86.777,
+      "75%": 91.456,
+      "max": 100.0
+    },
+    "alunos_avaliados_municipio_anterior": {
+      "count": 854479.0,
+      "mean": 3960.099,
+      "std": 8431.151,
+      "min": 9.0,
+      "25%": 270.0,
+      "50%": 904.0,
+      "75%": 3161.0,
+      "max": 44858.0
+    },
+    "total_pagamentos_bolsa_familia_anterior": {
+      "count": 1112203.0,
+      "mean": 787657.197,
+      "std": 1776883.124,
+      "min": 77.0,
+      "25%": 29396.0,
+      "50%": 97256.0,
+      "75%": 404265.0,
+      "max": 6993243.0
+    },
+    "valor_total_bolsa_familia_anterior": {
+      "count": 1112203.0,
+      "mean": 513777426.493,
+      "std": 1158940025.28,
+      "min": 45671.0,
+      "25%": 19495236.0,
+      "50%": 65437520.0,
+      "75%": 267472736.0,
+      "max": 4591153378.0
+    },
+    "valor_medio_pagamento_bolsa_familia_anterior": {
+      "count": 1112203.0,
+      "mean": 660.061,
+      "std": 21.796,
+      "min": 568.075,
+      "25%": 646.717,
+      "50%": 656.754,
+      "75%": 669.93,
+      "max": 919.363
+    }
+  },
+  "redes": {
+    "Municipal": 967452,
+    "Estadual": 144727,
+    "Privada": 24
+  }
+}

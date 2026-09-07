@@ -1,0 +1,37 @@
+{
+  "semente": 42,
+  "base_sha256": "367c07ba239e6729daed79d965b0378cc8583aea9f2e952f08732bc7519d15d4",
+  "unidade": "ano + municipio + escola",
+  "proporcoes_alvo_escolas": [
+    0.6,
+    0.2,
+    0.2
+  ],
+  "sobreposicao_escolas": 0,
+  "particoes": {
+    "treino": {
+      "linhas": 1112203,
+      "escolas": 25396,
+      "municipios": 4783,
+      "ufs": 26,
+      "proporcao_nao_alfabetizados": 0.40186189032038216,
+      "indices_sha256": "fdaaf18d39d6b2df375d8728741e2dd9bab503fa7fa4530a19fb58f14a1bdc03"
+    },
+    "validacao": {
+      "linhas": 370443,
+      "escolas": 8466,
+      "municipios": 3049,
+      "ufs": 26,
+      "proporcao_nao_alfabetizados": 0.4042862194723615,
+      "indices_sha256": "3589a544541c9280c0072f5de8a02c201ff7a11a197593e8e17821aa78b3e76c"
+    },
+    "teste": {
+      "linhas": 369206,
+      "escolas": 8466,
+      "municipios": 3067,
+      "ufs": 26,
+      "proporcao_nao_alfabetizados": 0.40090356061385785,
+      "indices_sha256": "6ed4739341dd6d02ff2120350cbc8dc98c036dce4f63ef86ed106ba9e0725a9f"
+    }
+  }
+}
