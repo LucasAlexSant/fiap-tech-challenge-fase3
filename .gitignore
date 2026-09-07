@@ -1,0 +1,17 @@
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+.env
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+modelos/*
+!modelos/.gitkeep
+reports/runs/
+*.log
+.DS_Store
+Thumbs.db
