@@ -1,0 +1,48 @@
+{
+  "gerado_em_utc": "2026-09-07T18:43:24.975619+00:00",
+  "ano": 2024,
+  "execution_date_gold": "2026-09-07",
+  "fonte_camada": "gold",
+  "fontes": [
+    {
+      "arquivo": "gold\\base_modelagem_aluno\\execution_date=2026-09-07\\ano=2024\\base_modelagem_aluno.parquet",
+      "sha256": "21b6cb9717775adab9ce74f6b94519041e4ad4e36ac81b3b313063caa47b712f",
+      "bytes": 11513847,
+      "linhas": 2120560
+    }
+  ],
+  "linhas_gold": 2120560,
+  "linhas_elegiveis": 1851852,
+  "elegibilidade": {
+    "elegivel": 1851852,
+    "ausente": 267772,
+    "sem_proficiencia_valida": 936
+  },
+  "alvo": "alfabetizado_binario",
+  "classe_risco": 0,
+  "features": [
+    "rede",
+    "sigla_uf",
+    "regiao_brasil",
+    "taxa_alfabetizacao_municipio_anterior",
+    "taxa_presenca_municipio_anterior",
+    "alunos_avaliados_municipio_anterior",
+    "total_pagamentos_bolsa_familia_anterior",
+    "valor_total_bolsa_familia_anterior",
+    "valor_medio_pagamento_bolsa_familia_anterior"
+  ],
+  "features_proibidas": {
+    "proficiencia": "define o próprio alvo pelo corte 743",
+    "presenca": "é critério de elegibilidade, conhecido após a prova",
+    "elegivel_modelagem": "deriva da existência e validade da avaliação",
+    "motivo_exclusao_modelagem": "deriva da avaliação e do rótulo",
+    "peso_aluno": "não foi validado como disponível antes da avaliação",
+    "meta_alfabetizacao_municipio": "publicação/revisões anteriores à previsão não comprovadas",
+    "meta_alfabetizacao_uf": "publicação/revisões anteriores à previsão não comprovadas",
+    "meta_alfabetizacao_brasil": "publicação/revisões anteriores à previsão não comprovadas",
+    "taxa_alfabetizacao_escola_anterior": "códigos escolares não são estáveis entre anos",
+    "status_meta": "deriva do resultado contemporâneo",
+    "distancia_meta": "deriva do resultado contemporâneo"
+  },
+  "base_sha256": "367c07ba239e6729daed79d965b0378cc8583aea9f2e952f08732bc7519d15d4"
+}
