@@ -8,9 +8,11 @@ from src import config
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("etapa", choices=["base", "eda", "treinar", "interpretar", "relatorio", "tudo"])
+    parser.add_argument("etapa", choices=["base", "eda", "treinar", "interpretar", "relatorio", "tudo", "temporal"])
     parser.add_argument("--lake", type=Path, default=config.LAKE)
     parser.add_argument("--ano", type=int, default=config.ANO_PADRAO)
+    parser.add_argument("--ano-treino", type=int, default=2024)
+    parser.add_argument("--ano-teste", type=int, default=2025)
     parser.add_argument("--execution-date")
     parser.add_argument("--max-busca", type=int, default=150000)
     parser.add_argument("--dobras", type=int, default=3)
@@ -23,6 +25,12 @@ def main():
     # Evita a consulta de núcleos físicos via subprocesso no Windows,
     # cuja saída localizada pode não ser UTF-8. Não altera os dados/modelos.
     os.environ.setdefault("LOKY_MAX_CPU_COUNT", str(args.threads))
+    if args.etapa == "temporal":
+        if not args.execution_date:
+            parser.error("temporal exige --execution-date da Gold enriquecida")
+        from src.modeling.temporal import executar_temporal
+        executar_temporal(args.lake, args.execution_date, args.ano_treino, args.ano_teste,
+                         args.max_busca, args.dobras, args.threads)
     if args.etapa in ["base", "tudo"]:
         from src.preprocessing.base import preparar_base
         preparar_base(args.lake, args.ano, args.execution_date)

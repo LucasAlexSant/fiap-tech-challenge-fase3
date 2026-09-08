@@ -1,0 +1,398 @@
+{
+  "execution_date": "2026-09-08",
+  "origem_execution_date": "2026-09-07",
+  "tabela": "base_modelagem_aluno_enriquecida",
+  "novas_features": [
+    "populacao_municipio_ibge",
+    "escolas_anos_iniciais_censo",
+    "matriculas_anos_iniciais_censo",
+    "vinculos_docentes_anos_iniciais_censo",
+    "turmas_anos_iniciais_censo",
+    "pct_escolas_rurais_censo",
+    "pct_escolas_internet_censo",
+    "pct_escolas_agua_potavel_censo",
+    "pct_escolas_biblioteca_censo",
+    "pct_escolas_lab_informatica_censo",
+    "matriculas_por_vinculo_docente_censo",
+    "matriculas_por_turma_censo"
+  ],
+  "fontes": [
+    {
+      "url": "https://apisidra.ibge.gov.br/values/t/6579/n6/all/v/9324/p/2021",
+      "extensao": "json",
+      "ano_referencia": 2021,
+      "tipo": "estimativa_populacional",
+      "divulgacao_edicao": "2021-08-27",
+      "pagina": "https://www.ibge.gov.br/estatisticas/sociais/populacao/9103-estimativas-de-populacao.html?edicao=31451&t=custom-data-edicao",
+      "arquivo": "ibge_populacao_2021.json",
+      "sha256": "38cd175e7f345de65baec455672bf7204115e2bc9f863f0740628b1e813900d7",
+      "bytes": 1508660,
+      "headers": {
+        "ETag": null,
+        "Last-Modified": null,
+        "Content-Length": "1508660"
+      },
+      "obtido_em_utc": "2026-09-08T01:44:26.607703+00:00",
+      "vintage_historico_comprovado": false,
+      "limite": "Data de edição não comprova versão histórica dos bytes baixados; avaliação retrospectiva."
+    },
+    {
+      "url": "https://apisidra.ibge.gov.br/values/t/4714/n6/all/v/93/p/2022",
+      "extensao": "json",
+      "ano_referencia": 2022,
+      "tipo": "censo_demografico",
+      "divulgacao_edicao": "2023-12-22",
+      "pagina": "https://www.ibge.gov.br/estatisticas/sociais/populacao/22827-censo-demografico-2022.html?t=resultados",
+      "arquivo": "ibge_populacao_2022.json",
+      "sha256": "ec3c169ff4e6f59641c3ec681aabe2b96b65edf2273e2f319eaa37d565413558",
+      "bytes": 1447059,
+      "headers": {
+        "ETag": null,
+        "Last-Modified": null,
+        "Content-Length": "1447059"
+      },
+      "obtido_em_utc": "2026-09-08T01:44:28.439793+00:00",
+      "vintage_historico_comprovado": false,
+      "limite": "Data de edição não comprova versão histórica dos bytes baixados; avaliação retrospectiva."
+    },
+    {
+      "url": "https://apisidra.ibge.gov.br/values/t/6579/n6/all/v/9324/p/2024",
+      "extensao": "json",
+      "ano_referencia": 2024,
+      "tipo": "estimativa_populacional",
+      "divulgacao_edicao": "2024-08-29",
+      "pagina": "https://www.ibge.gov.br/estatisticas/sociais/populacao/9103-estimativas-de-populacao.html",
+      "arquivo": "ibge_populacao_2024.json",
+      "sha256": "b0dd3ad00824c6718c8298b690243d0f7fe6a6f48eb140af631e7412065b4c01",
+      "bytes": 1508654,
+      "headers": {
+        "ETag": null,
+        "Last-Modified": null,
+        "Content-Length": "1508654"
+      },
+      "obtido_em_utc": "2026-09-08T01:47:39.971981+00:00",
+      "vintage_historico_comprovado": false,
+      "limite": "Data de edição não comprova versão histórica dos bytes baixados; avaliação retrospectiva."
+    },
+    {
+      "url": "http://download.inep.gov.br/dados_abertos/microdados_AEEB_2025.zip",
+      "extensao": "zip",
+      "ano_referencia": 2025,
+      "tipo": "avaliacao_alfabetizacao",
+      "divulgacao_edicao": null,
+      "pagina": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/avaliacao-da-alfabetizacao/resultados/2025",
+      "arquivo": "alfabetizacao_2025.zip",
+      "sha256": "3de5a867e49e38548d220ef547f05416665f6969b25c1860f9a6f5590f88c874",
+      "bytes": 43956518,
+      "headers": {
+        "ETag": "\"29eb926-64f9945bf00c0\"",
+        "Last-Modified": "Thu, 16 Apr 2026 19:59:39 GMT",
+        "Content-Length": "43956518"
+      },
+      "obtido_em_utc": "2026-09-08T01:49:32.117296+00:00",
+      "vintage_historico_comprovado": false,
+      "limite": "Data de edição não comprova versão histórica dos bytes baixados; avaliação retrospectiva."
+    },
+    {
+      "url": "http://download.inep.gov.br/dados_abertos/microdados_censo_escolar_2022.zip",
+      "extensao": "zip",
+      "ano_referencia": 2022,
+      "tipo": "censo_escolar",
+      "divulgacao_edicao": null,
+      "pagina": "https://www.gov.br/inep/pt-br/acesso-a-informacao/dados-abertos/microdados/censo-escolar",
+      "arquivo": "censo_escolar_2022.zip",
+      "sha256": "450d6f60d3447a8ca926b58d64eb5a0c4da823da07f045e129c3c8f154253a39",
+      "bytes": 26394408,
+      "headers": {
+        "ETag": "\"192bf28-5f40f6af9dd00\"",
+        "Last-Modified": "Mon, 06 Feb 2023 22:19:00 GMT",
+        "Content-Length": "26394408"
+      },
+      "obtido_em_utc": "2026-09-08T01:49:01.363900+00:00",
+      "vintage_historico_comprovado": false,
+      "limite": "Data de edição não comprova versão histórica dos bytes baixados; avaliação retrospectiva."
+    },
+    {
+      "url": "http://download.inep.gov.br/dados_abertos/microdados_censo_escolar_2023.zip",
+      "extensao": "zip",
+      "ano_referencia": 2023,
+      "tipo": "censo_escolar",
+      "divulgacao_edicao": null,
+      "pagina": "https://www.gov.br/inep/pt-br/acesso-a-informacao/dados-abertos/microdados/censo-escolar",
+      "arquivo": "censo_escolar_2023.zip",
+      "sha256": "8ed0db8c557137593727b0574d5c99d0abb52491cd7c5769f8cefa98e1fa9e66",
+      "bytes": 32094587,
+      "headers": {
+        "ETag": "\"1e9b97b-611c2893bf700\"",
+        "Last-Modified": "Mon, 19 Feb 2024 21:11:24 GMT",
+        "Content-Length": "32094587"
+      },
+      "obtido_em_utc": "2026-09-08T01:49:10.502009+00:00",
+      "vintage_historico_comprovado": false,
+      "limite": "Data de edição não comprova versão histórica dos bytes baixados; avaliação retrospectiva."
+    },
+    {
+      "url": "http://download.inep.gov.br/dados_abertos/microdados_censo_escolar_2024.zip",
+      "extensao": "zip",
+      "ano_referencia": 2024,
+      "tipo": "censo_escolar",
+      "divulgacao_edicao": null,
+      "pagina": "https://www.gov.br/inep/pt-br/acesso-a-informacao/dados-abertos/microdados/censo-escolar",
+      "arquivo": "censo_escolar_2024.zip",
+      "sha256": "ae29d81d45ddecef59e11eda39788cbfd30dfa1cc71be9d29f23051fc2d640db",
+      "bytes": 33829396,
+      "headers": {
+        "ETag": "\"2043214-656188f8006c0\"",
+        "Last-Modified": "Wed, 08 Jul 2026 12:22:27 GMT",
+        "Content-Length": "33829396"
+      },
+      "obtido_em_utc": "2026-09-08T01:49:19.939185+00:00",
+      "vintage_historico_comprovado": false,
+      "limite": "Data de edição não comprova versão histórica dos bytes baixados; avaliação retrospectiva."
+    },
+    {
+      "arquivo": "silver\\fato_bolsa_familia_municipio\\execution_date=2026-09-07\\ano=2023\\fato_bolsa_familia_municipio.parquet",
+      "sha256": "b8d01dfb5c8a1749e1b23ba95a51626b9dd97758c1fbf60536ce9e0c98234e5e"
+    },
+    {
+      "arquivo": "silver\\fato_bolsa_familia_municipio\\execution_date=2026-09-07\\ano=2024\\fato_bolsa_familia_municipio.parquet",
+      "sha256": "2d0ed0e4f39774515352bf0248f660a34e980cf9b256c1d52406be31e97c9066"
+    },
+    {
+      "arquivo": "silver\\fato_meta_anual_municipio\\execution_date=2026-09-07\\ano=2023\\fato_meta_anual_municipio.parquet",
+      "sha256": "6ae9a7d882811f24d1028098e7f390748a845d81124b4053e09b0e9ff4ed1a30"
+    },
+    {
+      "arquivo": "silver\\fato_meta_anual_municipio\\execution_date=2026-09-07\\ano=2024\\fato_meta_anual_municipio.parquet",
+      "sha256": "6ae9a7d882811f24d1028098e7f390748a845d81124b4053e09b0e9ff4ed1a30"
+    },
+    {
+      "arquivo": "silver\\fato_meta_anual_uf\\execution_date=2026-09-07\\ano=2023\\fato_meta_anual_uf.parquet",
+      "sha256": "5d0d29ad997051fc74a078efde116bdda79bbffe2f93dd6a7820e8fb3394bd04"
+    },
+    {
+      "arquivo": "silver\\fato_meta_anual_uf\\execution_date=2026-09-07\\ano=2024\\fato_meta_anual_uf.parquet",
+      "sha256": "5d0d29ad997051fc74a078efde116bdda79bbffe2f93dd6a7820e8fb3394bd04"
+    },
+    {
+      "arquivo": "silver\\fato_meta_anual_uf\\execution_date=2026-09-07\\ano=2025\\fato_meta_anual_uf.parquet",
+      "sha256": "b1d38bf1192dd50ee7255d13d19a165cf0764bb2c22730e2fd9bf414d282e19f"
+    },
+    {
+      "arquivo": "silver\\fato_meta_anual_brasil\\execution_date=2026-09-07\\ano=2023\\fato_meta_anual_brasil.parquet",
+      "sha256": "6dd74f83941f6a3a2a79b3465b7f9b3a6a99f7e94812ed21ef0ee29eba6a2aa6"
+    },
+    {
+      "arquivo": "silver\\fato_meta_anual_brasil\\execution_date=2026-09-07\\ano=2024\\fato_meta_anual_brasil.parquet",
+      "sha256": "6dd74f83941f6a3a2a79b3465b7f9b3a6a99f7e94812ed21ef0ee29eba6a2aa6"
+    },
+    {
+      "arquivo": "silver\\fato_meta_anual_brasil\\execution_date=2026-09-07\\ano=2025\\fato_meta_anual_brasil.parquet",
+      "sha256": "13c56c3b417a5a804f185892a9c5ba2bdb3a922034359a68adae281b2c9b3338"
+    },
+    {
+      "arquivo": "gold\\base_modelagem_aluno\\execution_date=2026-09-07\\ano=2023\\base_modelagem_aluno.parquet",
+      "sha256": "53ecd89c923ee651d302380acb2f61c61d6d3bf5d8c3a58f572464a3fef2619d"
+    },
+    {
+      "arquivo": "gold\\base_modelagem_aluno\\execution_date=2026-09-07\\ano=2024\\base_modelagem_aluno.parquet",
+      "sha256": "21b6cb9717775adab9ce74f6b94519041e4ad4e36ac81b3b313063caa47b712f"
+    }
+  ],
+  "cobertura": {
+    "2023": {
+      "linhas_gold": 1747439,
+      "elegiveis": 1502809,
+      "ufs": [
+        "AL",
+        "AM",
+        "AP",
+        "BA",
+        "CE",
+        "ES",
+        "GO",
+        "MA",
+        "MG",
+        "MS",
+        "MT",
+        "PA",
+        "PB",
+        "PE",
+        "PI",
+        "PR",
+        "RJ",
+        "RN",
+        "RO",
+        "RS",
+        "SC",
+        "SE",
+        "TO"
+      ],
+      "exclusoes": {
+        "elegivel": 1502809,
+        "ausente": 244381,
+        "sem_proficiencia_valida": 249
+      },
+      "cobertura_populacao_pct": 100.0,
+      "cobertura_censo_pct": 99.9950093458317,
+      "cobertura_historico_pct": 0.0,
+      "cobertura_bolsa_pct": 0.0,
+      "ausencias_features_pct": {
+        "populacao_municipio_ibge": 0.0,
+        "escolas_anos_iniciais_censo": 0.004990654168294174,
+        "matriculas_anos_iniciais_censo": 0.004990654168294174,
+        "vinculos_docentes_anos_iniciais_censo": 0.004990654168294174,
+        "turmas_anos_iniciais_censo": 0.004990654168294174,
+        "pct_escolas_rurais_censo": 0.004990654168294174,
+        "pct_escolas_internet_censo": 0.004990654168294174,
+        "pct_escolas_agua_potavel_censo": 0.004990654168294174,
+        "pct_escolas_biblioteca_censo": 0.004990654168294174,
+        "pct_escolas_lab_informatica_censo": 0.004990654168294174,
+        "matriculas_por_vinculo_docente_censo": 0.005722616779643986,
+        "matriculas_por_turma_censo": 0.005722616779643986
+      },
+      "ano_ibge": 2021,
+      "ano_censo": 2022
+    },
+    "2024": {
+      "linhas_gold": 2120560,
+      "elegiveis": 1851852,
+      "ufs": [
+        "AC",
+        "AL",
+        "AM",
+        "AP",
+        "BA",
+        "CE",
+        "DF",
+        "ES",
+        "GO",
+        "MA",
+        "MG",
+        "MS",
+        "MT",
+        "PA",
+        "PB",
+        "PE",
+        "PI",
+        "PR",
+        "RJ",
+        "RN",
+        "RO",
+        "RS",
+        "SC",
+        "SE",
+        "SP",
+        "TO"
+      ],
+      "exclusoes": {
+        "elegivel": 1851852,
+        "ausente": 267772,
+        "sem_proficiencia_valida": 936
+      },
+      "cobertura_populacao_pct": 100.0,
+      "cobertura_censo_pct": 100.0,
+      "cobertura_historico_pct": 76.88157584947393,
+      "cobertura_bolsa_pct": 100.0,
+      "ausencias_features_pct": {
+        "populacao_municipio_ibge": 0.0,
+        "escolas_anos_iniciais_censo": 0.0,
+        "matriculas_anos_iniciais_censo": 0.0,
+        "vinculos_docentes_anos_iniciais_censo": 0.0,
+        "turmas_anos_iniciais_censo": 0.0,
+        "pct_escolas_rurais_censo": 0.0,
+        "pct_escolas_internet_censo": 0.0,
+        "pct_escolas_agua_potavel_censo": 0.0,
+        "pct_escolas_biblioteca_censo": 0.0,
+        "pct_escolas_lab_informatica_censo": 0.0,
+        "matriculas_por_vinculo_docente_censo": 0.00048599996112000317,
+        "matriculas_por_turma_censo": 0.00048599996112000317
+      },
+      "ano_ibge": 2022,
+      "ano_censo": 2023
+    },
+    "2025": {
+      "linhas_gold": 2222164,
+      "elegiveis": 1966095,
+      "ufs": [
+        "AC",
+        "AL",
+        "AM",
+        "AP",
+        "BA",
+        "CE",
+        "DF",
+        "ES",
+        "GO",
+        "MA",
+        "MG",
+        "MS",
+        "MT",
+        "PA",
+        "PB",
+        "PE",
+        "PI",
+        "PR",
+        "RJ",
+        "RN",
+        "RO",
+        "RR",
+        "RS",
+        "SC",
+        "SE",
+        "SP",
+        "TO"
+      ],
+      "exclusoes": {
+        "elegivel": 1966095,
+        "ausente": 252753,
+        "sem_proficiencia_valida": 3316
+      },
+      "cobertura_populacao_pct": 99.99440515336238,
+      "cobertura_censo_pct": 99.99379480645645,
+      "cobertura_historico_pct": 99.26310783558272,
+      "cobertura_bolsa_pct": 99.99440515336238,
+      "ausencias_features_pct": {
+        "populacao_municipio_ibge": 0.005594846637624326,
+        "escolas_anos_iniciais_censo": 0.00620519354354698,
+        "matriculas_anos_iniciais_censo": 0.00620519354354698,
+        "vinculos_docentes_anos_iniciais_censo": 0.00620519354354698,
+        "turmas_anos_iniciais_censo": 0.00620519354354698,
+        "pct_escolas_rurais_censo": 0.00620519354354698,
+        "pct_escolas_internet_censo": 0.00620519354354698,
+        "pct_escolas_agua_potavel_censo": 0.00620519354354698,
+        "pct_escolas_biblioteca_censo": 0.00620519354354698,
+        "pct_escolas_lab_informatica_censo": 0.00620519354354698,
+        "matriculas_por_vinculo_docente_censo": 0.007324162871071845,
+        "matriculas_por_turma_censo": 0.007324162871071845
+      },
+      "ano_ibge": 2024,
+      "ano_censo": 2024
+    }
+  },
+  "auditoria_ingestao_2025": {
+    "linhas_bronze": 2222792,
+    "quarentena_sem_chave": 628
+  },
+  "vintage_historico_comprovado": false,
+  "limites": [
+    "Referência anterior não prova a disponibilidade histórica da versão baixada.",
+    "Estimativa IBGE e Censo Demográfico têm métodos distintos; não medir crescimento diretamente.",
+    "Docentes somados são vínculos por escola, não pessoas únicas.",
+    "Percentuais de infraestrutura usam escolas com resposta válida, sem imputar ausência como não."
+  ],
+  "arquivos_gold": [
+    {
+      "arquivo": "gold\\base_modelagem_aluno_enriquecida\\execution_date=2026-09-08\\ano=2023\\base_modelagem_aluno_enriquecida.parquet",
+      "sha256": "35ec89c2332eb53615df0a0e3a78f57fa255aa4ecbcf032368d015b730e9d32a"
+    },
+    {
+      "arquivo": "gold\\base_modelagem_aluno_enriquecida\\execution_date=2026-09-08\\ano=2024\\base_modelagem_aluno_enriquecida.parquet",
+      "sha256": "f17f3b7e1036c83887701782cdeab8d8f5369c5872ee1934c2ae3fa0f2ca8c56"
+    },
+    {
+      "arquivo": "gold\\base_modelagem_aluno_enriquecida\\execution_date=2026-09-08\\ano=2025\\base_modelagem_aluno_enriquecida.parquet",
+      "sha256": "f6b839dbed6058f3047584a1ec9df5277ef3d2300c8f6da3766108c6bdf3f393"
+    }
+  ]
+}

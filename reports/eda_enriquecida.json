@@ -1,0 +1,150 @@
+{
+  "ano": 2024,
+  "escopo": "treino",
+  "n": 1112203,
+  "ausencias_pct": {
+    "rede": 0.0,
+    "sigla_uf": 0.0,
+    "regiao_brasil": 0.0,
+    "taxa_alfabetizacao_municipio_anterior": 23.172388493827118,
+    "taxa_presenca_municipio_anterior": 23.1684323814987,
+    "alunos_avaliados_municipio_anterior": 23.172388493827118,
+    "total_pagamentos_bolsa_familia_anterior": 0.0,
+    "valor_total_bolsa_familia_anterior": 0.0,
+    "valor_medio_pagamento_bolsa_familia_anterior": 0.0,
+    "populacao_municipio_ibge": 0.0,
+    "escolas_anos_iniciais_censo": 0.0,
+    "matriculas_anos_iniciais_censo": 0.0,
+    "vinculos_docentes_anos_iniciais_censo": 0.0,
+    "turmas_anos_iniciais_censo": 0.0,
+    "pct_escolas_rurais_censo": 0.0,
+    "pct_escolas_internet_censo": 0.0,
+    "pct_escolas_agua_potavel_censo": 0.0,
+    "pct_escolas_biblioteca_censo": 0.0,
+    "pct_escolas_lab_informatica_censo": 0.0,
+    "matriculas_por_vinculo_docente_censo": 0.0,
+    "matriculas_por_turma_censo": 0.0
+  },
+  "novas_numericas": {
+    "populacao_municipio_ibge": {
+      "count": 1112203.0,
+      "mean": 1082514.672433,
+      "std": 2696125.7011100817,
+      "min": 833.0,
+      "25%": 29924.0,
+      "50%": 115791.0,
+      "75%": 480393.0,
+      "max": 11451999.0
+    },
+    "escolas_anos_iniciais_censo": {
+      "count": 1112203.0,
+      "mean": 96.5461161316774,
+      "std": 170.5784476696925,
+      "min": 1.0,
+      "25%": 12.0,
+      "50%": 30.0,
+      "75%": 79.0,
+      "max": 757.0
+    },
+    "matriculas_anos_iniciais_censo": {
+      "count": 1112203.0,
+      "mean": 34760.60760131019,
+      "std": 74080.58958643577,
+      "min": 19.0,
+      "25%": 1717.0,
+      "50%": 6060.0,
+      "75%": 22773.0,
+      "max": 319132.0
+    },
+    "vinculos_docentes_anos_iniciais_censo": {
+      "count": 1112203.0,
+      "mean": 1708.6072551503637,
+      "std": 3610.9903646518674,
+      "min": 2.0,
+      "25%": 98.0,
+      "50%": 317.0,
+      "75%": 1121.0,
+      "max": 15360.0
+    },
+    "turmas_anos_iniciais_censo": {
+      "count": 1112203.0,
+      "mean": 1295.5617265912788,
+      "std": 2630.570674036938,
+      "min": 1.0,
+      "25%": 79.0,
+      "50%": 253.0,
+      "75%": 918.0,
+      "max": 11070.0
+    },
+    "pct_escolas_rurais_censo": {
+      "count": 1112203.0,
+      "mean": 28.361655063628778,
+      "std": 30.632304364154358,
+      "min": 0.0,
+      "25%": 0.0,
+      "50%": 16.666666666666664,
+      "75%": 50.0,
+      "max": 100.0
+    },
+    "pct_escolas_internet_censo": {
+      "count": 1112203.0,
+      "mean": 94.71048700554482,
+      "std": 13.666589885892586,
+      "min": 0.0,
+      "25%": 97.82608695652173,
+      "50%": 100.0,
+      "75%": 100.0,
+      "max": 100.0
+    },
+    "pct_escolas_agua_potavel_censo": {
+      "count": 1112203.0,
+      "mean": 97.15586290102529,
+      "std": 10.664704011601504,
+      "min": 0.0,
+      "25%": 100.0,
+      "50%": 100.0,
+      "75%": 100.0,
+      "max": 100.0
+    },
+    "pct_escolas_biblioteca_censo": {
+      "count": 1112203.0,
+      "mean": 39.11085601460216,
+      "std": 33.96971596696894,
+      "min": 0.0,
+      "25%": 7.142857142857142,
+      "50%": 31.25,
+      "75%": 66.16915422885572,
+      "max": 100.0
+    },
+    "pct_escolas_lab_informatica_censo": {
+      "count": 1112203.0,
+      "mean": 43.9393973128399,
+      "std": 34.240351037225665,
+      "min": 0.0,
+      "25%": 11.11111111111111,
+      "50%": 40.0,
+      "75%": 75.0,
+      "max": 100.0
+    },
+    "matriculas_por_vinculo_docente_censo": {
+      "count": 1112203.0,
+      "mean": 19.48291504027342,
+      "std": 5.324043998390932,
+      "min": 3.892857142857143,
+      "25%": 15.752475247524753,
+      "50%": 18.90016070711129,
+      "75%": 22.361161524500908,
+      "max": 68.0
+    },
+    "matriculas_por_turma_censo": {
+      "count": 1112203.0,
+      "mean": 23.720925963570945,
+      "std": 3.857727207804718,
+      "min": 4.4,
+      "25%": 21.091666666666665,
+      "50%": 23.69368295589988,
+      "75%": 26.429447852760735,
+      "max": 73.23076923076923
+    }
+  }
+}

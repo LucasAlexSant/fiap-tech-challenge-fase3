@@ -11,9 +11,10 @@ from sklearn.preprocessing import FunctionTransformer, OneHotEncoder, StandardSc
 from src import config
 
 
-def pre_processador():
-    taxas = config.NUMERICAS[:2]
-    volumes = config.NUMERICAS[2:]
+def pre_processador(numericas=None):
+    numericas = config.NUMERICAS if numericas is None else numericas
+    taxas = [c for c in numericas if c.startswith(("taxa_", "pct_"))]
+    volumes = [c for c in numericas if c not in taxas]
     numerico = Pipeline([
         ("imputar", SimpleImputer(strategy="median", add_indicator=True, keep_empty_features=True)),
         ("escalar", StandardScaler()),
@@ -33,7 +34,7 @@ def pre_processador():
     ], remainder="drop", sparse_threshold=0)
 
 
-def candidatos():
+def candidatos(numericas=None):
     estimadores = {
         "baseline": DummyClassifier(strategy="prior", random_state=config.SEMENTE),
         "logistica": LogisticRegression(max_iter=1000, random_state=config.SEMENTE),
@@ -43,7 +44,7 @@ def candidatos():
             max_iter=150, max_leaf_nodes=15, min_samples_leaf=100,
             l2_regularization=10., early_stopping=False, random_state=config.SEMENTE),
     }
-    return {nome: Pipeline([("preprocessar", pre_processador()), ("modelo", modelo)])
+    return {nome: Pipeline([("preprocessar", pre_processador(numericas)), ("modelo", modelo)])
             for nome, modelo in estimadores.items()}
 
 
