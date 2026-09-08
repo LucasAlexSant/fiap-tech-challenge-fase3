@@ -1,31 +1,31 @@
 # Roteiro executivo — até cinco minutos
 
-Duração planejada: 4min45s. Público: gestores públicos e lideranças
-educacionais. Usar os gráficos exportados ou o notebook para apoiar a fala.
+Versão atualizada para IBGE, Censo Escolar e teste em 2025.
+Duração planejada: 4min45s. Público: gestores públicos e lideranças educacionais.
 A gravação e o envio ainda precisam ser realizados pelo grupo.
 
 | Tempo | Mensagem sugerida | Apoio visual |
 |---|---|---|
-| 0:00–0:40 | “Queremos apoiar o diagnóstico de dificuldades de alfabetização. Integramos a Gold da Fase 2 e estudamos 1,85 milhão de avaliações válidas de 2024. O modelo usa contexto territorial, rede e dados do ano anterior.” | README: problema e cobertura |
-| 0:40–1:15 | “Parte dos municípios não tem histórico anterior disponível, e Roraima está ausente. Tratamos faltantes dentro do modelo. Separamos escolas inteiras para que a avaliação não misture alunos da mesma escola entre treino e teste.” | eda_ausencias.png; tabela da divisão |
-| 1:15–2:05 | “Comparamos uma referência simples, regressão logística e boosting. Escolhemos a logística na validação, antes de abrir o teste. No teste, o F1 macro foi 0,598 e identificamos 63,6% dos casos de não alfabetização. Cerca de metade dos alertas correspondeu à classe de risco.” | teste_confusao.png; tabela de resultados |
-| 2:05–2:50 | “O histórico municipal foi a informação com maior influência. Rede e região também contribuem. São associações, não causas. Há diferenças regionais relevantes: no Norte, o modelo produz alertas em excesso. O score ainda precisa de calibração para ser usado como probabilidade.” | interpretacao_permutacao.png; teste_calibracao.png |
-| 2:50–3:45 | “O ranking ajuda a escolher onde aprofundar o diagnóstico. Ele considera apenas as escolas do teste e exige uma amostra mínima. Araci, Paulo Afonso e Porto Alegre aparecem entre os primeiros grupos municipais; isso não é um ranking oficial nem previsão do próximo ano.” | prioridades_teste.png |
-| 3:45–4:25 | “Para apoiar políticas públicas, propomos cruzar o diagnóstico com informações locais e planejar apoio pedagógico. A próxima etapa incorpora população e infraestrutura escolar, calibra o modelo e testa outra edição. Só então poderemos avaliar previsões de metas futuras.” | aplicacao_estrategica.md: próximos passos |
-| 4:25–4:45 | “Entregamos uma análise reproduzível e rastreável, com código, testes, explicações e limites claros. O valor é orientar investigação e planejamento de apoio, com revisão dos gestores e avaliação dos resultados das intervenções.” | README e comando python main.py tudo |
+| 0:00–0:40 | “Queremos apoiar o diagnóstico de dificuldades de alfabetização. Usamos a Gold da Fase 2, agora com população do IBGE e infraestrutura, matrículas, docentes e turmas do Censo Escolar.” | Notebook 02: contexto e novos atributos |
+| 0:40–1:20 | “Desenvolvemos o modelo em 1,85 milhão de avaliações válidas de 2024. Reservamos outra edição, com 1,97 milhão de avaliações de 2025, para testar sua generalização. Roraima passou a estar na base.” | Cobertura e divisão temporal |
+| 1:20–2:10 | “O enriquecimento melhorou a validação de 2024, mas esse ganho não se confirmou em 2025: F1 de 0,5833 contra 0,5839 da referência. Esse resultado mostra por que precisamos testar em outro ano, e não confiar apenas no desempenho do desenvolvimento.” | reports/resultados_temporais.md: tabela de modelos |
+| 2:10–2:55 | “A calibração melhorou a qualidade das probabilidades, mas reduziu a identificação de casos de risco no limiar de 0,5. Não ajustamos esse limiar usando o teste. Em Roraima, que não estava no treino, a generalização foi insuficiente.” | temporal_calibracao.png; recorte de UF nova |
+| 2:55–3:35 | “O histórico municipal segue como a informação mais relevante. Internet aparece entre as contribuições positivas do Censo. São associações do modelo, não evidência de causalidade.” | temporal_permutacao.png |
+| 3:35–4:15 | “A aplicação imediata é apoiar investigação e planejamento de apoio, cruzando o diagnóstico com informações das secretarias e escolas. O ranking de 2025 não é uma taxa oficial e ainda não prevê metas futuras.” | Notebook 02: diagnóstico territorial |
+| 4:15–4:45 | “Entregamos dados rastreáveis, testes e uma avaliação temporal que expõe os limites da solução. Os próximos passos são verificar disponibilidade histórica das fontes, avaliar agregação municipal e escolher um limiar de atendimento em nova validação.” | README e protocolo_temporal.md |
 
 ## Preparação da gravação
 
-- Abrir o notebook já executado, com resultados e figuras prontos.
-- Dividir os blocos entre integrantes e ensaiar para ficar abaixo de cinco minutos.
-- Explicar “F1” como equilíbrio da classificação entre as duas classes,
-  sem apresentar acurácia como evidência suficiente.
-- Manter visível que o ranking usa a amostra do teste e scores sem calibração.
-- Mostrar resultados agregados, sem abrir microdados ou predições individuais.
-- Confirmar que as métricas apresentadas pertencem à mesma execução.
+- Abrir o notebook 02 já executado e ensaiar para ficar abaixo de cinco minutos.
+- Dividir os blocos entre os integrantes.
+- Explicar F1 como equilíbrio da classificação das duas classes.
+- Diferenciar resultado sem calibração e resultado calibrado: F1 0,5833 e
+  0,5666, respectivamente; a escolha da calibração não veio do teste.
+- Mostrar somente agregados, sem abrir microdados ou quarentena individual.
+- Não afirmar que mais atributos melhoraram a previsão em 2025.
+- Explicar que esse teste é retrospectivo e ainda não libera previsão operacional de metas.
 
-## Antes da entrega acadêmica
+## Pendências de entrega
 
-O repositório local e o roteiro estão preparados. Ainda é necessário gravar
-o vídeo, disponibilizá-lo conforme orientação da turma e realizar o PR e a
-revisão colaborativa combinados. Não há link de vídeo ou PR fictício.
+Gravar o vídeo, disponibilizá-lo conforme orientação da turma e realizar o
+PR e a revisão colaborativa combinados. Não há link de vídeo ou PR fictício.

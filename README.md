@@ -1,5 +1,28 @@
 # Tech Challenge FIAP - Fase 3
 
+**Atualização: IBGE, Censo Escolar e teste de 2025.** A Gold enriquecida
+agora tem 12 atributos adicionais, totalizando 21 preditores. O experimento
+temporal desenvolve em 2024 e reserva 1.966.095 avaliações elegíveis de 2025
+para teste. Comece pelo [relatório temporal](reports/resultados_temporais.md)
+e pelo [notebook da evolução](notebooks/02_enriquecimento_validacao_temporal.ipynb).
+As seções abaixo documentam a referência inicial com nove preditores.
+
+No teste de 2025, a logística enriquecida teve F1 **0,5833**, contra
+**0,5839** da referência. A calibração reduziu o Brier para **0,2182**,
+com F1 **0,5666** no limiar 0,5. O ganho observado na validação não se
+confirmou no teste temporal; previsões operacionais de metas continuam
+desabilitadas. Verificação local: 26 testes na Fase 2 e 17 na Fase 3,
+além dos comandos completos de enriquecimento e avaliação temporal.
+
+```powershell
+python main.py temporal --execution-date 2026-09-08 --ano-treino 2024 --ano-teste 2025
+```
+
+Os comandos para construir a nova Gold estão na
+[documentação da Fase 2](../fiap-tech-challenge-fase2/docs/enriquecimento_ibge_censo.md).
+O comando `tudo` continua reproduzindo o experimento inicial; `temporal`
+gera artefatos próprios e preserva o notebook e os resultados anteriores.
+
 **Classificação retrospectiva de alfabetização com dados exclusivamente da Gold
 da Fase 2.** Pipeline local: validação, EDA, busca de parâmetros, avaliação por
 escola, calibração diagnóstica e interpretabilidade.

@@ -1,5 +1,10 @@
 # Decisões analíticas e cobertura do enunciado
 
+**Evolução:** IBGE, Censo Escolar e AEEB 2025 já foram integrados. Consulte
+[as decisões do protocolo temporal](protocolo_temporal.md) e
+[os novos resultados](resultados_temporais.md). As decisões abaixo
+descrevem o experimento inicial de nove preditores.
+
 Referência: `[IAST] - Tech Challenge - Fase 3.pdf`, páginas 2–8.
 Esta versão estabelece a referência reproduzível com a Gold disponível.
 A execução registrada é `20260908T003806585513Z`.

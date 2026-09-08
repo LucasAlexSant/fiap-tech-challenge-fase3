@@ -1,5 +1,10 @@
 # Aplicação estratégica
 
+**Evolução:** o enriquecimento com IBGE/Censo e o teste de outra edição
+foram implementados. Veja [resultados_temporais.md](resultados_temporais.md).
+O texto abaixo preserva a análise da referência inicial; a previsão
+operacional de metas futuras continua pendente.
+
 Resultados da execução `20260908T003806585513Z`, sobre avaliações elegíveis
 de 2024. Este documento responde às perguntas do enunciado com o alcance
 permitido pelos dados disponíveis.
