@@ -1,5 +1,5 @@
 {
-  "run_id": "20260907T185024143073Z",
+  "run_id": "20260908T003806585513Z",
   "ano": 2024,
   "execution_date_gold": "2026-09-07",
   "base_sha256": "367c07ba239e6729daed79d965b0378cc8583aea9f2e952f08732bc7519d15d4",
@@ -19,7 +19,7 @@
     "criterio": "F1 macro de validação; tolerância 0.005 favorece logística",
     "limiar_risco": 0.5,
     "teste_usado_na_selecao": false,
-    "run_id": "20260907T185024143073Z"
+    "run_id": "20260908T003806585513Z"
   },
   "divisao": {
     "semente": 42,
@@ -184,7 +184,7 @@
           220678
         ]
       ],
-      "tempo_busca_e_ajuste_segundos": 1.89
+      "tempo_busca_e_ajuste_segundos": 1.92
     },
     "logistica": {
       "n": 370443,
@@ -209,7 +209,7 @@
           124287
         ]
       ],
-      "tempo_busca_e_ajuste_segundos": 13.73
+      "tempo_busca_e_ajuste_segundos": 12.14
     },
     "gradient_boosting": {
       "n": 370443,
@@ -234,7 +234,7 @@
           181631
         ]
       ],
-      "tempo_busca_e_ajuste_segundos": 58.58
+      "tempo_busca_e_ajuste_segundos": 53.52
     }
   },
   "teste": {
@@ -911,7 +911,9 @@
     "src\\artefatos.py": "1667fe62e1661cd79f7141ddf6a8b62403d38cf48c5d01cbc457c7d336225141",
     "src\\config.py": "9fb503c82f659b017e3afad6107e191d9a58bd26248b029ecf5c54b9f7e5ab55",
     "src\\evaluation\\__init__.py": "89dbffc0c4b3d88833822c0fa6bdbb9559a21697e4c6eae144541d8d7880124e",
+    "src\\evaluation\\interpretabilidade.py": "9ab71b6c7d28f1dbfbdaae83c9dabd98b81e00d435bdea7f10b32658de41cd23",
     "src\\evaluation\\metricas.py": "1f8a7bb1d98d5e6f8d5c1be601596e39e1cad3be5eb5f29847e2381d41613d12",
+    "src\\evaluation\\relatorio.py": "92501d2c272817f75c0952f159d658fd66c37a91053abe4246306e6d17a592e5",
     "src\\modeling\\__init__.py": "1fff5be459583b8a5782456e3675c8297718d7a3201f283f4093fff613dc248c",
     "src\\modeling\\pipelines.py": "a34f9b7a547ba03ed203ed0315cf4df0dc7bcae43243b713c656da07bf7caeb9",
     "src\\modeling\\treinar.py": "57219cfc745568ee42004c8271c750d0bb88606b72421b5a3b685870eef64477",
@@ -923,6 +925,6 @@
     "src\\visualization\\estilo.py": "5faf6b49b42938ede7df91ad3dc955b315a55d8ef569ab2a0e25da6eb0f440fa",
     "src\\visualization\\exploratoria.py": "3be5ed064eaa86e8d1be4a246a9fd518e9e11eb8162715d346535cdb81c3cf9c"
   },
-  "duracao_segundos": 105.8,
-  "modelo_sha256": "c8dd84108187ca1d07bd3e3ad665d6b7367619f083462ad03962cc17cc9fb9e9"
+  "duracao_segundos": 98.69,
+  "modelo_sha256": "68f02bebe2ca52e3b3739fb8dbbf05888a733f51e46542416096f894d5d3b9b7"
 }

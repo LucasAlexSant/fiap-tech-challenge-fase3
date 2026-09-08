@@ -1,0 +1,97 @@
+{
+  "run_id": "20260908T003806585513Z",
+  "modelo": "logistica",
+  "amostra_permutacao": 5000,
+  "amostra_shap": 2000,
+  "semente": 42,
+  "repeticoes": 5,
+  "shap_versao": "0.51.0",
+  "shap_escala": "log-odds da não alfabetização",
+  "erro_maximo_reconstrucao_probabilidade": 2.220446049250313e-16,
+  "permutacao": [
+    {
+      "variavel": "taxa_alfabetizacao_municipio_anterior",
+      "queda_f1_macro": 0.03742707223431245,
+      "desvio_permutacoes": 0.0047537911018417575
+    },
+    {
+      "variavel": "rede",
+      "queda_f1_macro": 0.00966800048558003,
+      "desvio_permutacoes": 0.0019064358956311365
+    },
+    {
+      "variavel": "regiao_brasil",
+      "queda_f1_macro": 0.007499907997986765,
+      "desvio_permutacoes": 0.0035066687015212843
+    },
+    {
+      "variavel": "sigla_uf",
+      "queda_f1_macro": -4.640834890536905e-05,
+      "desvio_permutacoes": 0.0017627821658486938
+    },
+    {
+      "variavel": "valor_medio_pagamento_bolsa_familia_anterior",
+      "queda_f1_macro": -0.0022603853267079586,
+      "desvio_permutacoes": 0.0004105229406056944
+    },
+    {
+      "variavel": "taxa_presenca_municipio_anterior",
+      "queda_f1_macro": -0.0023515774951184953,
+      "desvio_permutacoes": 0.0023479177405223467
+    },
+    {
+      "variavel": "valor_total_bolsa_familia_anterior",
+      "queda_f1_macro": -0.004328834400926018,
+      "desvio_permutacoes": 0.0015749768134423671
+    },
+    {
+      "variavel": "total_pagamentos_bolsa_familia_anterior",
+      "queda_f1_macro": -0.004356275594848569,
+      "desvio_permutacoes": 0.0015678463540564796
+    },
+    {
+      "variavel": "alunos_avaliados_municipio_anterior",
+      "queda_f1_macro": -0.006505173680509735,
+      "desvio_permutacoes": 0.0028768639340847613
+    }
+  ],
+  "shap": [
+    {
+      "variavel": "taxa_alfabetizacao_municipio_anterior",
+      "shap_absoluto_medio_logodds": 0.3108516380677549
+    },
+    {
+      "variavel": "sigla_uf",
+      "shap_absoluto_medio_logodds": 0.15957798068876955
+    },
+    {
+      "variavel": "regiao_brasil",
+      "shap_absoluto_medio_logodds": 0.12705337506234166
+    },
+    {
+      "variavel": "rede",
+      "shap_absoluto_medio_logodds": 0.07642817450004209
+    },
+    {
+      "variavel": "taxa_presenca_municipio_anterior",
+      "shap_absoluto_medio_logodds": 0.07426510374878918
+    },
+    {
+      "variavel": "valor_total_bolsa_familia_anterior",
+      "shap_absoluto_medio_logodds": 0.05730611369047485
+    },
+    {
+      "variavel": "total_pagamentos_bolsa_familia_anterior",
+      "shap_absoluto_medio_logodds": 0.05690789662404973
+    },
+    {
+      "variavel": "alunos_avaliados_municipio_anterior",
+      "shap_absoluto_medio_logodds": 0.055677051253753995
+    },
+    {
+      "variavel": "valor_medio_pagamento_bolsa_familia_anterior",
+      "shap_absoluto_medio_logodds": 0.01930557669208271
+    }
+  ],
+  "limites": "Sensibilidade e contribuição ao modelo; não causalidade. Correlação divide atribuições; desvios de permutação não são IC populacional."
+}
