@@ -1,5 +1,5 @@
 {
-  "run_id": "20260909T004124029778Z_temporal",
+  "run_id": "20260909T015730505921Z_temporal",
   "execucao_gold": "2026-09-08",
   "selecao": {
     "modelo": "enriquecida_logistica",
@@ -9,9 +9,9 @@
     "limiar": 0.5,
     "calibracao": "sigmoid fixa, em 20% de escolas de desenvolvimento reservadas",
     "teste_usado_na_selecao": false,
-    "run_id": "20260909T004124029778Z_temporal",
-    "modelo_sha256": "0969223fa773be4c493d9f260f9e59805df89bdd4fa0ef7099d6d9bc3a0dcd10",
-    "congelado_em_utc": "2026-09-09T00:45:46.215939+00:00"
+    "run_id": "20260909T015730505921Z_temporal",
+    "modelo_sha256": "a2d0c98f578df97002a352ba79542f45e9d154b3ec127710ef4a69d991ee9d86",
+    "congelado_em_utc": "2026-09-09T02:02:01.891496+00:00"
   },
   "features": [
     "rede",
@@ -88,7 +88,11 @@
     "salas_acessiveis_censo",
     "salas_utilizadas_fora_censo",
     "matriculas_por_vinculo_docente_censo",
-    "matriculas_por_turma_censo"
+    "matriculas_por_turma_censo",
+    "idhm_municipio",
+    "idhm_educacao_municipio",
+    "idhm_longevidade_municipio",
+    "idhm_renda_municipio"
   ],
   "novas_features": [
     "populacao_municipio_ibge",
@@ -156,7 +160,11 @@
     "salas_acessiveis_censo",
     "salas_utilizadas_fora_censo",
     "matriculas_por_vinculo_docente_censo",
-    "matriculas_por_turma_censo"
+    "matriculas_por_turma_censo",
+    "idhm_municipio",
+    "idhm_educacao_municipio",
+    "idhm_longevidade_municipio",
+    "idhm_renda_municipio"
   ],
   "divisao_desenvolvimento": {
     "treino": {
@@ -178,13 +186,13 @@
   "proveniencia_treino": [
     {
       "arquivo": "gold/base_modelagem_aluno_enriquecida/execution_date=2026-09-08/ano=2024/base_modelagem_aluno_enriquecida.parquet",
-      "sha256": "d2a9c70255e91fa5be63f30af6049fef7daf3294f273329f32843e384d6dd5d7"
+      "sha256": "a7169fe7e91cf8d6e694c32dd4925d5f6d09181ab4b6a7c53ec22e0d8e273c83"
     }
   ],
   "proveniencia_teste": [
     {
       "arquivo": "gold/base_modelagem_aluno_enriquecida/execution_date=2026-09-08/ano=2025/base_modelagem_aluno_enriquecida.parquet",
-      "sha256": "a12d0a428ab3428cdb42b6ca9f459647ae08cd73204a7a2be38bae931ef48490"
+      "sha256": "08ad9fe5d0976c8991f49353aca72253bac5135837c7f2114600d59201b60d4f"
     }
   ],
   "cobertura_gold": {
@@ -291,7 +299,11 @@
         "salas_acessiveis_censo": 0.004990654168294174,
         "salas_utilizadas_fora_censo": 0.004990654168294174,
         "matriculas_por_vinculo_docente_censo": 0.005722616779643986,
-        "matriculas_por_turma_censo": 0.005722616779643986
+        "matriculas_por_turma_censo": 0.005722616779643986,
+        "idhm_municipio": 0.043784672569834225,
+        "idhm_educacao_municipio": 0.043784672569834225,
+        "idhm_longevidade_municipio": 0.043784672569834225,
+        "idhm_renda_municipio": 0.043784672569834225
       },
       "ano_ibge": 2021,
       "ano_censo": 2022
@@ -402,7 +414,11 @@
         "salas_acessiveis_censo": 0.0,
         "salas_utilizadas_fora_censo": 0.0,
         "matriculas_por_vinculo_docente_censo": 0.00048599996112000317,
-        "matriculas_por_turma_censo": 0.00048599996112000317
+        "matriculas_por_turma_censo": 0.00048599996112000317,
+        "idhm_municipio": 0.03466799722656022,
+        "idhm_educacao_municipio": 0.03466799722656022,
+        "idhm_longevidade_municipio": 0.03466799722656022,
+        "idhm_renda_municipio": 0.03466799722656022
       },
       "ano_ibge": 2022,
       "ano_censo": 2023
@@ -514,7 +530,11 @@
         "salas_acessiveis_censo": 0.00620519354354698,
         "salas_utilizadas_fora_censo": 0.00620519354354698,
         "matriculas_por_vinculo_docente_censo": 0.007324162871071845,
-        "matriculas_por_turma_censo": 0.007324162871071845
+        "matriculas_por_turma_censo": 0.007324162871071845,
+        "idhm_municipio": 0.04170703857138135,
+        "idhm_educacao_municipio": 0.04170703857138135,
+        "idhm_longevidade_municipio": 0.04170703857138135,
+        "idhm_renda_municipio": 0.04170703857138135
       },
       "ano_ibge": 2024,
       "ano_censo": 2024
@@ -580,42 +600,42 @@
             "modelo__C": 0.1,
             "modelo__class_weight": null
           },
-          "f1_treino": 0.5788096004898416,
-          "f1_validacao_media": 0.5709295439932162,
-          "f1_validacao_desvio": 0.0033147423007626434
+          "f1_treino": 0.5797612540081397,
+          "f1_validacao_media": 0.5704225304692921,
+          "f1_validacao_desvio": 0.0036081935900906274
         },
         {
           "parametros": {
             "modelo__C": 0.1,
             "modelo__class_weight": "balanced"
           },
-          "f1_treino": 0.6108527894107297,
-          "f1_validacao_media": 0.6004661390816878,
-          "f1_validacao_desvio": 0.0029963221994145904
+          "f1_treino": 0.6108547904498951,
+          "f1_validacao_media": 0.6014094035039449,
+          "f1_validacao_desvio": 0.0018564479349660787
         },
         {
           "parametros": {
             "modelo__C": 1.0,
             "modelo__class_weight": null
           },
-          "f1_treino": 0.5795082404466515,
-          "f1_validacao_media": 0.5704520829210405,
-          "f1_validacao_desvio": 0.0037933234820896355
+          "f1_treino": 0.5805040589556719,
+          "f1_validacao_media": 0.5719577917529226,
+          "f1_validacao_desvio": 0.0033532121694485858
         },
         {
           "parametros": {
             "modelo__C": 1.0,
             "modelo__class_weight": "balanced"
           },
-          "f1_treino": 0.6111109830066724,
-          "f1_validacao_media": 0.6000872334863676,
-          "f1_validacao_desvio": 0.0024293488103855716
+          "f1_treino": 0.6109882123729874,
+          "f1_validacao_media": 0.6011368482021852,
+          "f1_validacao_desvio": 0.001996293540498524
         }
       ]
     },
     "enriquecida_boosting": {
       "melhores_parametros": {
-        "modelo__max_leaf_nodes": 15,
+        "modelo__max_leaf_nodes": 31,
         "modelo__min_samples_leaf": 100
       },
       "linhas": 149967,
@@ -626,36 +646,36 @@
             "modelo__max_leaf_nodes": 15,
             "modelo__min_samples_leaf": 100
           },
-          "f1_treino": 0.6178991240491337,
-          "f1_validacao_media": 0.5822391422444148,
-          "f1_validacao_desvio": 0.010930499253736702
+          "f1_treino": 0.6183020025661867,
+          "f1_validacao_media": 0.5803110027818085,
+          "f1_validacao_desvio": 0.012526726309619731
         },
         {
           "parametros": {
             "modelo__max_leaf_nodes": 15,
             "modelo__min_samples_leaf": 300
           },
-          "f1_treino": 0.6188763985667699,
-          "f1_validacao_media": 0.5818114428586614,
-          "f1_validacao_desvio": 0.01210613492310299
+          "f1_treino": 0.6189400897500227,
+          "f1_validacao_media": 0.582114350188923,
+          "f1_validacao_desvio": 0.013590874491380193
         },
         {
           "parametros": {
             "modelo__max_leaf_nodes": 31,
             "modelo__min_samples_leaf": 100
           },
-          "f1_treino": 0.6272301981062943,
-          "f1_validacao_media": 0.581716228210722,
-          "f1_validacao_desvio": 0.012056487963094874
+          "f1_treino": 0.6300190666964803,
+          "f1_validacao_media": 0.5864485262994003,
+          "f1_validacao_desvio": 0.01322382851591501
         },
         {
           "parametros": {
             "modelo__max_leaf_nodes": 31,
             "modelo__min_samples_leaf": 300
           },
-          "f1_treino": 0.627958434080078,
-          "f1_validacao_media": 0.5814795897734898,
-          "f1_validacao_desvio": 0.011906155937834438
+          "f1_treino": 0.6280573922345486,
+          "f1_validacao_media": 0.5809158267456224,
+          "f1_validacao_desvio": 0.010834980723165548
         }
       ]
     }
@@ -712,48 +732,48 @@
     "enriquecida_logistica": {
       "n": 370443,
       "prevalencia_risco": 0.4042862194723615,
-      "acuracia": 0.6050944409801238,
-      "acuracia_balanceada": 0.6082153050210151,
-      "f1_macro": 0.6010953303382691,
-      "recall_risco": 0.6245184121790806,
-      "precisao_risco": 0.5094641777467903,
-      "recall_alfabetizado": 0.5919121978629497,
-      "roc_auc": 0.6547100727823266,
-      "average_precision_risco": 0.5454634137708894,
-      "brier": 0.23155664748325622,
-      "log_loss": 0.6542070842434285,
+      "acuracia": 0.605529055752167,
+      "acuracia_balanceada": 0.6085060653939909,
+      "f1_macro": 0.6014690164654719,
+      "recall_risco": 0.6240576903815979,
+      "precisao_risco": 0.5099188162891187,
+      "recall_alfabetizado": 0.592954440406384,
+      "roc_auc": 0.654856476271781,
+      "average_precision_risco": 0.5456664080366513,
+      "brier": 0.23150504875991676,
+      "log_loss": 0.6541012640839533,
       "matriz_confusao_labels_0_1": [
         [
-          93531,
-          56234
+          93462,
+          56303
         ],
         [
-          90056,
-          130622
+          89826,
+          130852
         ]
       ]
     },
     "enriquecida_boosting": {
       "n": 370443,
       "prevalencia_risco": 0.4042862194723615,
-      "acuracia": 0.6360789649149802,
-      "acuracia_balanceada": 0.5917711436428538,
-      "f1_macro": 0.5869947059012552,
-      "recall_risco": 0.36031115414148834,
-      "precisao_risco": 0.5804175495584645,
-      "recall_alfabetizado": 0.8232311331442191,
-      "roc_auc": 0.6622590650903734,
-      "average_precision_risco": 0.5524198978734398,
-      "brier": 0.221783512632038,
-      "log_loss": 0.6325382453551323,
+      "acuracia": 0.6361599490339944,
+      "acuracia_balanceada": 0.5924624238740694,
+      "f1_macro": 0.5880672177803087,
+      "recall_risco": 0.36419056521884285,
+      "precisao_risco": 0.5796095767403803,
+      "recall_alfabetizado": 0.820734282529296,
+      "roc_auc": 0.6633112810253072,
+      "average_precision_risco": 0.5538450359843821,
+      "brier": 0.2215669368835605,
+      "log_loss": 0.6320504061248273,
       "matriz_confusao_labels_0_1": [
         [
-          53962,
-          95803
+          54543,
+          95222
         ],
         [
-          39009,
-          181669
+          39560,
+          181118
         ]
       ]
     }
@@ -810,72 +830,72 @@
     "enriquecida_logistica": {
       "n": 1966095,
       "prevalencia_risco": 0.3374252007151231,
-      "acuracia": 0.6162738830015844,
-      "acuracia_balanceada": 0.5857422898614638,
-      "f1_macro": 0.582517407981334,
-      "recall_risco": 0.4918421488973636,
-      "precisao_risco": 0.438791153522373,
-      "recall_alfabetizado": 0.6796424308255641,
-      "roc_auc": 0.6281628637941891,
-      "average_precision_risco": 0.447172134022017,
-      "brier": 0.23305601410436846,
-      "log_loss": 0.6585541793687807,
+      "acuracia": 0.6170617391326462,
+      "acuracia_balanceada": 0.5854647033967925,
+      "f1_macro": 0.5825469019688045,
+      "recall_risco": 0.4882877858337981,
+      "precisao_risco": 0.4393214647529745,
+      "recall_alfabetizado": 0.6826416209597869,
+      "roc_auc": 0.6276459766230088,
+      "average_precision_risco": 0.4468232310628041,
+      "brier": 0.23291505154086348,
+      "log_loss": 0.6582390819435318,
       "matriz_confusao_labels_0_1": [
         [
-          326293,
-          337117
+          323935,
+          339475
         ],
         [
-          417325,
-          885360
+          413418,
+          889267
         ]
       ]
     },
     "enriquecida_boosting": {
       "n": 1966095,
       "prevalencia_risco": 0.3374252007151231,
-      "acuracia": 0.6524669459003761,
-      "acuracia_balanceada": 0.567815410487943,
-      "f1_macro": 0.566667270627644,
-      "recall_risco": 0.30746898599659334,
-      "precisao_risco": 0.4767745991973429,
-      "recall_alfabetizado": 0.8281618349792927,
-      "roc_auc": 0.637520835511568,
-      "average_precision_risco": 0.44818679865512523,
-      "brier": 0.21535696628143977,
-      "log_loss": 0.6184228835287099,
+      "acuracia": 0.6569728319333501,
+      "acuracia_balanceada": 0.5629108792315926,
+      "f1_macro": 0.5584754371438034,
+      "recall_risco": 0.2736226466287816,
+      "precisao_risco": 0.4852778416412252,
+      "recall_alfabetizado": 0.8521991118344036,
+      "roc_auc": 0.6376567205565149,
+      "average_precision_risco": 0.4477332730568386,
+      "brier": 0.21523682124653015,
+      "log_loss": 0.6182089727761751,
       "matriz_confusao_labels_0_1": [
         [
-          203978,
-          459432
+          181524,
+          481886
         ],
         [
-          223851,
-          1078834
+          192538,
+          1110147
         ]
       ]
     },
     "selecionado_calibrado": {
       "n": 1966095,
       "prevalencia_risco": 0.3374252007151231,
-      "acuracia": 0.6482896299517572,
-      "acuracia_balanceada": 0.5680816827068313,
-      "f1_macro": 0.5678709438839559,
-      "recall_risco": 0.3214015465549208,
-      "precisao_risco": 0.4691042136018023,
-      "recall_alfabetizado": 0.8147618188587418,
-      "roc_auc": 0.6281628637941891,
-      "average_precision_risco": 0.447172134022017,
-      "brier": 0.21819050447512497,
-      "log_loss": 0.6255048010652179,
+      "acuracia": 0.6488597956863732,
+      "acuracia_balanceada": 0.5673380151317484,
+      "f1_macro": 0.5668193532034848,
+      "recall_risco": 0.3166171748993835,
+      "precisao_risco": 0.4698417882203468,
+      "recall_alfabetizado": 0.8180588553641134,
+      "roc_auc": 0.6276459766230088,
+      "average_precision_risco": 0.4468232310628041,
+      "brier": 0.21820320483620476,
+      "log_loss": 0.625548318726626,
       "matriz_confusao_labels_0_1": [
         [
-          213221,
-          450189
+          210047,
+          453363
         ],
         [
-          241307,
-          1061378
+          237012,
+          1065673
         ]
       ]
     }
@@ -887,48 +907,48 @@
         "amostra_pequena": false,
         "n": 10456,
         "prevalencia_risco": 0.3154169854628921,
-        "acuracia": 0.6285386381025249,
-        "acuracia_balanceada": 0.5547202695597644,
-        "f1_macro": 0.5557652295422597,
-        "recall_risco": 0.3547604608853851,
-        "precisao_risco": 0.3998632946001367,
-        "recall_alfabetizado": 0.7546800782341436,
-        "roc_auc": 0.5667202480408,
-        "average_precision_risco": 0.3733752189530986,
-        "brier": 0.2306622874724334,
-        "log_loss": 0.6538558697177018
+        "acuracia": 0.632938026013772,
+        "acuracia_balanceada": 0.5515565581924476,
+        "f1_macro": 0.5524566627090861,
+        "recall_risco": 0.33110976349302607,
+        "precisao_risco": 0.4008810572687225,
+        "recall_alfabetizado": 0.7720033528918693,
+        "roc_auc": 0.5679490317397948,
+        "average_precision_risco": 0.37468634989124877,
+        "brier": 0.23005640781259756,
+        "log_loss": 0.6525928188317947
       },
       {
         "grupo": "AL",
         "amostra_pequena": false,
         "n": 33161,
         "prevalencia_risco": 0.3584934109345315,
-        "acuracia": 0.5748318808238594,
-        "acuracia_balanceada": 0.6063275314742862,
-        "f1_macro": 0.5732796793955514,
-        "recall_risco": 0.717614401076716,
-        "precisao_risco": 0.4426399626420381,
-        "recall_alfabetizado": 0.49504066187185636,
-        "roc_auc": 0.6404333827201455,
-        "average_precision_risco": 0.45428681048721464,
-        "brier": 0.22992410611653757,
-        "log_loss": 0.6503989007900506
+        "acuracia": 0.5762492084074666,
+        "acuracia_balanceada": 0.6067456740195822,
+        "f1_macro": 0.5745085363758395,
+        "recall_risco": 0.7145020188425303,
+        "precisao_risco": 0.4435045948203843,
+        "recall_alfabetizado": 0.49898932919663425,
+        "roc_auc": 0.6391921048923754,
+        "average_precision_risco": 0.4521330063601198,
+        "brier": 0.22970706523589662,
+        "log_loss": 0.6499601078130645
       },
       {
         "grupo": "AM",
         "amostra_pequena": false,
         "n": 50253,
         "prevalencia_risco": 0.4248701570055519,
-        "acuracia": 0.5176009392474081,
-        "acuracia_balanceada": 0.5487227374610866,
-        "f1_macro": 0.5099849275442495,
-        "recall_risco": 0.7558428176666199,
-        "precisao_risco": 0.4588961242073535,
-        "recall_alfabetizado": 0.3416026572555532,
-        "roc_auc": 0.5784053564656715,
-        "average_precision_risco": 0.48216497445034023,
-        "brier": 0.24810246675502284,
-        "log_loss": 0.6893336484856011
+        "acuracia": 0.5164865779157464,
+        "acuracia_balanceada": 0.54487836133574,
+        "f1_macro": 0.5108784384503993,
+        "recall_risco": 0.7338297971991944,
+        "precisao_risco": 0.4570195140448619,
+        "recall_alfabetizado": 0.35592692547228566,
+        "roc_auc": 0.5768588344752298,
+        "average_precision_risco": 0.48241492509298595,
+        "brier": 0.24799628110535765,
+        "log_loss": 0.6891390707217492
       },
       {
         "grupo": "AP",
@@ -941,10 +961,10 @@
         "recall_risco": 0.5780320366132723,
         "precisao_risco": 0.3914458391445839,
         "recall_alfabetizado": 0.40831701069760434,
-        "roc_auc": 0.5325717693162492,
-        "average_precision_risco": 0.4443079383759503,
-        "brier": 0.2545141506446804,
-        "log_loss": 0.7024708504786715
+        "roc_auc": 0.531398401375825,
+        "average_precision_risco": 0.44108327222236665,
+        "brier": 0.2543459166380908,
+        "log_loss": 0.7020818637577335
       },
       {
         "grupo": "BA",
@@ -957,10 +977,10 @@
         "recall_risco": 0.9830119461950898,
         "precisao_risco": 0.4499905268778312,
         "recall_alfabetizado": 0.047401706342103694,
-        "roc_auc": 0.5807243585727695,
-        "average_precision_risco": 0.5036693646487593,
-        "brier": 0.278978732171164,
-        "log_loss": 0.7543066063744253
+        "roc_auc": 0.5789600175863235,
+        "average_precision_risco": 0.5020663445071647,
+        "brier": 0.2788729234308659,
+        "log_loss": 0.7540873527398965
       },
       {
         "grupo": "CE",
@@ -973,10 +993,10 @@
         "recall_risco": 0.0,
         "precisao_risco": 0.0,
         "recall_alfabetizado": 1.0,
-        "roc_auc": 0.7376566628170218,
-        "average_precision_risco": 0.31264129202861024,
-        "brier": 0.12636991510421905,
-        "log_loss": 0.4084521552715912
+        "roc_auc": 0.7380821641893384,
+        "average_precision_risco": 0.3127435520058171,
+        "brier": 0.12644259115020773,
+        "log_loss": 0.4086985983236743
       },
       {
         "grupo": "DF",
@@ -991,8 +1011,8 @@
         "recall_alfabetizado": 1.0,
         "roc_auc": 0.5,
         "average_precision_risco": 0.34874143799638607,
-        "brier": 0.22834823234728258,
-        "log_loss": 0.649461134317491
+        "brier": 0.22860431961356248,
+        "log_loss": 0.650057708912828
       },
       {
         "grupo": "ES",
@@ -1005,10 +1025,10 @@
         "recall_risco": 0.0,
         "precisao_risco": 0.0,
         "recall_alfabetizado": 1.0,
-        "roc_auc": 0.6094826128615717,
-        "average_precision_risco": 0.29674193148519457,
-        "brier": 0.17074390799567649,
-        "log_loss": 0.5230941486131042
+        "roc_auc": 0.6098465138721628,
+        "average_precision_risco": 0.29684875744850137,
+        "brier": 0.17065743900895736,
+        "log_loss": 0.5228765933567612
       },
       {
         "grupo": "GO",
@@ -1021,26 +1041,26 @@
         "recall_risco": 0.0,
         "precisao_risco": 0.0,
         "recall_alfabetizado": 1.0,
-        "roc_auc": 0.6281537423464714,
-        "average_precision_risco": 0.26560513222422216,
-        "brier": 0.1535801555980691,
-        "log_loss": 0.4822962685147043
+        "roc_auc": 0.6285749803958117,
+        "average_precision_risco": 0.2651664827335068,
+        "brier": 0.15352392292707326,
+        "log_loss": 0.4820919999188338
       },
       {
         "grupo": "MA",
         "amostra_pequena": false,
         "n": 67935,
         "prevalencia_risco": 0.30705821741370426,
-        "acuracia": 0.6764995952012953,
-        "acuracia_balanceada": 0.5145248906678263,
-        "f1_macro": 0.47628991102073104,
-        "recall_risco": 0.09477468839884948,
-        "precisao_risco": 0.3898639321632814,
-        "recall_alfabetizado": 0.934275092936803,
-        "roc_auc": 0.6008618796936205,
-        "average_precision_risco": 0.36741399124453356,
-        "brier": 0.21182416884540756,
-        "log_loss": 0.612702020819887
+        "acuracia": 0.6786045484654449,
+        "acuracia_balanceada": 0.5074743465910103,
+        "f1_macro": 0.4564527775926491,
+        "recall_risco": 0.06399808245445829,
+        "precisao_risco": 0.36635565312843027,
+        "recall_alfabetizado": 0.9509506107275624,
+        "roc_auc": 0.6014149047159094,
+        "average_precision_risco": 0.36754705715075536,
+        "brier": 0.2117972957791051,
+        "log_loss": 0.6126518666322393
       },
       {
         "grupo": "MG",
@@ -1053,10 +1073,10 @@
         "recall_risco": 0.001772156996999416,
         "precisao_risco": 0.567741935483871,
         "recall_alfabetizado": 0.9995336145567946,
-        "roc_auc": 0.5858548631626153,
-        "average_precision_risco": 0.3166776330746726,
-        "brier": 0.18904468642086725,
-        "log_loss": 0.5651251906541195
+        "roc_auc": 0.5863364439651717,
+        "average_precision_risco": 0.31735625694558667,
+        "brier": 0.18895812110110055,
+        "log_loss": 0.5649002464191173
       },
       {
         "grupo": "MS",
@@ -1069,10 +1089,10 @@
         "recall_risco": 0.1338088223893325,
         "precisao_risco": 0.5181627138997298,
         "recall_alfabetizado": 0.9359281437125748,
-        "roc_auc": 0.5931156401825389,
-        "average_precision_risco": 0.41614812064755285,
-        "brier": 0.2196487443639374,
-        "log_loss": 0.630099068219022
+        "roc_auc": 0.5938907919489341,
+        "average_precision_risco": 0.41663353821052257,
+        "brier": 0.21968547665003121,
+        "log_loss": 0.6301826292670831
       },
       {
         "grupo": "MT",
@@ -1085,74 +1105,74 @@
         "recall_risco": 0.03197261874947825,
         "precisao_risco": 0.42414174972314506,
         "recall_alfabetizado": 0.9856784819190835,
-        "roc_auc": 0.6145834518108177,
-        "average_precision_risco": 0.32911992705361937,
-        "brier": 0.1922650461129508,
-        "log_loss": 0.5729517696240362
+        "roc_auc": 0.6156548227945731,
+        "average_precision_risco": 0.32922307573081616,
+        "brier": 0.19227303146707697,
+        "log_loss": 0.5728880098183493
       },
       {
         "grupo": "PA",
         "amostra_pequena": false,
         "n": 90627,
         "prevalencia_risco": 0.4157701347280612,
-        "acuracia": 0.5353040484623788,
-        "acuracia_balanceada": 0.5600128821286134,
-        "f1_macro": 0.5340277533905327,
-        "recall_risco": 0.706687898089172,
-        "precisao_risco": 0.4615704628185127,
-        "recall_alfabetizado": 0.41333786616805485,
-        "roc_auc": 0.5913812382265693,
-        "average_precision_risco": 0.49135811410820296,
-        "brier": 0.24723312212609114,
-        "log_loss": 0.6875911451961229
+        "acuracia": 0.5424321670142452,
+        "acuracia_balanceada": 0.5590845314428718,
+        "f1_macro": 0.5424221984990711,
+        "recall_risco": 0.6579352441613588,
+        "precisao_risco": 0.4645118980700768,
+        "recall_alfabetizado": 0.46023381872438474,
+        "roc_auc": 0.5918813477580452,
+        "average_precision_risco": 0.49189736633410164,
+        "brier": 0.24685602272480733,
+        "log_loss": 0.6868025141546518
       },
       {
         "grupo": "PB",
         "amostra_pequena": false,
         "n": 34170,
         "prevalencia_risco": 0.2881474978050922,
-        "acuracia": 0.6826163301141353,
-        "acuracia_balanceada": 0.5389499150258831,
-        "f1_macro": 0.5319004124645978,
-        "recall_risco": 0.19987812309567338,
-        "precisao_risco": 0.39878419452887537,
-        "recall_alfabetizado": 0.8780217069560927,
-        "roc_auc": 0.603957949628689,
-        "average_precision_risco": 0.3665832007910404,
-        "brier": 0.214109323744632,
-        "log_loss": 0.6178354972567436
+        "acuracia": 0.6837576821773486,
+        "acuracia_balanceada": 0.5395400088847281,
+        "f1_macro": 0.5323680695984341,
+        "recall_risco": 0.19916717448710136,
+        "precisao_risco": 0.40167963949201146,
+        "recall_alfabetizado": 0.8799128432823549,
+        "roc_auc": 0.603587055320577,
+        "average_precision_risco": 0.36710661300294284,
+        "brier": 0.21403863339912044,
+        "log_loss": 0.6177019659758687
       },
       {
         "grupo": "PE",
         "amostra_pequena": false,
         "n": 79471,
         "prevalencia_risco": 0.3384882535767764,
-        "acuracia": 0.6607441708296108,
-        "acuracia_balanceada": 0.5156393831418922,
-        "f1_macro": 0.4535404119792673,
-        "recall_risco": 0.06643122676579925,
-        "precisao_risco": 0.49160935350756535,
-        "recall_alfabetizado": 0.9648475395179852,
-        "roc_auc": 0.6236010259518743,
-        "average_precision_risco": 0.4257067035806727,
-        "brier": 0.2160725106408113,
-        "log_loss": 0.6217643594426967
+        "acuracia": 0.6598885127908294,
+        "acuracia_balanceada": 0.5162361073878562,
+        "f1_macro": 0.456783310497072,
+        "recall_risco": 0.07152416356877324,
+        "precisao_risco": 0.48378174503394517,
+        "recall_alfabetizado": 0.9609480512069392,
+        "roc_auc": 0.6208395320076605,
+        "average_precision_risco": 0.4224639379511003,
+        "brier": 0.21618062954329928,
+        "log_loss": 0.6220024571622416
       },
       {
         "grupo": "PI",
         "amostra_pequena": false,
         "n": 32681,
         "prevalencia_risco": 0.22838958416205135,
-        "acuracia": 0.7460604020684801,
-        "acuracia_balanceada": 0.5516846861418663,
-        "f1_macro": 0.5526743728072991,
-        "recall_risco": 0.19386387995712753,
-        "precisao_risco": 0.3880396889246447,
-        "recall_alfabetizado": 0.909505492326605,
-        "roc_auc": 0.6211299160160121,
-        "average_precision_risco": 0.3182714943754147,
-        "brier": 0.18546683785538762,
-        "log_loss": 0.5557648348295692
+        "acuracia": 0.7513233989168018,
+        "acuracia_balanceada": 0.5424089588332545,
+        "f1_macro": 0.5383276959190979,
+        "recall_risco": 0.15782422293676313,
+        "precisao_risco": 0.39019542894998344,
+        "recall_alfabetizado": 0.9269936947297458,
+        "roc_auc": 0.6249623843813831,
+        "average_precision_risco": 0.3189957989648373,
+        "brier": 0.18540233577006598,
+        "log_loss": 0.5556261497761005
       },
       {
         "grupo": "PR",
@@ -1165,10 +1185,10 @@
         "recall_risco": 0.022901998867038927,
         "precisao_risco": 0.3658694246929541,
         "recall_alfabetizado": 0.9900909090909091,
-        "roc_auc": 0.6133680975000471,
-        "average_precision_risco": 0.26985825782531536,
-        "brier": 0.16863028042595812,
-        "log_loss": 0.5207966485671439
+        "roc_auc": 0.6132250256060647,
+        "average_precision_risco": 0.27133513241808144,
+        "brier": 0.1685692029749256,
+        "log_loss": 0.5206808253112428
       },
       {
         "grupo": "RJ",
@@ -1181,42 +1201,42 @@
         "recall_risco": 0.38252423311659817,
         "precisao_risco": 0.5561064718162839,
         "recall_alfabetizado": 0.8018457635455228,
-        "roc_auc": 0.6227807562189993,
-        "average_precision_risco": 0.5024127994807079,
-        "brier": 0.22781801850158118,
-        "log_loss": 0.6478356779366762
+        "roc_auc": 0.621832149903766,
+        "average_precision_risco": 0.5023041444318248,
+        "brier": 0.22766672609880179,
+        "log_loss": 0.647511004040683
       },
       {
         "grupo": "RN",
         "amostra_pequena": false,
         "n": 26161,
         "prevalencia_risco": 0.508008103665762,
-        "acuracia": 0.5482588586063224,
-        "acuracia_balanceada": 0.5423976556393159,
-        "f1_macro": 0.47450185124776506,
-        "recall_risco": 0.908352144469526,
-        "precisao_risco": 0.5324629498941426,
-        "recall_alfabetizado": 0.17644316680910574,
-        "roc_auc": 0.5852888438197197,
-        "average_precision_risco": 0.5679584270754582,
-        "brier": 0.2507484517145913,
-        "log_loss": 0.6951262083815976
+        "acuracia": 0.5476090363518215,
+        "acuracia_balanceada": 0.5417115365829319,
+        "f1_macro": 0.4727062905307773,
+        "recall_risco": 0.9099322799097066,
+        "precisao_risco": 0.5320047512207998,
+        "recall_alfabetizado": 0.17349079325615727,
+        "roc_auc": 0.5877666932720527,
+        "average_precision_risco": 0.571618516281841,
+        "brier": 0.2505429799839909,
+        "log_loss": 0.694678668930408
       },
       {
         "grupo": "RO",
         "amostra_pequena": false,
         "n": 20901,
         "prevalencia_risco": 0.23965360509066552,
-        "acuracia": 0.6780058370412899,
-        "acuracia_balanceada": 0.5941900162390807,
-        "f1_macro": 0.5865303046496559,
-        "recall_risco": 0.43322020363345976,
-        "precisao_risco": 0.3580267282626629,
-        "recall_alfabetizado": 0.7551598288447018,
-        "roc_auc": 0.6136643382460275,
-        "average_precision_risco": 0.31835238936192806,
-        "brier": 0.19811214659851084,
-        "log_loss": 0.5852987780252573
+        "acuracia": 0.687622601789388,
+        "acuracia_balanceada": 0.5929262200930346,
+        "f1_macro": 0.5886052698541124,
+        "recall_risco": 0.41106009183469755,
+        "precisao_risco": 0.36520042568286626,
+        "recall_alfabetizado": 0.7747923483513718,
+        "roc_auc": 0.6143179440359983,
+        "average_precision_risco": 0.3186800493223377,
+        "brier": 0.19823931707349537,
+        "log_loss": 0.5856667388957328
       },
       {
         "grupo": "RR",
@@ -1229,58 +1249,58 @@
         "recall_risco": 0.9023476523476524,
         "precisao_risco": 0.4181712962962963,
         "recall_alfabetizado": 0.05258198266113833,
-        "roc_auc": 0.4765096616538381,
-        "average_precision_risco": 0.42370662077455956,
-        "brier": 0.25559646891908366,
-        "log_loss": 0.7043719857488393
+        "roc_auc": 0.4969711074827924,
+        "average_precision_risco": 0.435739339905344,
+        "brier": 0.2556286875739189,
+        "log_loss": 0.7044335758844855
       },
       {
         "grupo": "RS",
         "amostra_pequena": false,
         "n": 93839,
         "prevalencia_risco": 0.46316563475740363,
-        "acuracia": 0.5028293140378733,
-        "acuracia_balanceada": 0.5329607722245397,
-        "f1_macro": 0.4240941786608269,
-        "recall_risco": 0.9419736327450935,
-        "precisao_risco": 0.4812455185546531,
-        "recall_alfabetizado": 0.12394791170398603,
-        "roc_auc": 0.6372789703819199,
-        "average_precision_risco": 0.5842508367927621,
-        "brier": 0.2730501275732176,
-        "log_loss": 0.7450196775263315
+        "acuracia": 0.5033514849902493,
+        "acuracia_balanceada": 0.5333839678620479,
+        "f1_macro": 0.4253744542682491,
+        "recall_risco": 0.9410533097117089,
+        "precisao_risco": 0.48150546242230174,
+        "recall_alfabetizado": 0.12571462601238684,
+        "roc_auc": 0.6373590419204109,
+        "average_precision_risco": 0.5830989277997481,
+        "brier": 0.2725525198842615,
+        "log_loss": 0.7437841918108165
       },
       {
         "grupo": "SC",
         "amostra_pequena": false,
         "n": 84644,
         "prevalencia_risco": 0.3612541940361987,
-        "acuracia": 0.6243915693965314,
-        "acuracia_balanceada": 0.538375758557725,
-        "f1_macro": 0.5239305775460027,
-        "recall_risco": 0.2283995029105893,
-        "precisao_risco": 0.4599881446354475,
-        "recall_alfabetizado": 0.8483520142048607,
-        "roc_auc": 0.5904082554269994,
-        "average_precision_risco": 0.4292444537024499,
-        "brier": 0.22836879758714348,
-        "log_loss": 0.6485730494774529
+        "acuracia": 0.6230565663248429,
+        "acuracia_balanceada": 0.5389219613965085,
+        "f1_macro": 0.5258713586100021,
+        "recall_risco": 0.23572503106808818,
+        "precisao_risco": 0.4578252032520325,
+        "recall_alfabetizado": 0.8421188917249288,
+        "roc_auc": 0.5906708800836603,
+        "average_precision_risco": 0.4290690017655897,
+        "brier": 0.22845854724339165,
+        "log_loss": 0.6487713915922942
       },
       {
         "grupo": "SE",
         "amostra_pequena": false,
         "n": 19041,
         "prevalencia_risco": 0.5003938868756893,
-        "acuracia": 0.5499711149624494,
-        "acuracia_balanceada": 0.549704189759155,
-        "f1_macro": 0.4914337657369836,
-        "recall_risco": 0.8885390428211587,
-        "precisao_risco": 0.5300194077505791,
-        "recall_alfabetizado": 0.21086933669715127,
-        "roc_auc": 0.6108518157088144,
-        "average_precision_risco": 0.5859164201400057,
-        "brier": 0.24765002076223172,
-        "log_loss": 0.6887036384949591
+        "acuracia": 0.5506013339635524,
+        "acuracia_balanceada": 0.550336229542445,
+        "f1_macro": 0.49304118885000026,
+        "recall_risco": 0.8868597816960537,
+        "precisao_risco": 0.5304790005650072,
+        "recall_alfabetizado": 0.21381267738883633,
+        "roc_auc": 0.6105282494686884,
+        "average_precision_risco": 0.5857904825854089,
+        "brier": 0.24741150520295233,
+        "log_loss": 0.688233181936682
       },
       {
         "grupo": "SP",
@@ -1293,26 +1313,26 @@
         "recall_risco": 0.004858531008859674,
         "precisao_risco": 0.5499640546369519,
         "recall_alfabetizado": 0.9974488652340646,
-        "roc_auc": 0.5825629023175429,
-        "average_precision_risco": 0.4543291460421122,
-        "brier": 0.23876762658285186,
-        "log_loss": 0.6716613739691368
+        "roc_auc": 0.5824783078296683,
+        "average_precision_risco": 0.4547796692093974,
+        "brier": 0.23919221505616234,
+        "log_loss": 0.6726854870405011
       },
       {
         "grupo": "TO",
         "amostra_pequena": false,
         "n": 18519,
         "prevalencia_risco": 0.3861439602570333,
-        "acuracia": 0.5908526378314164,
-        "acuracia_balanceada": 0.5290913555590961,
-        "f1_macro": 0.5166979368111106,
-        "recall_risco": 0.25786603272269615,
-        "precisao_risco": 0.4482255712202236,
-        "recall_alfabetizado": 0.8003166783954961,
-        "roc_auc": 0.5744415774883627,
-        "average_precision_risco": 0.45466145835322724,
-        "brier": 0.23550196803253715,
-        "log_loss": 0.6633255229499487
+        "acuracia": 0.5919326097521465,
+        "acuracia_balanceada": 0.5287000959300486,
+        "f1_macro": 0.5150911303159521,
+        "recall_risco": 0.25101384421759193,
+        "precisao_risco": 0.4491991991991992,
+        "recall_alfabetizado": 0.8063863476425053,
+        "roc_auc": 0.5745380684738609,
+        "average_precision_risco": 0.45563972268322056,
+        "brier": 0.23563178795560227,
+        "log_loss": 0.6635871787886888
       }
     ],
     "regiao_brasil": [
@@ -1327,42 +1347,42 @@
         "recall_risco": 0.04475616484869063,
         "precisao_risco": 0.4981105337742088,
         "recall_alfabetizado": 0.9841965135649691,
-        "roc_auc": 0.6229812826223902,
-        "average_precision_risco": 0.34794092398473886,
-        "brier": 0.1874732354096161,
-        "log_loss": 0.5591995738083695
+        "roc_auc": 0.6219022437038779,
+        "average_precision_risco": 0.3480559809747869,
+        "brier": 0.18749443802934226,
+        "log_loss": 0.5591977734701792
       },
       {
         "grupo": "Nordeste",
         "amostra_pequena": false,
         "n": 502869,
         "prevalencia_risco": 0.3328341973754596,
-        "acuracia": 0.6385181826678519,
-        "acuracia_balanceada": 0.6110176216111673,
-        "f1_macro": 0.6061843688601624,
-        "recall_risco": 0.5287622780393375,
-        "precisao_risco": 0.4623679508479358,
-        "recall_alfabetizado": 0.6932729651829972,
-        "roc_auc": 0.6688896833111166,
-        "average_precision_risco": 0.4654542780532394,
-        "brier": 0.21626219508639613,
-        "log_loss": 0.6177060700320687
+        "acuracia": 0.6391704400151929,
+        "acuracia_balanceada": 0.6102893622604059,
+        "f1_macro": 0.6059324851676628,
+        "recall_risco": 0.523904834739383,
+        "precisao_risco": 0.4628454700926884,
+        "recall_alfabetizado": 0.6966738897814287,
+        "roc_auc": 0.6684387645279279,
+        "average_precision_risco": 0.4647658409182257,
+        "brier": 0.21622034596385847,
+        "log_loss": 0.6176405276769764
       },
       {
         "grupo": "Norte",
         "amostra_pequena": false,
         "n": 211073,
         "prevalencia_risco": 0.39257981835668226,
-        "acuracia": 0.5464318032150014,
-        "acuracia_balanceada": 0.5652341899107468,
-        "f1_macro": 0.5459094288655322,
-        "recall_risco": 0.6527521330388714,
-        "precisao_risco": 0.4468281963800382,
-        "recall_alfabetizado": 0.47771624678262226,
-        "roc_auc": 0.5997271092076909,
-        "average_precision_risco": 0.4755846371617871,
-        "brier": 0.24147445482087188,
-        "log_loss": 0.6755927024506245
+        "acuracia": 0.5504920098733613,
+        "acuracia_balanceada": 0.5631448126907386,
+        "f1_macro": 0.5487522471804229,
+        "recall_risco": 0.6220387869133389,
+        "precisao_risco": 0.44780372532666113,
+        "recall_alfabetizado": 0.5042508384681382,
+        "roc_auc": 0.5998627402580483,
+        "average_precision_risco": 0.47583213623587095,
+        "brier": 0.24127387832175953,
+        "log_loss": 0.675187024510441
       },
       {
         "grupo": "Sudeste",
@@ -1375,26 +1395,26 @@
         "recall_risco": 0.07494257345733975,
         "precisao_risco": 0.5559194094466338,
         "recall_alfabetizado": 0.9680644697767985,
-        "roc_auc": 0.6134582179897016,
-        "average_precision_risco": 0.44559048708449794,
-        "brier": 0.2204741565270603,
-        "log_loss": 0.6322408221628101
+        "roc_auc": 0.6132637963423324,
+        "average_precision_risco": 0.4455836604975996,
+        "brier": 0.22064484942385162,
+        "log_loss": 0.632654621352676
       },
       {
         "grupo": "Sul",
         "amostra_pequena": false,
         "n": 302197,
         "prevalencia_risco": 0.326790140206554,
-        "acuracia": 0.6572566901723048,
-        "acuracia_balanceada": 0.6144865609257271,
-        "f1_macro": 0.61354025588767,
-        "recall_risco": 0.4910232393296542,
-        "precisao_risco": 0.47632191585709655,
-        "recall_alfabetizado": 0.7379498825217998,
-        "roc_auc": 0.67122195732023,
-        "average_precision_risco": 0.4918873266202707,
-        "brier": 0.21778748940898265,
-        "log_loss": 0.6262125543939834
+        "acuracia": 0.657044907791937,
+        "acuracia_balanceada": 0.6148086489985403,
+        "f1_macro": 0.6137193953163735,
+        "recall_risco": 0.4928864361298162,
+        "precisao_risco": 0.4761089646402895,
+        "recall_alfabetizado": 0.7367308618672643,
+        "roc_auc": 0.6717356289050713,
+        "average_precision_risco": 0.4916174630227478,
+        "brier": 0.2176331054349607,
+        "log_loss": 0.6258370469191569
       }
     ],
     "rede": [
@@ -1403,32 +1423,32 @@
         "amostra_pequena": false,
         "n": 243198,
         "prevalencia_risco": 0.35327181966956966,
-        "acuracia": 0.6414320841454288,
-        "acuracia_balanceada": 0.53877495745995,
-        "f1_macro": 0.516760988002454,
-        "recall_risco": 0.18895419891753476,
-        "precisao_risco": 0.48092191017893116,
-        "recall_alfabetizado": 0.8885957160023652,
-        "roc_auc": 0.5864079174793071,
-        "average_precision_risco": 0.43720641557556045,
-        "brier": 0.22917868439570097,
-        "log_loss": 0.6521041482066173
+        "acuracia": 0.6417199154598311,
+        "acuracia_balanceada": 0.5391400852878967,
+        "f1_macro": 0.5172521481487944,
+        "recall_risco": 0.18958272711400803,
+        "precisao_risco": 0.4819790495354205,
+        "recall_alfabetizado": 0.8886974434617855,
+        "roc_auc": 0.585721798238026,
+        "average_precision_risco": 0.43690675593225053,
+        "brier": 0.22939670379888605,
+        "log_loss": 0.6526507685595428
       },
       {
         "grupo": "Municipal",
         "amostra_pequena": false,
         "n": 1722897,
         "prevalencia_risco": 0.33518834846192197,
-        "acuracia": 0.6492576166770271,
-        "acuracia_balanceada": 0.5728645819673913,
-        "f1_macro": 0.5738792604397938,
-        "recall_risco": 0.3411059836015896,
-        "precisao_risco": 0.4681561510746913,
-        "recall_alfabetizado": 0.804623180333193,
-        "roc_auc": 0.6359805008382253,
-        "average_precision_risco": 0.448665922099779,
-        "brier": 0.2166394521601438,
-        "log_loss": 0.6217501320245883
+        "acuracia": 0.6498676357321419,
+        "acuracia_balanceada": 0.5719376557215973,
+        "f1_macro": 0.5727078538160504,
+        "recall_risco": 0.3355163248166651,
+        "precisao_risco": 0.46884928556737204,
+        "recall_alfabetizado": 0.8083589866265294,
+        "roc_auc": 0.6355838771299648,
+        "average_precision_risco": 0.448350619709542,
+        "brier": 0.21662317041701074,
+        "log_loss": 0.621722633503153
       }
     ],
     "uf_nova": [
@@ -1437,16 +1457,16 @@
         "amostra_pequena": false,
         "n": 1956785,
         "prevalencia_risco": 0.3369843902114949,
-        "acuracia": 0.6493850882953416,
-        "acuracia_balanceada": 0.5678764675937061,
-        "f1_macro": 0.5674871619128572,
-        "recall_risco": 0.3178739653566998,
-        "precisao_risco": 0.4700911439644036,
-        "recall_alfabetizado": 0.8178789698307125,
-        "roc_auc": 0.6282886113282711,
-        "average_precision_risco": 0.4469936894555049,
-        "brier": 0.21801253421831449,
-        "log_loss": 0.6251295664383153
+        "acuracia": 0.6499579667669162,
+        "acuracia_balanceada": 0.567125016435232,
+        "f1_macro": 0.5664092776929432,
+        "recall_risco": 0.3130605423669181,
+        "precisao_risco": 0.47086006765217747,
+        "recall_alfabetizado": 0.821189490503546,
+        "roc_auc": 0.627764824315377,
+        "average_precision_risco": 0.4466383741653305,
+        "brier": 0.21802514171517318,
+        "log_loss": 0.6251729981144285
       },
       {
         "grupo": "True",
@@ -1459,10 +1479,10 @@
         "recall_risco": 0.9023476523476524,
         "precisao_risco": 0.4181712962962963,
         "recall_alfabetizado": 0.05258198266113833,
-        "roc_auc": 0.4765096616538381,
-        "average_precision_risco": 0.42370662077455956,
-        "brier": 0.25559646891908366,
-        "log_loss": 0.7043719857488393
+        "roc_auc": 0.4969711074827924,
+        "average_precision_risco": 0.435739339905344,
+        "brier": 0.2556286875739189,
+        "log_loss": 0.7044335758844855
       }
     ],
     "municipio_novo": [
@@ -1471,16 +1491,16 @@
         "amostra_pequena": false,
         "n": 1951607,
         "prevalencia_risco": 0.336735828473663,
-        "acuracia": 0.6497737505553116,
-        "acuracia_balanceada": 0.5675625683685928,
-        "f1_macro": 0.5670578461603788,
-        "recall_risco": 0.3157890732467406,
-        "precisao_risco": 0.47017576452356896,
-        "recall_alfabetizado": 0.8193360634904449,
-        "roc_auc": 0.6282575318482477,
-        "average_precision_risco": 0.44679975765669283,
-        "brier": 0.2178823130593979,
-        "log_loss": 0.6248312674008591
+        "acuracia": 0.650348148986963,
+        "acuracia_balanceada": 0.5668067202691147,
+        "f1_macro": 0.5659649589720848,
+        "recall_risco": 0.3109593168344553,
+        "precisao_risco": 0.4709541225626099,
+        "recall_alfabetizado": 0.8226541237037741,
+        "roc_auc": 0.6277306209276361,
+        "average_precision_risco": 0.4464506422037708,
+        "brier": 0.21789018409393826,
+        "log_loss": 0.6248664995506832
       },
       {
         "grupo": "True",
@@ -1493,10 +1513,10 @@
         "recall_risco": 0.9130574270131536,
         "precisao_risco": 0.43311520316542385,
         "recall_alfabetizado": 0.09740731766416283,
-        "roc_auc": 0.524876992588305,
-        "average_precision_risco": 0.4458453453380519,
-        "brier": 0.25970544955195596,
-        "log_loss": 0.7162331979522305
+        "roc_auc": 0.5327172526533446,
+        "average_precision_risco": 0.4489140722957738,
+        "brier": 0.26036868466451096,
+        "log_loss": 0.717392816000537
       }
     ],
     "tem_historico": [
@@ -1511,26 +1531,26 @@
         "recall_risco": 0.9130574270131536,
         "precisao_risco": 0.43311520316542385,
         "recall_alfabetizado": 0.09740731766416283,
-        "roc_auc": 0.524876992588305,
-        "average_precision_risco": 0.4458453453380519,
-        "brier": 0.25970544955195596,
-        "log_loss": 0.7162331979522305
+        "roc_auc": 0.5327172526533446,
+        "average_precision_risco": 0.4489140722957738,
+        "brier": 0.26036868466451096,
+        "log_loss": 0.717392816000537
       },
       {
         "grupo": "True",
         "amostra_pequena": false,
         "n": 1951607,
         "prevalencia_risco": 0.336735828473663,
-        "acuracia": 0.6497737505553116,
-        "acuracia_balanceada": 0.5675625683685928,
-        "f1_macro": 0.5670578461603788,
-        "recall_risco": 0.3157890732467406,
-        "precisao_risco": 0.47017576452356896,
-        "recall_alfabetizado": 0.8193360634904449,
-        "roc_auc": 0.6282575318482477,
-        "average_precision_risco": 0.44679975765669283,
-        "brier": 0.2178823130593979,
-        "log_loss": 0.6248312674008591
+        "acuracia": 0.650348148986963,
+        "acuracia_balanceada": 0.5668067202691147,
+        "f1_macro": 0.5659649589720848,
+        "recall_risco": 0.3109593168344553,
+        "precisao_risco": 0.4709541225626099,
+        "recall_alfabetizado": 0.8226541237037741,
+        "roc_auc": 0.6277306209276361,
+        "average_precision_risco": 0.4464506422037708,
+        "brier": 0.21789018409393826,
+        "log_loss": 0.6248664995506832
       }
     ]
   },
@@ -1539,389 +1559,409 @@
     "repeticoes": 300,
     "escolas": 43538,
     "f1_macro_ic95": [
-      0.5658352246322879,
-      0.5700461151319464
+      0.5646582386036673,
+      0.5689723245070265
     ],
     "recall_risco_ic95": [
-      0.31527883635551884,
-      0.3281129975456718
+      0.31025936100533624,
+      0.3231767022080469
     ]
   },
   "permutacao": [
     {
       "variavel": "taxa_alfabetizacao_municipio_anterior",
-      "queda_f1_macro": 0.06223808196319053,
-      "desvio": 0.002585175059207271
+      "queda_f1_macro": 0.06133758640825493,
+      "desvio": 0.003198124868827901
     },
     {
       "variavel": "taxa_presenca_municipio_anterior",
-      "queda_f1_macro": 0.011965328708037282,
-      "desvio": 0.002080289637897151
+      "queda_f1_macro": 0.012312603011673006,
+      "desvio": 0.0024948725158077277
     },
     {
       "variavel": "sigla_uf",
-      "queda_f1_macro": 0.010474948199410417,
-      "desvio": 0.004668863186884848
+      "queda_f1_macro": 0.010424265873782135,
+      "desvio": 0.004470633468802619
     },
     {
       "variavel": "pct_escolas_biblioteca_sala_leitura_censo",
-      "queda_f1_macro": 0.007801777130808385,
-      "desvio": 0.0016340242010026611
+      "queda_f1_macro": 0.008484956789598286,
+      "desvio": 0.0017237108073753658
+    },
+    {
+      "variavel": "idhm_renda_municipio",
+      "queda_f1_macro": 0.006909211947626148,
+      "desvio": 0.0015469415905097047
     },
     {
       "variavel": "regiao_brasil",
-      "queda_f1_macro": 0.006415460773544513,
-      "desvio": 0.003213563242894979
+      "queda_f1_macro": 0.00678737511846208,
+      "desvio": 0.002916193676388025
     },
     {
       "variavel": "total_pagamentos_bolsa_familia_anterior",
-      "queda_f1_macro": 0.005563752980747095,
-      "desvio": 0.0021233648061823574
+      "queda_f1_macro": 0.005600997903774751,
+      "desvio": 0.0021983351901666724
     },
     {
       "variavel": "valor_total_bolsa_familia_anterior",
-      "queda_f1_macro": 0.005532899071047148,
-      "desvio": 0.0018758973478521402
-    },
-    {
-      "variavel": "pct_escolas_esgoto_fossa_censo",
-      "queda_f1_macro": 0.005043381878336373,
-      "desvio": 0.0011026526438977972
-    },
-    {
-      "variavel": "pct_escolas_esgoto_fossa_comum_censo",
-      "queda_f1_macro": 0.004921513985175596,
-      "desvio": 0.0013742074691905617
-    },
-    {
-      "variavel": "pct_escolas_biblioteca_censo",
-      "queda_f1_macro": 0.003966676956762139,
-      "desvio": 0.0021998606572199205
-    },
-    {
-      "variavel": "pct_escolas_agua_fonte_rio_censo",
-      "queda_f1_macro": 0.0038827610068232986,
-      "desvio": 0.0006262736383532676
-    },
-    {
-      "variavel": "pct_escolas_quadra_esportes_censo",
-      "queda_f1_macro": 0.0033813609356027285,
-      "desvio": 0.0008684059809541117
-    },
-    {
-      "variavel": "pct_escolas_agua_poco_artesiano_censo",
-      "queda_f1_macro": 0.0032164757508320596,
-      "desvio": 0.0003890249541356428
-    },
-    {
-      "variavel": "pct_escolas_acesso_internet_computador_censo",
-      "queda_f1_macro": 0.0028327628251596736,
-      "desvio": 0.0012536383374770752
-    },
-    {
-      "variavel": "pct_escolas_material_ped_multimidia_censo",
-      "queda_f1_macro": 0.0024298175316321167,
-      "desvio": 0.0006528831438279856
+      "queda_f1_macro": 0.005561133474880764,
+      "desvio": 0.002127172496657249
     },
     {
       "variavel": "populacao_municipio_ibge",
-      "queda_f1_macro": 0.002300663019181548,
-      "desvio": 0.0013362584575946452
+      "queda_f1_macro": 0.004138036288264524,
+      "desvio": 0.0025829194434499416
     },
     {
-      "variavel": "pct_escolas_sala_leitura_censo",
-      "queda_f1_macro": 0.0022458956486494765,
-      "desvio": 0.0015921466964308796
+      "variavel": "pct_escolas_esgoto_fossa_censo",
+      "queda_f1_macro": 0.0040552414280460745,
+      "desvio": 0.0009502255410820151
     },
     {
-      "variavel": "pct_escolas_acessibilidade_elevador_censo",
-      "queda_f1_macro": 0.0020054334136512474,
-      "desvio": 0.0012528123219940734
+      "variavel": "pct_escolas_quadra_esportes_censo",
+      "queda_f1_macro": 0.0035536475795297172,
+      "desvio": 0.0017143266820447676
     },
     {
-      "variavel": "pct_escolas_internet_aprendizagem_censo",
-      "queda_f1_macro": 0.0019309766551250719,
-      "desvio": 0.0006455286055204778
+      "variavel": "pct_escolas_esgoto_fossa_comum_censo",
+      "queda_f1_macro": 0.0031644008610767884,
+      "desvio": 0.001320731050521563
     },
     {
-      "variavel": "valor_medio_pagamento_bolsa_familia_anterior",
-      "queda_f1_macro": 0.001590276105396593,
-      "desvio": 0.0007938060763548831
+      "variavel": "pct_escolas_biblioteca_censo",
+      "queda_f1_macro": 0.002808737725685595,
+      "desvio": 0.0020056561351713535
     },
     {
-      "variavel": "pct_escolas_com_prof_psicologo_censo",
-      "queda_f1_macro": 0.0011621326982013125,
-      "desvio": 0.0011252894154297223
+      "variavel": "pct_escolas_agua_fonte_rio_censo",
+      "queda_f1_macro": 0.0022223646590804557,
+      "desvio": 0.0003185815857080175
     },
     {
-      "variavel": "salas_acessiveis_censo",
-      "queda_f1_macro": 0.0010456671461051225,
-      "desvio": 0.0006884033614620871
-    },
-    {
-      "variavel": "pct_escolas_com_prof_gestao_censo",
-      "queda_f1_macro": 0.0009833527899967497,
-      "desvio": 0.0002635471264507729
-    },
-    {
-      "variavel": "pct_escolas_agua_potavel_censo",
-      "queda_f1_macro": 0.0008917504344676975,
-      "desvio": 0.0005375896252882309
-    },
-    {
-      "variavel": "pct_escolas_com_prof_administrativos_censo",
-      "queda_f1_macro": 0.00088333615180336,
-      "desvio": 0.0009594296097105837
-    },
-    {
-      "variavel": "pct_escolas_acessibilidade_vao_livre_censo",
-      "queda_f1_macro": 0.0008761005132114308,
-      "desvio": 0.00032198580201392955
-    },
-    {
-      "variavel": "salas_utilizadas_censo",
-      "queda_f1_macro": 0.0008381181056499765,
-      "desvio": 0.0009447601204657253
-    },
-    {
-      "variavel": "pct_escolas_agua_cacimba_censo",
-      "queda_f1_macro": 0.0007999223594510107,
-      "desvio": 0.00044297134359822296
-    },
-    {
-      "variavel": "pct_escolas_agua_inexistente_censo",
-      "queda_f1_macro": 0.0007536971863196573,
-      "desvio": 6.116536207008138e-05
-    },
-    {
-      "variavel": "escolas_anos_iniciais_censo",
-      "queda_f1_macro": 0.0007433735829961652,
-      "desvio": 0.0010854613038756174
-    },
-    {
-      "variavel": "pct_escolas_internet_censo",
-      "queda_f1_macro": 0.0006857765037379338,
-      "desvio": 0.0005143336134017479
-    },
-    {
-      "variavel": "pct_escolas_quadra_esportes_descoberta_censo",
-      "queda_f1_macro": 0.000654550827607192,
-      "desvio": 0.0011771467280850502
-    },
-    {
-      "variavel": "pct_escolas_internet_administrativo_censo",
-      "queda_f1_macro": 0.0005928636497082529,
-      "desvio": 0.0003782615822438056
-    },
-    {
-      "variavel": "pct_escolas_com_prof_assist_social_censo",
-      "queda_f1_macro": 0.000547241394068787,
-      "desvio": 0.0006812569442647639
-    },
-    {
-      "variavel": "pct_escolas_acessibilidade_rampas_censo",
-      "queda_f1_macro": 0.0005403630965965078,
-      "desvio": 0.0009778373589120373
-    },
-    {
-      "variavel": "salas_utilizadas_fora_censo",
-      "queda_f1_macro": 0.0005400517382107451,
-      "desvio": 0.0011566829733367495
-    },
-    {
-      "variavel": "pct_escolas_quadra_esportes_coberta_censo",
-      "queda_f1_macro": 0.0005392474020635474,
-      "desvio": 0.0003909225473084395
-    },
-    {
-      "variavel": "pct_escolas_acessibilidade_sinal_sonoro_censo",
-      "queda_f1_macro": 0.0005165995062927031,
-      "desvio": 0.0003907266730460008
-    },
-    {
-      "variavel": "pct_escolas_acessibilidade_pisos_tateis_censo",
-      "queda_f1_macro": 0.00045596032382209104,
-      "desvio": 0.0004187825649206209
-    },
-    {
-      "variavel": "pct_escolas_com_prof_alimentacao_censo",
-      "queda_f1_macro": 0.00038816235608178927,
-      "desvio": 0.00016255974215384204
-    },
-    {
-      "variavel": "pct_escolas_com_prof_pedagogia_censo",
-      "queda_f1_macro": 0.0003807793235255152,
-      "desvio": 0.0003227081319297724
-    },
-    {
-      "variavel": "pct_escolas_acessibilidade_corrimao_censo",
-      "queda_f1_macro": 0.0003718583229965544,
-      "desvio": 0.0004745878195488563
+      "variavel": "pct_escolas_material_ped_multimidia_censo",
+      "queda_f1_macro": 0.002203870026808863,
+      "desvio": 0.0004064039051105775
     },
     {
       "variavel": "matriculas_anos_iniciais_censo",
-      "queda_f1_macro": 0.00037166103458115,
-      "desvio": 0.000895472662403867
-    },
-    {
-      "variavel": "pct_escolas_com_prof_bibliotecario_censo",
-      "queda_f1_macro": 0.00034180630874127706,
-      "desvio": 0.0002300164675252247
+      "queda_f1_macro": 0.001807044213776532,
+      "desvio": 0.0010380268824723296
     },
     {
       "variavel": "vinculos_docentes_anos_iniciais_censo",
-      "queda_f1_macro": 0.000295491755347066,
-      "desvio": 0.000912001939087397
+      "queda_f1_macro": 0.0017435365552489924,
+      "desvio": 0.0010881890725234081
+    },
+    {
+      "variavel": "salas_utilizadas_fora_censo",
+      "queda_f1_macro": 0.00152941853629045,
+      "desvio": 0.0007606914080632361
+    },
+    {
+      "variavel": "pct_escolas_acesso_internet_computador_censo",
+      "queda_f1_macro": 0.0014687211691019719,
+      "desvio": 0.001459962634338285
+    },
+    {
+      "variavel": "pct_escolas_acessibilidade_elevador_censo",
+      "queda_f1_macro": 0.0014385990775489742,
+      "desvio": 0.00043019895272765666
+    },
+    {
+      "variavel": "pct_escolas_com_prof_psicologo_censo",
+      "queda_f1_macro": 0.0014226840898179604,
+      "desvio": 0.0010979178542599194
     },
     {
       "variavel": "turmas_anos_iniciais_censo",
-      "queda_f1_macro": 0.00029523584795074773,
-      "desvio": 0.0005494451457430476
+      "queda_f1_macro": 0.0013796789709368928,
+      "desvio": 0.0010810419148175562
     },
     {
-      "variavel": "pct_escolas_com_professores_censo",
-      "queda_f1_macro": 0.0002890670641214399,
-      "desvio": 0.0003966551298285558
-    },
-    {
-      "variavel": "pct_escolas_energia_gerador_fossil_censo",
-      "queda_f1_macro": 0.00028467736891144566,
-      "desvio": 0.0004391070521077807
-    },
-    {
-      "variavel": "pct_escolas_internet_comunidade_censo",
-      "queda_f1_macro": 0.00021300011696054889,
-      "desvio": 0.00012660050966619612
-    },
-    {
-      "variavel": "pct_escolas_material_ped_infantil_censo",
-      "queda_f1_macro": 0.00018143727734072358,
-      "desvio": 0.00024005757213850162
-    },
-    {
-      "variavel": "alunos_avaliados_municipio_anterior",
-      "queda_f1_macro": 0.00010288556828261797,
-      "desvio": 0.00033296398065803387
+      "variavel": "pct_escolas_com_prof_gestao_censo",
+      "queda_f1_macro": 0.0012056737234203752,
+      "desvio": 0.0007461345830584716
     },
     {
       "variavel": "pct_escolas_internet_alunos_censo",
-      "queda_f1_macro": 6.63791848237949e-05,
-      "desvio": 0.00042859013541252566
+      "queda_f1_macro": 0.0011246083563695385,
+      "desvio": 0.0007041136887662676
+    },
+    {
+      "variavel": "alunos_avaliados_municipio_anterior",
+      "queda_f1_macro": 0.0010001768315818227,
+      "desvio": 0.0009381460133295349
+    },
+    {
+      "variavel": "pct_escolas_agua_poco_artesiano_censo",
+      "queda_f1_macro": 0.000980976424848312,
+      "desvio": 0.00036608388715803606
+    },
+    {
+      "variavel": "salas_acessiveis_censo",
+      "queda_f1_macro": 0.0009565341768084546,
+      "desvio": 0.0008355293525054752
+    },
+    {
+      "variavel": "pct_escolas_acessibilidade_pisos_tateis_censo",
+      "queda_f1_macro": 0.0008926227498178285,
+      "desvio": 0.00046476879630429947
     },
     {
       "variavel": "pct_escolas_lab_informatica_censo",
-      "queda_f1_macro": 5.992670785557319e-05,
-      "desvio": 0.00032073781492969597
+      "queda_f1_macro": 0.0008421164455576502,
+      "desvio": 0.0004093258874561201
     },
     {
-      "variavel": "pct_escolas_com_prof_saude_censo",
-      "queda_f1_macro": 4.522091039558251e-05,
-      "desvio": 0.00026155338455505987
+      "variavel": "pct_escolas_acessibilidade_rampas_censo",
+      "queda_f1_macro": 0.0007262364739375693,
+      "desvio": 0.00046717240756227643
     },
     {
-      "variavel": "pct_escolas_rurais_censo",
-      "queda_f1_macro": 3.953987161986472e-05,
-      "desvio": 0.0004660728653928531
+      "variavel": "pct_escolas_com_prof_alimentacao_censo",
+      "queda_f1_macro": 0.0006972930976941738,
+      "desvio": 0.00020373964099359727
     },
     {
-      "variavel": "pct_escolas_com_prof_monitores_censo",
-      "queda_f1_macro": 1.3359212478047943e-05,
-      "desvio": 0.00046895984017101004
+      "variavel": "pct_escolas_internet_aprendizagem_censo",
+      "queda_f1_macro": 0.0006601572425497748,
+      "desvio": 0.0005462955348091409
+    },
+    {
+      "variavel": "pct_escolas_sala_leitura_censo",
+      "queda_f1_macro": 0.0006486654903755662,
+      "desvio": 0.001847495980698519
+    },
+    {
+      "variavel": "pct_escolas_com_prof_assist_social_censo",
+      "queda_f1_macro": 0.0005875506941679376,
+      "desvio": 0.00039877214028575505
     },
     {
       "variavel": "pct_escolas_acessibilidade_sinal_visual_censo",
-      "queda_f1_macro": 0.0,
-      "desvio": 0.0
-    },
-    {
-      "variavel": "pct_escolas_acessibilidade_sinal_tatil_censo",
-      "queda_f1_macro": 0.0,
-      "desvio": 0.0
-    },
-    {
-      "variavel": "pct_escolas_material_ped_jogos_censo",
-      "queda_f1_macro": -0.00011048761883762915,
-      "desvio": 0.00035042302246652543
-    },
-    {
-      "variavel": "pct_escolas_energia_inexistente_censo",
-      "queda_f1_macro": -0.00011802670745635347,
-      "desvio": 0.00023649969792883892
-    },
-    {
-      "variavel": "pct_escolas_esgoto_rede_publica_censo",
-      "queda_f1_macro": -0.0001886559322871184,
-      "desvio": 0.0008602250116386857
-    },
-    {
-      "variavel": "matriculas_por_turma_censo",
-      "queda_f1_macro": -0.00020875286303552177,
-      "desvio": 0.0007179121230805558
-    },
-    {
-      "variavel": "pct_escolas_esgoto_inexistente_censo",
-      "queda_f1_macro": -0.0002778102021868012,
-      "desvio": 0.000377356680750228
-    },
-    {
-      "variavel": "salas_climatizadas_censo",
-      "queda_f1_macro": -0.00029043472123304606,
-      "desvio": 0.0018691969879880835
-    },
-    {
-      "variavel": "pct_escolas_com_prof_fonoaudiologo_censo",
-      "queda_f1_macro": -0.00031495622742063747,
-      "desvio": 0.00021784768846089267
-    },
-    {
-      "variavel": "pct_escolas_com_prof_nutricionista_censo",
-      "queda_f1_macro": -0.0004288737105093032,
-      "desvio": 0.00015009323047948696
-    },
-    {
-      "variavel": "pct_escolas_energia_renovavel_censo",
-      "queda_f1_macro": -0.0004795499793741609,
-      "desvio": 0.0004838704297801604
-    },
-    {
-      "variavel": "pct_escolas_computador_censo",
-      "queda_f1_macro": -0.0005046610885384606,
-      "desvio": 0.0002878719802357082
-    },
-    {
-      "variavel": "matriculas_por_vinculo_docente_censo",
-      "queda_f1_macro": -0.0007877449677784476,
-      "desvio": 0.0003693958785417398
+      "queda_f1_macro": 0.0005689232992055926,
+      "desvio": 0.00045592514095990866
     },
     {
       "variavel": "pct_escolas_esgoto_fossa_septica_censo",
-      "queda_f1_macro": -0.0008383551469522077,
-      "desvio": 0.0006211324977807744
+      "queda_f1_macro": 0.0005593061003204669,
+      "desvio": 0.0013184443740850925
+    },
+    {
+      "variavel": "pct_escolas_com_prof_monitores_censo",
+      "queda_f1_macro": 0.0005305662195395522,
+      "desvio": 0.0005577416170844823
     },
     {
       "variavel": "pct_escolas_material_ped_cientifico_censo",
-      "queda_f1_macro": -0.0008502095131218468,
-      "desvio": 0.0003020376238479949
+      "queda_f1_macro": 0.00052642420280955,
+      "desvio": 0.0005060534935364049
     },
     {
-      "variavel": "pct_escolas_energia_rede_publica_censo",
-      "queda_f1_macro": -0.0008679858081761749,
-      "desvio": 0.0004968514272351326
+      "variavel": "pct_escolas_com_prof_bibliotecario_censo",
+      "queda_f1_macro": 0.00030854475248465185,
+      "desvio": 0.0004097062987932417
+    },
+    {
+      "variavel": "pct_escolas_rurais_censo",
+      "queda_f1_macro": 0.00030339266394614485,
+      "desvio": 0.001223261373642997
+    },
+    {
+      "variavel": "pct_escolas_com_prof_saude_censo",
+      "queda_f1_macro": 0.0002457753515437755,
+      "desvio": 0.0002957045425921725
+    },
+    {
+      "variavel": "pct_escolas_energia_gerador_fossil_censo",
+      "queda_f1_macro": 0.00023790010498934145,
+      "desvio": 0.0004261976032267889
+    },
+    {
+      "variavel": "pct_escolas_acessibilidade_sinal_tatil_censo",
+      "queda_f1_macro": 0.00023772016470982038,
+      "desvio": 0.0002668519797995727
+    },
+    {
+      "variavel": "pct_escolas_energia_inexistente_censo",
+      "queda_f1_macro": 0.0002233676126164097,
+      "desvio": 0.00020092947399433505
+    },
+    {
+      "variavel": "pct_escolas_agua_inexistente_censo",
+      "queda_f1_macro": 0.00021520354672655007,
+      "desvio": 0.00019324372138747111
+    },
+    {
+      "variavel": "pct_escolas_acessibilidade_vao_livre_censo",
+      "queda_f1_macro": 0.0001847274427605905,
+      "desvio": 0.0002445067161373038
+    },
+    {
+      "variavel": "pct_escolas_com_prof_pedagogia_censo",
+      "queda_f1_macro": 0.00017670387929291653,
+      "desvio": 0.0003045785573287142
+    },
+    {
+      "variavel": "valor_medio_pagamento_bolsa_familia_anterior",
+      "queda_f1_macro": 0.0001722479230771512,
+      "desvio": 0.0012466166806546146
+    },
+    {
+      "variavel": "pct_escolas_com_prof_nutricionista_censo",
+      "queda_f1_macro": 0.0001302617082764801,
+      "desvio": 0.0004245711571100905
+    },
+    {
+      "variavel": "pct_escolas_com_prof_administrativos_censo",
+      "queda_f1_macro": 0.00011429172723280701,
+      "desvio": 0.0002856299060272816
+    },
+    {
+      "variavel": "salas_utilizadas_censo",
+      "queda_f1_macro": 8.504490337475356e-05,
+      "desvio": 0.0002239261013307127
+    },
+    {
+      "variavel": "pct_escolas_internet_administrativo_censo",
+      "queda_f1_macro": 4.819379879918984e-05,
+      "desvio": 0.00041730386482971267
+    },
+    {
+      "variavel": "pct_escolas_quadra_esportes_descoberta_censo",
+      "queda_f1_macro": 3.7642924025660386e-05,
+      "desvio": 0.0006658533594900948
     },
     {
       "variavel": "pct_escolas_com_prof_coordenador_censo",
-      "queda_f1_macro": -0.0012224062526745793,
-      "desvio": 0.00048179650830690996
+      "queda_f1_macro": -1.4173777246861974e-05,
+      "desvio": 0.0004710976316807155
     },
     {
-      "variavel": "rede",
-      "queda_f1_macro": -0.0012586383006124135,
-      "desvio": 0.002165245778206327
+      "variavel": "matriculas_por_turma_censo",
+      "queda_f1_macro": -1.974076942106162e-05,
+      "desvio": 0.0003680216308252787
+    },
+    {
+      "variavel": "pct_escolas_com_professores_censo",
+      "queda_f1_macro": -2.254826103005314e-05,
+      "desvio": 6.691890578533558e-05
+    },
+    {
+      "variavel": "pct_escolas_material_ped_infantil_censo",
+      "queda_f1_macro": -2.905903806689203e-05,
+      "desvio": 0.0002586335564697126
+    },
+    {
+      "variavel": "pct_escolas_energia_renovavel_censo",
+      "queda_f1_macro": -3.9512772515837294e-05,
+      "desvio": 0.00048362093351613693
+    },
+    {
+      "variavel": "pct_escolas_computador_censo",
+      "queda_f1_macro": -5.589629742424052e-05,
+      "desvio": 0.0003814312189477879
+    },
+    {
+      "variavel": "idhm_educacao_municipio",
+      "queda_f1_macro": -8.334587765415069e-05,
+      "desvio": 0.000474747405871398
+    },
+    {
+      "variavel": "pct_escolas_internet_censo",
+      "queda_f1_macro": -0.00011071243185327706,
+      "desvio": 0.00039508972766099586
+    },
+    {
+      "variavel": "escolas_anos_iniciais_censo",
+      "queda_f1_macro": -0.00011075496733286006,
+      "desvio": 0.0017183306816731794
+    },
+    {
+      "variavel": "salas_climatizadas_censo",
+      "queda_f1_macro": -0.00011500206749750496,
+      "desvio": 0.0015064421600020105
+    },
+    {
+      "variavel": "pct_escolas_com_prof_fonoaudiologo_censo",
+      "queda_f1_macro": -0.0001153933330920287,
+      "desvio": 0.0002947744833493831
+    },
+    {
+      "variavel": "pct_escolas_agua_cacimba_censo",
+      "queda_f1_macro": -0.00014601656624468884,
+      "desvio": 0.0002795768171361414
+    },
+    {
+      "variavel": "pct_escolas_acessibilidade_sinal_sonoro_censo",
+      "queda_f1_macro": -0.00017627515555749263,
+      "desvio": 0.0004324230128349925
+    },
+    {
+      "variavel": "pct_escolas_agua_potavel_censo",
+      "queda_f1_macro": -0.00019310401320093984,
+      "desvio": 0.0002894733582191154
+    },
+    {
+      "variavel": "pct_escolas_acessibilidade_corrimao_censo",
+      "queda_f1_macro": -0.00024556700915054905,
+      "desvio": 0.00034312493216201364
+    },
+    {
+      "variavel": "pct_escolas_quadra_esportes_coberta_censo",
+      "queda_f1_macro": -0.00029075701707759194,
+      "desvio": 0.00033495195730176726
+    },
+    {
+      "variavel": "idhm_municipio",
+      "queda_f1_macro": -0.00030659334066105435,
+      "desvio": 0.0008409751043182666
+    },
+    {
+      "variavel": "idhm_longevidade_municipio",
+      "queda_f1_macro": -0.0003074108736571546,
+      "desvio": 0.00018966585075477573
     },
     {
       "variavel": "pct_escolas_agua_rede_publica_censo",
-      "queda_f1_macro": -0.0017551652630194425,
-      "desvio": 0.0006023386577653896
+      "queda_f1_macro": -0.0003691791931034416,
+      "desvio": 0.0006054854355898861
+    },
+    {
+      "variavel": "pct_escolas_material_ped_jogos_censo",
+      "queda_f1_macro": -0.0005255798897248143,
+      "desvio": 0.0005062560187577562
+    },
+    {
+      "variavel": "pct_escolas_internet_comunidade_censo",
+      "queda_f1_macro": -0.0005371745856841859,
+      "desvio": 0.000354325797266505
+    },
+    {
+      "variavel": "matriculas_por_vinculo_docente_censo",
+      "queda_f1_macro": -0.0005759091746003087,
+      "desvio": 0.0005076722584695835
+    },
+    {
+      "variavel": "pct_escolas_esgoto_inexistente_censo",
+      "queda_f1_macro": -0.0008886457335225417,
+      "desvio": 0.0006511029277758633
+    },
+    {
+      "variavel": "pct_escolas_esgoto_rede_publica_censo",
+      "queda_f1_macro": -0.001098966314898009,
+      "desvio": 0.0004663984045667111
+    },
+    {
+      "variavel": "pct_escolas_energia_rede_publica_censo",
+      "queda_f1_macro": -0.001186790993723652,
+      "desvio": 0.0004674016043391114
+    },
+    {
+      "variavel": "rede",
+      "queda_f1_macro": -0.00235795992082366,
+      "desvio": 0.0022993272298917704
     }
   ],
   "amostra_permutacao": 5000,
@@ -1929,54 +1969,54 @@
   "curvas_calibracao": {
     "Sem calibração": {
       "score_medio": [
-        0.19772864782205854,
-        0.28859613765054454,
-        0.34079239109562515,
-        0.38332676280750916,
-        0.4332256417270406,
-        0.4617304407479899,
-        0.5134552886701685,
-        0.5809015837299266,
-        0.6583531862308063,
-        0.7633131787619974
+        0.19762301806289695,
+        0.28766982305805583,
+        0.3437237403727148,
+        0.38480195743287277,
+        0.43191196362976814,
+        0.46064084053412835,
+        0.5116308299063081,
+        0.5802178604254806,
+        0.6586190788376962,
+        0.762831414432263
       ],
       "frequencia_observada": [
-        0.15080168218500983,
-        0.23970637609498519,
-        0.25298602802506437,
-        0.31658114601079296,
-        0.31270919098472305,
-        0.3673771462403789,
-        0.37381467478113184,
-        0.40575490236214024,
-        0.445993917386307,
-        0.5094536691241282
+        0.15011817326996874,
+        0.24044803159223221,
+        0.2858306536220882,
+        0.2840311249724349,
+        0.3148238202338257,
+        0.36489519437786894,
+        0.3757627838220776,
+        0.40256225824786607,
+        0.446763920700557,
+        0.5097581649952001
       ]
     },
     "Sigmoide aprendida em 2024": {
       "score_medio": [
-        0.14771159846600734,
-        0.21919431034273984,
-        0.2621752181555861,
-        0.2982856073927325,
-        0.3419906436191754,
-        0.36761774407021924,
-        0.4156514923437427,
-        0.48128715236776115,
-        0.561137609932647,
-        0.6792014243552843
+        0.14771691853614688,
+        0.21851875006727975,
+        0.26469201388365887,
+        0.2995804756268618,
+        0.3408285315536473,
+        0.36662209315925914,
+        0.41388792535937735,
+        0.4805491998801862,
+        0.5613034080571264,
+        0.6784308747812536
       ],
       "frequencia_observada": [
-        0.15080168218500983,
-        0.23970637609498519,
-        0.25298602802506437,
-        0.31658114601079296,
-        0.31270919098472305,
-        0.3673771462403789,
-        0.37381467478113184,
-        0.40575490236214024,
-        0.445993917386307,
-        0.5094536691241282
+        0.15011817326996874,
+        0.24044803159223221,
+        0.2858306536220882,
+        0.2840311249724349,
+        0.3148238202338257,
+        0.36489519437786894,
+        0.3757627838220776,
+        0.40256225824786607,
+        0.446763920700557,
+        0.5097581649952001
       ]
     }
   },
@@ -1988,7 +2028,7 @@
       "rede": "Municipal",
       "avaliacoes": 2677,
       "escolas": 51,
-      "score_medio": 0.8373860471854969,
+      "score_medio": 0.8310338820424521,
       "fracao_nao_alfabetizada": 0.7273066865894658
     },
     {
@@ -1998,7 +2038,7 @@
       "rede": "Municipal",
       "avaliacoes": 265,
       "escolas": 8,
-      "score_medio": 0.807281451304092,
+      "score_medio": 0.8051671159806589,
       "fracao_nao_alfabetizada": 0.6566037735849056
     },
     {
@@ -2008,8 +2048,18 @@
       "rede": "Municipal",
       "avaliacoes": 360,
       "escolas": 10,
-      "score_medio": 0.8030261943456919,
+      "score_medio": 0.8022897490207165,
       "fracao_nao_alfabetizada": 0.7111111111111111
+    },
+    {
+      "sigla_uf": "RS",
+      "id_municipio": "4300604",
+      "id_municipio_nome": "Alvorada",
+      "rede": "Municipal",
+      "avaliacoes": 1568,
+      "escolas": 28,
+      "score_medio": 0.7844904262618722,
+      "fracao_nao_alfabetizada": 0.5892857142857143
     },
     {
       "sigla_uf": "RS",
@@ -2018,7 +2068,7 @@
       "rede": "Municipal",
       "avaliacoes": 108,
       "escolas": 4,
-      "score_medio": 0.7865041218068538,
+      "score_medio": 0.783540513301167,
       "fracao_nao_alfabetizada": 0.6666666666666666
     },
     {
@@ -2028,38 +2078,8 @@
       "rede": "Municipal",
       "avaliacoes": 145,
       "escolas": 4,
-      "score_medio": 0.7832570636434238,
+      "score_medio": 0.7827531220989279,
       "fracao_nao_alfabetizada": 0.6896551724137931
-    },
-    {
-      "sigla_uf": "RS",
-      "id_municipio": "4310330",
-      "id_municipio_nome": "Imbé",
-      "rede": "Municipal",
-      "avaliacoes": 272,
-      "escolas": 7,
-      "score_medio": 0.7824077575493575,
-      "fracao_nao_alfabetizada": 0.5367647058823529
-    },
-    {
-      "sigla_uf": "RS",
-      "id_municipio": "4300604",
-      "id_municipio_nome": "Alvorada",
-      "rede": "Municipal",
-      "avaliacoes": 1568,
-      "escolas": 28,
-      "score_medio": 0.7804944783695764,
-      "fracao_nao_alfabetizada": 0.5892857142857143
-    },
-    {
-      "sigla_uf": "RS",
-      "id_municipio": "4314407",
-      "id_municipio_nome": "Pelotas",
-      "rede": "Municipal",
-      "avaliacoes": 1367,
-      "escolas": 48,
-      "score_medio": 0.7780583465085816,
-      "fracao_nao_alfabetizada": 0.6986100950987564
     },
     {
       "sigla_uf": "RS",
@@ -2068,28 +2088,18 @@
       "rede": "Municipal",
       "avaliacoes": 2078,
       "escolas": 57,
-      "score_medio": 0.7762666621758103,
+      "score_medio": 0.778109091814346,
       "fracao_nao_alfabetizada": 0.5380173243503369
     },
     {
       "sigla_uf": "RS",
-      "id_municipio": "4304630",
-      "id_municipio_nome": "Capão da Canoa",
+      "id_municipio": "4314407",
+      "id_municipio_nome": "Pelotas",
       "rede": "Municipal",
-      "avaliacoes": 507,
-      "escolas": 12,
-      "score_medio": 0.7759311012623318,
-      "fracao_nao_alfabetizada": 0.5936883629191322
-    },
-    {
-      "sigla_uf": "RS",
-      "id_municipio": "4314902",
-      "id_municipio_nome": "Porto Alegre",
-      "rede": "Estadual",
-      "avaliacoes": 4701,
-      "escolas": 176,
-      "score_medio": 0.7738264360772072,
-      "fracao_nao_alfabetizada": 0.6662412252712189
+      "avaliacoes": 1367,
+      "escolas": 48,
+      "score_medio": 0.7779048910668901,
+      "fracao_nao_alfabetizada": 0.6986100950987564
     },
     {
       "sigla_uf": "BA",
@@ -2098,8 +2108,38 @@
       "rede": "Municipal",
       "avaliacoes": 236,
       "escolas": 10,
-      "score_medio": 0.7718360675166701,
+      "score_medio": 0.7750287460693195,
       "fracao_nao_alfabetizada": 0.4279661016949153
+    },
+    {
+      "sigla_uf": "RS",
+      "id_municipio": "4304630",
+      "id_municipio_nome": "Capão da Canoa",
+      "rede": "Municipal",
+      "avaliacoes": 507,
+      "escolas": 12,
+      "score_medio": 0.7716186022217146,
+      "fracao_nao_alfabetizada": 0.5936883629191322
+    },
+    {
+      "sigla_uf": "RS",
+      "id_municipio": "4310330",
+      "id_municipio_nome": "Imbé",
+      "rede": "Municipal",
+      "avaliacoes": 272,
+      "escolas": 7,
+      "score_medio": 0.7694863757019205,
+      "fracao_nao_alfabetizada": 0.5367647058823529
+    },
+    {
+      "sigla_uf": "RS",
+      "id_municipio": "4314902",
+      "id_municipio_nome": "Porto Alegre",
+      "rede": "Estadual",
+      "avaliacoes": 4701,
+      "escolas": 176,
+      "score_medio": 0.7669559390647139,
+      "fracao_nao_alfabetizada": 0.6662412252712189
     },
     {
       "sigla_uf": "RS",
@@ -2108,7 +2148,7 @@
       "rede": "Municipal",
       "avaliacoes": 832,
       "escolas": 20,
-      "score_medio": 0.7623970102084829,
+      "score_medio": 0.7611611542641779,
       "fracao_nao_alfabetizada": 0.5889423076923077
     },
     {
@@ -2118,8 +2158,18 @@
       "rede": "Municipal",
       "avaliacoes": 2107,
       "escolas": 53,
-      "score_medio": 0.7573594341716603,
+      "score_medio": 0.7556902477189621,
       "fracao_nao_alfabetizada": 0.586141433317513
+    },
+    {
+      "sigla_uf": "BA",
+      "id_municipio": "2901908",
+      "id_municipio_nome": "Aporá",
+      "rede": "Municipal",
+      "avaliacoes": 178,
+      "escolas": 7,
+      "score_medio": 0.7542561084047857,
+      "fracao_nao_alfabetizada": 0.5955056179775281
     },
     {
       "sigla_uf": "RS",
@@ -2128,7 +2178,7 @@
       "rede": "Municipal",
       "avaliacoes": 1639,
       "escolas": 36,
-      "score_medio": 0.7531319065349724,
+      "score_medio": 0.7518730977357015,
       "fracao_nao_alfabetizada": 0.589993898718731
     },
     {
@@ -2138,18 +2188,18 @@
       "rede": "Municipal",
       "avaliacoes": 651,
       "escolas": 15,
-      "score_medio": 0.7530473476987236,
+      "score_medio": 0.7491111570629734,
       "fracao_nao_alfabetizada": 0.7603686635944701
     },
     {
       "sigla_uf": "BA",
-      "id_municipio": "2901908",
-      "id_municipio_nome": "Aporá",
+      "id_municipio": "2909307",
+      "id_municipio_nome": "Correntina",
       "rede": "Municipal",
-      "avaliacoes": 178,
-      "escolas": 7,
-      "score_medio": 0.7516540779963674,
-      "fracao_nao_alfabetizada": 0.5955056179775281
+      "avaliacoes": 333,
+      "escolas": 11,
+      "score_medio": 0.7472687523674522,
+      "fracao_nao_alfabetizada": 0.4924924924924925
     },
     {
       "sigla_uf": "RS",
@@ -2158,28 +2208,18 @@
       "rede": "Municipal",
       "avaliacoes": 1169,
       "escolas": 34,
-      "score_medio": 0.7476074605801235,
+      "score_medio": 0.7458367445691088,
       "fracao_nao_alfabetizada": 0.5962360992301112
     },
     {
       "sigla_uf": "BA",
-      "id_municipio": "2933158",
-      "id_municipio_nome": "Várzea Nova",
+      "id_municipio": "2923704",
+      "id_municipio_nome": "Paratinga",
       "rede": "Municipal",
-      "avaliacoes": 196,
-      "escolas": 6,
-      "score_medio": 0.7446551926431564,
-      "fracao_nao_alfabetizada": 0.40816326530612246
-    },
-    {
-      "sigla_uf": "RS",
-      "id_municipio": "4313409",
-      "id_municipio_nome": "Novo Hamburgo",
-      "rede": "Municipal",
-      "avaliacoes": 1984,
-      "escolas": 52,
-      "score_medio": 0.7432442438870572,
-      "fracao_nao_alfabetizada": 0.5282258064516129
+      "avaliacoes": 241,
+      "escolas": 11,
+      "score_medio": 0.74538562125021,
+      "fracao_nao_alfabetizada": 0.4190871369294606
     }
   ],
   "ambiente": {
@@ -2210,13 +2250,13 @@
     "src\\preprocessing\\__init__.py": "dd5bf872c95593d79783c5e08dff196b08224584c8c31120c7d57f8851e739cc",
     "src\\preprocessing\\base.py": "a03b4f02039ffc409694ad555b8c6e9f56a91f166d95a296a5c9f5e92629e8bf",
     "src\\preprocessing\\divisao.py": "2e9e6a55db0bcd15ed2b010eb615076cbdbc4ef1e64a0adfc306173f5af8f05a",
-    "src\\preprocessing\\enriquecida.py": "6c23778d2b2c9be995ff8303f92e7a19a7f825f8ae52ce7a67e16bd8a0ebc8c2",
+    "src\\preprocessing\\enriquecida.py": "a5d1ff187397ccd5a6e3682f5ae9f4f913a5e5407e2633c1406c57e05baf63ce",
     "src\\visualization\\__init__.py": "9b715d0452ee40b818ad7f75b056d54c5b1fe49818d66f910251b909af6e6fc4",
     "src\\visualization\\avaliacao.py": "f81a87b8b5eecd2ed197bb6f59631f14b377c727492a5750cdb483aef9e9b9da",
     "src\\visualization\\estilo.py": "5faf6b49b42938ede7df91ad3dc955b315a55d8ef569ab2a0e25da6eb0f440fa",
     "src\\visualization\\exploratoria.py": "3be5ed064eaa86e8d1be4a246a9fd518e9e11eb8162715d346535cdb81c3cf9c"
   },
-  "duracao_segundos": 398.89100000006147,
+  "duracao_segundos": 404.2349999998696,
   "metas_futuras_habilitadas": false,
   "limites": [
     "Teste de outra edição; identidades escolares não são longitudinais.",

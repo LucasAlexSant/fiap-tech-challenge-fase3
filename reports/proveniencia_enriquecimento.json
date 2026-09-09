@@ -68,7 +68,11 @@
     "salas_acessiveis_censo",
     "salas_utilizadas_fora_censo",
     "matriculas_por_vinculo_docente_censo",
-    "matriculas_por_turma_censo"
+    "matriculas_por_turma_censo",
+    "idhm_municipio",
+    "idhm_educacao_municipio",
+    "idhm_longevidade_municipio",
+    "idhm_renda_municipio"
   ],
   "fontes": [
     {
@@ -144,6 +148,25 @@
         "Content-Length": "43956518"
       },
       "obtido_em_utc": "2026-09-08T01:49:32.117296+00:00",
+      "vintage_historico_comprovado": false,
+      "limite": "Data de edição não comprova versão histórica dos bytes baixados; avaliação retrospectiva."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/mauriciocramos/IDHM/main/municipal.csv",
+      "extensao": "csv",
+      "ano_referencia": 2010,
+      "tipo": "idhm_municipal",
+      "divulgacao_edicao": null,
+      "pagina": "https://www.undp.org/pt/brazil/idhm-municipios-2010",
+      "arquivo": "idhm_municipios_2010.csv",
+      "sha256": "53de49d28b9be59fcafcde921d2ae15c3f4cd465ab77b35a7312f292353cfe0a",
+      "bytes": 20011687,
+      "headers": {
+        "ETag": "W/\"f7e2f72febbf90aa7c35d8a575e3172e26bcfcd8a7cf54bd2b74fc07a2770aac\"",
+        "Last-Modified": null,
+        "Content-Length": "8389054"
+      },
+      "obtido_em_utc": "2026-09-09T01:47:23.274630+00:00",
       "vintage_historico_comprovado": false,
       "limite": "Data de edição não comprova versão histórica dos bytes baixados; avaliação retrospectiva."
     },
@@ -357,7 +380,11 @@
         "salas_acessiveis_censo": 0.004990654168294174,
         "salas_utilizadas_fora_censo": 0.004990654168294174,
         "matriculas_por_vinculo_docente_censo": 0.005722616779643986,
-        "matriculas_por_turma_censo": 0.005722616779643986
+        "matriculas_por_turma_censo": 0.005722616779643986,
+        "idhm_municipio": 0.043784672569834225,
+        "idhm_educacao_municipio": 0.043784672569834225,
+        "idhm_longevidade_municipio": 0.043784672569834225,
+        "idhm_renda_municipio": 0.043784672569834225
       },
       "ano_ibge": 2021,
       "ano_censo": 2022
@@ -468,7 +495,11 @@
         "salas_acessiveis_censo": 0.0,
         "salas_utilizadas_fora_censo": 0.0,
         "matriculas_por_vinculo_docente_censo": 0.00048599996112000317,
-        "matriculas_por_turma_censo": 0.00048599996112000317
+        "matriculas_por_turma_censo": 0.00048599996112000317,
+        "idhm_municipio": 0.03466799722656022,
+        "idhm_educacao_municipio": 0.03466799722656022,
+        "idhm_longevidade_municipio": 0.03466799722656022,
+        "idhm_renda_municipio": 0.03466799722656022
       },
       "ano_ibge": 2022,
       "ano_censo": 2023
@@ -580,7 +611,11 @@
         "salas_acessiveis_censo": 0.00620519354354698,
         "salas_utilizadas_fora_censo": 0.00620519354354698,
         "matriculas_por_vinculo_docente_censo": 0.007324162871071845,
-        "matriculas_por_turma_censo": 0.007324162871071845
+        "matriculas_por_turma_censo": 0.007324162871071845,
+        "idhm_municipio": 0.04170703857138135,
+        "idhm_educacao_municipio": 0.04170703857138135,
+        "idhm_longevidade_municipio": 0.04170703857138135,
+        "idhm_renda_municipio": 0.04170703857138135
       },
       "ano_ibge": 2024,
       "ano_censo": 2024
@@ -600,15 +635,15 @@
   "arquivos_gold": [
     {
       "arquivo": "gold\\base_modelagem_aluno_enriquecida\\execution_date=2026-09-08\\ano=2023\\base_modelagem_aluno_enriquecida.parquet",
-      "sha256": "c9296a4d6a82d8c2d5116f6aaf1db745969b78d05cb67734bca10985259531d4"
+      "sha256": "4348125929aa915c864db3643ba146bb34cdd40fa6718f28918883e2120d6bd6"
     },
     {
       "arquivo": "gold\\base_modelagem_aluno_enriquecida\\execution_date=2026-09-08\\ano=2024\\base_modelagem_aluno_enriquecida.parquet",
-      "sha256": "d2a9c70255e91fa5be63f30af6049fef7daf3294f273329f32843e384d6dd5d7"
+      "sha256": "a7169fe7e91cf8d6e694c32dd4925d5f6d09181ab4b6a7c53ec22e0d8e273c83"
     },
     {
       "arquivo": "gold\\base_modelagem_aluno_enriquecida\\execution_date=2026-09-08\\ano=2025\\base_modelagem_aluno_enriquecida.parquet",
-      "sha256": "a12d0a428ab3428cdb42b6ca9f459647ae08cd73204a7a2be38bae931ef48490"
+      "sha256": "08ad9fe5d0976c8991f49353aca72253bac5135837c7f2114600d59201b60d4f"
     }
   ]
 }

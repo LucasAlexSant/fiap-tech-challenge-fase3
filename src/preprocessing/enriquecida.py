@@ -42,15 +42,18 @@ NOVAS_NUMERICAS = [
     "pct_escolas_material_ped_jogos_censo",
     "salas_utilizadas_censo", "salas_climatizadas_censo", "salas_acessiveis_censo", "salas_utilizadas_fora_censo",
     "matriculas_por_vinculo_docente_censo", "matriculas_por_turma_censo",
+    "idhm_municipio", "idhm_educacao_municipio", "idhm_longevidade_municipio", "idhm_renda_municipio",
 ]
 FEATURES = config.FEATURES + NOVAS_NUMERICAS
+IDHM_NUMERICAS = ["idhm_municipio", "idhm_educacao_municipio", "idhm_longevidade_municipio", "idhm_renda_municipio"]
 
 
 def validar_contextos(df):
     obrigatorias = NOVAS_NUMERICAS + ["ano_referencia_ibge", "ano_referencia_censo", "tem_populacao_ibge", "tem_censo_escolar"]
     if faltantes := set(obrigatorias) - set(df):
         raise ValueError(f"Gold sem enriquecimento: {sorted(faltantes)}")
-    for ref, colunas in [("ano_referencia_ibge", [NOVAS_NUMERICAS[0]]), ("ano_referencia_censo", NOVAS_NUMERICAS[1:])]:
+    colunas_censo = [c for c in NOVAS_NUMERICAS[1:] if c not in IDHM_NUMERICAS]
+    for ref, colunas in [("ano_referencia_ibge", [NOVAS_NUMERICAS[0]]), ("ano_referencia_censo", colunas_censo)]:
         referencia = pd.to_numeric(df[ref], errors="raise")
         if (referencia.notna() & (referencia.ge(df.ano) | referencia.le(0))).any():
             raise ValueError(f"Referência contemporânea/futura ou inválida: {ref}")
@@ -58,6 +61,12 @@ def validar_contextos(df):
             raise ValueError("Censo deve corresponder ao ano anterior")
         if (referencia.isna() & df[colunas].notna().any(axis=1)).any():
             raise ValueError("Medida sem referência temporal")
+    if "ano_referencia_idhm" in df:
+        referencia_idhm = pd.to_numeric(df["ano_referencia_idhm"], errors="raise")
+        if (referencia_idhm.notna() & (referencia_idhm.ge(df.ano) | referencia_idhm.le(0))).any():
+            raise ValueError("ReferÃªncia IDHM contemporÃ¢nea/futura ou invÃ¡lida")
+        if (referencia_idhm.isna() & df[IDHM_NUMERICAS].notna().any(axis=1)).any():
+            raise ValueError("Medida IDHM sem referÃªncia temporal")
     for c in NOVAS_NUMERICAS:
         v = pd.to_numeric(df[c], errors="raise").to_numpy(dtype=float, na_value=np.nan)
         if np.isinf(v).any() or (v < 0).any() or (c.startswith("pct_") and (v > 100).any()):
