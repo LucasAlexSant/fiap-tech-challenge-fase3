@@ -22,6 +22,10 @@
     "pct_escolas_agua_potavel_censo": 0.0,
     "pct_escolas_biblioteca_censo": 0.0,
     "pct_escolas_lab_informatica_censo": 0.0,
+    "pct_escolas_sala_leitura_censo": 0.0,
+    "pct_escolas_quadra_esportes_censo": 0.0,
+    "pct_escolas_energia_rede_publica_censo": 0.0,
+    "pct_escolas_computador_censo": 0.0,
     "matriculas_por_vinculo_docente_censo": 0.0,
     "matriculas_por_turma_censo": 0.0
   },
@@ -124,6 +128,46 @@
       "25%": 11.11111111111111,
       "50%": 40.0,
       "75%": 75.0,
+      "max": 100.0
+    },
+    "pct_escolas_sala_leitura_censo": {
+      "count": 1112203.0,
+      "mean": 36.01299649147767,
+      "std": 30.929545924677583,
+      "min": 0.0,
+      "25%": 8.860759493670885,
+      "50%": 27.27272727272727,
+      "75%": 61.111111111111114,
+      "max": 100.0
+    },
+    "pct_escolas_quadra_esportes_censo": {
+      "count": 1112203.0,
+      "mean": 57.05348881286202,
+      "std": 31.328202917637977,
+      "min": 0.0,
+      "25%": 28.421052631578945,
+      "50%": 62.78026905829597,
+      "75%": 85.48387096774194,
+      "max": 100.0
+    },
+    "pct_escolas_energia_rede_publica_censo": {
+      "count": 1112203.0,
+      "mean": 98.46261609850886,
+      "std": 8.409734577219547,
+      "min": 3.9215686274509802,
+      "25%": 100.0,
+      "50%": 100.0,
+      "75%": 100.0,
+      "max": 100.0
+    },
+    "pct_escolas_computador_censo": {
+      "count": 1112203.0,
+      "mean": 90.90898684417195,
+      "std": 18.85812453944199,
+      "min": 0.0,
+      "25%": 93.23076923076923,
+      "50%": 100.0,
+      "75%": 100.0,
       "max": 100.0
     },
     "matriculas_por_vinculo_docente_censo": {

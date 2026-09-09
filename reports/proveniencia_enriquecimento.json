@@ -13,6 +13,10 @@
     "pct_escolas_agua_potavel_censo",
     "pct_escolas_biblioteca_censo",
     "pct_escolas_lab_informatica_censo",
+    "pct_escolas_sala_leitura_censo",
+    "pct_escolas_quadra_esportes_censo",
+    "pct_escolas_energia_rede_publica_censo",
+    "pct_escolas_computador_censo",
     "matriculas_por_vinculo_docente_censo",
     "matriculas_por_turma_censo"
   ],
@@ -248,6 +252,10 @@
         "pct_escolas_agua_potavel_censo": 0.004990654168294174,
         "pct_escolas_biblioteca_censo": 0.004990654168294174,
         "pct_escolas_lab_informatica_censo": 0.004990654168294174,
+        "pct_escolas_sala_leitura_censo": 0.004990654168294174,
+        "pct_escolas_quadra_esportes_censo": 0.004990654168294174,
+        "pct_escolas_energia_rede_publica_censo": 0.004990654168294174,
+        "pct_escolas_computador_censo": 0.004990654168294174,
         "matriculas_por_vinculo_docente_censo": 0.005722616779643986,
         "matriculas_por_turma_censo": 0.005722616779643986
       },
@@ -305,6 +313,10 @@
         "pct_escolas_agua_potavel_censo": 0.0,
         "pct_escolas_biblioteca_censo": 0.0,
         "pct_escolas_lab_informatica_censo": 0.0,
+        "pct_escolas_sala_leitura_censo": 0.0,
+        "pct_escolas_quadra_esportes_censo": 0.0,
+        "pct_escolas_energia_rede_publica_censo": 0.0,
+        "pct_escolas_computador_censo": 0.0,
         "matriculas_por_vinculo_docente_censo": 0.00048599996112000317,
         "matriculas_por_turma_censo": 0.00048599996112000317
       },
@@ -363,6 +375,10 @@
         "pct_escolas_agua_potavel_censo": 0.00620519354354698,
         "pct_escolas_biblioteca_censo": 0.00620519354354698,
         "pct_escolas_lab_informatica_censo": 0.00620519354354698,
+        "pct_escolas_sala_leitura_censo": 0.00620519354354698,
+        "pct_escolas_quadra_esportes_censo": 0.00620519354354698,
+        "pct_escolas_energia_rede_publica_censo": 0.00620519354354698,
+        "pct_escolas_computador_censo": 0.00620519354354698,
         "matriculas_por_vinculo_docente_censo": 0.007324162871071845,
         "matriculas_por_turma_censo": 0.007324162871071845
       },
@@ -384,15 +400,15 @@
   "arquivos_gold": [
     {
       "arquivo": "gold\\base_modelagem_aluno_enriquecida\\execution_date=2026-09-08\\ano=2023\\base_modelagem_aluno_enriquecida.parquet",
-      "sha256": "35ec89c2332eb53615df0a0e3a78f57fa255aa4ecbcf032368d015b730e9d32a"
+      "sha256": "494c17283b4b4ff10f07d5f6762126df766836caf2a9319b85436eb7edbc2685"
     },
     {
       "arquivo": "gold\\base_modelagem_aluno_enriquecida\\execution_date=2026-09-08\\ano=2024\\base_modelagem_aluno_enriquecida.parquet",
-      "sha256": "f17f3b7e1036c83887701782cdeab8d8f5369c5872ee1934c2ae3fa0f2ca8c56"
+      "sha256": "cb08bd3c62e20d0a53410db65bd4e5069a224e596051034a0aff8801f887e98d"
     },
     {
       "arquivo": "gold\\base_modelagem_aluno_enriquecida\\execution_date=2026-09-08\\ano=2025\\base_modelagem_aluno_enriquecida.parquet",
-      "sha256": "f6b839dbed6058f3047584a1ec9df5277ef3d2300c8f6da3766108c6bdf3f393"
+      "sha256": "8b82055b4f796106b17f3b7e4e5e2998ee0bdafceb5b1fb501d10b309cc8fe3a"
     }
   ]
 }

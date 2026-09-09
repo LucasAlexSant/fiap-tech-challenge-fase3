@@ -16,6 +16,8 @@ NOVAS_NUMERICAS = [
     "vinculos_docentes_anos_iniciais_censo", "turmas_anos_iniciais_censo",
     "pct_escolas_rurais_censo", "pct_escolas_internet_censo", "pct_escolas_agua_potavel_censo",
     "pct_escolas_biblioteca_censo", "pct_escolas_lab_informatica_censo",
+    "pct_escolas_sala_leitura_censo", "pct_escolas_quadra_esportes_censo",
+    "pct_escolas_energia_rede_publica_censo", "pct_escolas_computador_censo",
     "matriculas_por_vinculo_docente_censo", "matriculas_por_turma_censo",
 ]
 FEATURES = config.FEATURES + NOVAS_NUMERICAS
