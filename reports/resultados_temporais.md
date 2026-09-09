@@ -1,6 +1,6 @@
 # Gold enriquecida e validação em outra edição
 
-Execução `20260909T015730505921Z_temporal`. Desenvolvimento: **2024**. Teste: **2025**.
+Execução `20260909T021745439678Z_temporal`. Desenvolvimento: **2024**. Teste: **2025**.
 
 **12 novos atributos**, totalizando 79 preditores. Modelo escolhido na validação: **enriquecida_logistica**.
 
@@ -22,11 +22,11 @@ IBGE é integrado por município; Censo por município e rede. Escolas ativas co
 |---|---:|---:|---:|---:|---:|---:|
 | baseline | 0.3733 | 0.3985 | 0.0000 | 0.0000 | 0.5000 | 0.2278 |
 | referencia_logistica | 0.5945 | 0.5839 | 0.4950 | 0.4402 | 0.6311 | 0.2333 |
-| enriquecida_logistica | 0.6015 | 0.5825 | 0.4883 | 0.4393 | 0.6276 | 0.2329 |
+| enriquecida_logistica | 0.6014 | 0.5826 | 0.4882 | 0.4395 | 0.6277 | 0.2329 |
 | enriquecida_boosting | 0.5881 | 0.5585 | 0.2736 | 0.4853 | 0.6377 | 0.2152 |
-| selecionado_calibrado | — | 0.5668 | 0.3166 | 0.4698 | 0.6276 | 0.2182 |
+| selecionado_calibrado | — | 0.5668 | 0.3165 | 0.4699 | 0.6277 | 0.2182 |
 
-Comparando logísticas sob o mesmo protocolo, a diferença de F1 no teste com enriquecimento foi **-0.0013**. O sinal pode favorecer ou desfavorecer a inclusão; o teste não é usado para nova escolha.
+Comparando logísticas sob o mesmo protocolo, a diferença de F1 no teste com enriquecimento foi **-0.0012**. O sinal pode favorecer ou desfavorecer a inclusão; o teste não é usado para nova escolha.
 
 A calibração é uma transformação predefinida, não um novo candidato escolhido pelo teste. Pode melhorar Brier e reduzir recall/F1 no limiar 0,5; ambos os resultados são apresentados.
 

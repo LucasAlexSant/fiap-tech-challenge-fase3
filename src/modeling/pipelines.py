@@ -49,6 +49,8 @@ def candidatos(numericas=None):
 
 
 GRADES = {
-    "logistica": {"modelo__C": [.1, 1.], "modelo__class_weight": [None, "balanced"]},
+    # O custo do falso negativo (aluno não alfabetizado classificado como alfabetizado)
+    # é maior. Além do balanceamento automático, testamos pesos explícitos moderados.
+    "logistica": {"modelo__C": [.1, 1.], "modelo__class_weight": [None, "balanced", {0: 2, 1: 1}]},
     "gradient_boosting": {"modelo__max_leaf_nodes": [15, 31], "modelo__min_samples_leaf": [100, 300]},
 }

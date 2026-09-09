@@ -6,7 +6,7 @@
   "limiar": 0.5,
   "calibracao": "sigmoid fixa, em 20% de escolas de desenvolvimento reservadas",
   "teste_usado_na_selecao": false,
-  "run_id": "20260909T015730505921Z_temporal",
-  "modelo_sha256": "a2d0c98f578df97002a352ba79542f45e9d154b3ec127710ef4a69d991ee9d86",
-  "congelado_em_utc": "2026-09-09T02:02:01.891496+00:00"
+  "run_id": "20260909T021745439678Z_temporal",
+  "modelo_sha256": "cea7699f0faadc49ac0b86697458b77daa3e2d1b0258ac61f7c1987d2ee06ba2",
+  "congelado_em_utc": "2026-09-09T02:21:47.900710+00:00"
 }
