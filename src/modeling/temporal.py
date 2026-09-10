@@ -73,7 +73,7 @@ def executar_temporal(lake, execucao, ano_treino=2024, ano_teste=2025, max_busca
     treino = base.iloc[partes["treino"]]
     eda = {"ano": ano_treino, "escopo": "treino", "n": len(treino),
            "ausencias_pct": treino[FEATURES].isna().mean().mul(100).to_dict(),
-           "novas_numericas": treino[NOVAS_NUMERICAS].dropna(axis=1, how="all").describe().to_dict()}
+           "novas_numericas": treino[NOVAS_NUMERICAS].describe().to_dict()}
     salvar_json(config.RELATORIOS / "eda_enriquecida.json", eda)
     del treino
     originais = candidatos(numericas_modelo, categoricas_modelo)
