@@ -37,6 +37,8 @@ def main():
     if args.etapa in ["eda", "tudo"]:
         from src.visualization.exploratoria import executar_eda
         executar_eda()
+        from src.visualization.exploratoria_enriquecida import executar_eda_enriquecida
+        executar_eda_enriquecida(args.lake, args.ano_treino, args.execution_date)
     if args.etapa in ["treinar", "tudo"]:
         from src.modeling.treinar import treinar
         treinar(args.max_busca, args.dobras, args.sem_busca, args.threads)
