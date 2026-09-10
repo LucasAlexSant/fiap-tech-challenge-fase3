@@ -49,14 +49,15 @@ NOVAS_NUMERICAS = [
 FEATURES = config.FEATURES + NOVAS_NUMERICAS
 IDHM_NUMERICAS = ["idhm_municipio", "idhm_educacao_municipio", "idhm_longevidade_municipio", "idhm_renda_municipio"]
 HISTORICAS_LAG2 = ["taxa_alfabetizacao_municipio_lag2", "taxa_presenca_municipio_lag2", "delta_taxa_alfabetizacao_municipio", "delta_taxa_presenca_municipio"]
+HISTORICAS_BASE = ["taxa_alfabetizacao_municipio_anterior", "taxa_presenca_municipio_anterior", "alunos_avaliados_municipio_anterior", "total_pagamentos_bolsa_familia_anterior", "valor_total_bolsa_familia_anterior", "valor_medio_pagamento_bolsa_familia_anterior"]
 
 
 def validar_contextos(df):
     obrigatorias = NOVAS_NUMERICAS + ["ano_referencia_ibge", "ano_referencia_censo", "tem_populacao_ibge", "tem_censo_escolar"]
     if faltantes := set(obrigatorias) - set(df):
         raise ValueError(f"Gold sem enriquecimento: {sorted(faltantes)}")
-    colunas_censo = [c for c in NOVAS_NUMERICAS[1:] if c not in IDHM_NUMERICAS + HISTORICAS_LAG2]
-    for ref, colunas in [("ano_referencia_ibge", [NOVAS_NUMERICAS[0]]), ("ano_referencia_censo", colunas_censo)]:
+    colunas_censo = [c for c in NOVAS_NUMERICAS if c not in ["populacao_municipio_ibge"] + IDHM_NUMERICAS + HISTORICAS_LAG2 + HISTORICAS_BASE]
+    for ref, colunas in [("ano_referencia_ibge", ["populacao_municipio_ibge"]), ("ano_referencia_censo", colunas_censo)]:
         referencia = pd.to_numeric(df[ref], errors="raise")
         if (referencia.notna() & (referencia.ge(df.ano) | referencia.le(0))).any():
             raise ValueError(f"Referência contemporânea/futura ou inválida: {ref}")
