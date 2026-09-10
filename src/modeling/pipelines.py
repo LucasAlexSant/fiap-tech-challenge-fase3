@@ -14,7 +14,7 @@ from src import config
 def pre_processador(numericas=None, categoricas=None):
     numericas = config.NUMERICAS if numericas is None else numericas
     categoricas = config.CATEGORICAS if categoricas is None else categoricas
-    taxas = [c for c in numericas if c.startswith(("taxa_", "pct_"))]
+    taxas = [c for c in numericas if c.startswith(("taxa_", "pct_", "delta_taxa_"))]
     volumes = [c for c in numericas if c not in taxas]
     numerico = Pipeline([
         ("imputar", SimpleImputer(strategy="median", add_indicator=True, keep_empty_features=True)),
