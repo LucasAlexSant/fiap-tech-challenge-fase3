@@ -24,6 +24,11 @@ from src.preprocessing.enriquecida import carregar_enriquecida, FEATURES, NOVAS_
 from src.visualization.estilo import configurar, salvar, plt
 
 
+# Perfil experimental solicitado: retirar histórico de alfabetização e recortes
+# territoriais, mantendo rede e os complementos municipais/escolares.
+EXCLUIDAS_TESTE = {"taxa_alfabetizacao_municipio_anterior", "sigla_uf", "regiao_brasil"}
+
+
 def verificar_ordem(ano_treino, ano_teste):
     if ano_teste <= ano_treino:
         raise ValueError("Teste temporal deve ser posterior ao treino")
@@ -46,6 +51,9 @@ def executar_temporal(lake, execucao, ano_treino=2024, ano_teste=2025, max_busca
     configurar()
     inicio = time.monotonic()
     base, proveniencia = carregar_enriquecida(lake, ano_treino, execucao)
+    features_modelo = [c for c in FEATURES if c not in EXCLUIDAS_TESTE]
+    numericas_modelo = [c for c in config.NUMERICAS + NOVAS_NUMERICAS if c not in EXCLUIDAS_TESTE]
+    categoricas_modelo = [c for c in config.CATEGORICAS if c not in EXCLUIDAS_TESTE]
     partes = dividir(base)
     partes["calibracao"] = partes.pop("teste")
     grupos = grupos_escola(base)
@@ -53,7 +61,7 @@ def executar_temporal(lake, execucao, ano_treino=2024, ano_teste=2025, max_busca
                      "indices_sha256": hashlib.sha256(np.asarray(idx, dtype="int64").tobytes()).hexdigest()}
                for nome, idx in partes.items()}
     idx = amostrar_escolas(base, partes["treino"], max_busca)
-    X, y = base[FEATURES], base[config.ALVO]
+    X, y = base[features_modelo], base[config.ALVO]
     cv = list(StratifiedGroupKFold(n_splits=dobras, shuffle=True, random_state=config.SEMENTE).split(
         X.iloc[idx], y.iloc[idx], grupos.iloc[idx]))
     for a, b in cv:
@@ -68,8 +76,8 @@ def executar_temporal(lake, execucao, ano_treino=2024, ano_teste=2025, max_busca
            "novas_numericas": treino[NOVAS_NUMERICAS].describe().to_dict()}
     salvar_json(config.RELATORIOS / "eda_enriquecida.json", eda)
     del treino
-    originais = candidatos()
-    novos = candidatos(config.NUMERICAS + NOVAS_NUMERICAS)
+    originais = candidatos(numericas_modelo, categoricas_modelo)
+    novos = candidatos(numericas_modelo, categoricas_modelo)
     modelos = {"baseline": originais["baseline"], "referencia_logistica": originais["logistica"],
                "enriquecida_logistica": novos["logistica"], "enriquecida_boosting": novos["gradient_boosting"]}
     validacao, buscas, ajustados = {}, {}, {}
@@ -117,7 +125,7 @@ def executar_temporal(lake, execucao, ano_treino=2024, ano_teste=2025, max_busca
         del X, y, base, grupos
         print(f"[TEMPORAL] Modelo congelado. Abrindo teste {ano_teste}...", flush=True)
         teste, origem_teste = carregar_enriquecida(lake, ano_teste, execucao)
-        X_teste, y_teste = teste[FEATURES], teste[config.ALVO]
+        X_teste, y_teste = teste[features_modelo], teste[config.ALVO]
         metricas, probas = {}, {}
         for nome, modelo in ajustados.items():
             p = probabilidade_risco(modelo, X_teste)
@@ -133,7 +141,7 @@ def executar_temporal(lake, execucao, ano_treino=2024, ano_teste=2025, max_busca
         amostra = np.random.default_rng(config.SEMENTE).choice(len(teste), min(5000, len(teste)), replace=False)
         perm = permutation_importance(vencedor, X_teste.iloc[amostra], y_teste.iloc[amostra],
                                       scoring="f1_macro", n_repeats=5, n_jobs=1, random_state=config.SEMENTE)
-        importancia = pd.DataFrame({"variavel": FEATURES, "queda_f1_macro": perm.importances_mean,
+        importancia = pd.DataFrame({"variavel": features_modelo, "queda_f1_macro": perm.importances_mean,
                                    "desvio": perm.importances_std}).sort_values("queda_f1_macro", ascending=False)
         fig, ax = plt.subplots(figsize=(10, 8))
         r = importancia.iloc[::-1]
@@ -160,7 +168,7 @@ def executar_temporal(lake, execucao, ano_treino=2024, ano_teste=2025, max_busca
         territorio = territorio.loc[territorio.avaliacoes.ge(100) & territorio.escolas.ge(3)]
         territorio.to_parquet(config.BASE.parent / "diagnostico_territorial_2025.parquet", index=False)
     resultado = {"run_id": run_id, "execucao_gold": execucao, "selecao": congelamento,
-                 "features": FEATURES, "novas_features": NOVAS_NUMERICAS, "divisao_desenvolvimento": resumo,
+                 "features": features_modelo, "novas_features": NOVAS_NUMERICAS, "divisao_desenvolvimento": resumo,
                  "proveniencia_treino": proveniencia["fontes"], "proveniencia_teste": origem_teste["fontes"],
                  "cobertura_gold": origem_teste["manifesto_gold"]["cobertura"],
                  "busca": buscas, "validacao": validacao, "teste": metricas,
