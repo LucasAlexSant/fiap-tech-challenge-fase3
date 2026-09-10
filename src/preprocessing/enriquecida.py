@@ -12,8 +12,6 @@ from src.preprocessing.base import validar_gold
 
 TABELA = "base_modelagem_aluno_enriquecida"
 NOVAS_NUMERICAS = [
-    "taxa_alfabetizacao_municipio_lag2", "taxa_presenca_municipio_lag2",
-    "delta_taxa_alfabetizacao_municipio", "delta_taxa_presenca_municipio",
     "populacao_municipio_ibge", "escolas_anos_iniciais_censo", "matriculas_anos_iniciais_censo",
     "vinculos_docentes_anos_iniciais_censo", "turmas_anos_iniciais_censo",
     "pct_escolas_rurais_censo", "pct_escolas_internet_censo", "pct_escolas_agua_potavel_censo",
@@ -48,14 +46,13 @@ NOVAS_NUMERICAS = [
 ]
 FEATURES = config.FEATURES + NOVAS_NUMERICAS
 IDHM_NUMERICAS = ["idhm_municipio", "idhm_educacao_municipio", "idhm_longevidade_municipio", "idhm_renda_municipio"]
-HISTORICAS_LAG2 = ["taxa_alfabetizacao_municipio_lag2", "taxa_presenca_municipio_lag2", "delta_taxa_alfabetizacao_municipio", "delta_taxa_presenca_municipio"]
 
 
 def validar_contextos(df):
     obrigatorias = NOVAS_NUMERICAS + ["ano_referencia_ibge", "ano_referencia_censo", "tem_populacao_ibge", "tem_censo_escolar"]
     if faltantes := set(obrigatorias) - set(df):
         raise ValueError(f"Gold sem enriquecimento: {sorted(faltantes)}")
-    colunas_censo = [c for c in NOVAS_NUMERICAS[1:] if c not in IDHM_NUMERICAS + HISTORICAS_LAG2]
+    colunas_censo = [c for c in NOVAS_NUMERICAS[1:] if c not in IDHM_NUMERICAS]
     for ref, colunas in [("ano_referencia_ibge", [NOVAS_NUMERICAS[0]]), ("ano_referencia_censo", colunas_censo)]:
         referencia = pd.to_numeric(df[ref], errors="raise")
         if (referencia.notna() & (referencia.ge(df.ano) | referencia.le(0))).any():
@@ -70,15 +67,9 @@ def validar_contextos(df):
             raise ValueError("ReferÃªncia IDHM contemporÃ¢nea/futura ou invÃ¡lida")
         if (referencia_idhm.isna() & df[IDHM_NUMERICAS].notna().any(axis=1)).any():
             raise ValueError("Medida IDHM sem referÃªncia temporal")
-    if "ano_referencia_historico_municipio_lag2" in df:
-        ref_lag2 = pd.to_numeric(df["ano_referencia_historico_municipio_lag2"], errors="raise")
-        if (ref_lag2.notna() & (ref_lag2.ge(df.ano) | ref_lag2.le(0) | ref_lag2.ne(df.ano - 2))).any():
-            raise ValueError("ReferÃªncia histÃ³rica de segundo atraso invÃ¡lida")
-        if (ref_lag2.isna() & df[HISTORICAS_LAG2].notna().any(axis=1)).any():
-            raise ValueError("Feature histórica de segundo atraso sem referência")
     for c in NOVAS_NUMERICAS:
         v = pd.to_numeric(df[c], errors="raise").to_numpy(dtype=float, na_value=np.nan)
-        if np.isinf(v).any() or (not c.startswith("delta_") and (v < 0).any()) or (c.startswith("pct_") and (v > 100).any()):
+        if np.isinf(v).any() or (v < 0).any() or (c.startswith("pct_") and (v > 100).any()):
             raise ValueError(f"Medida de contexto inválida: {c}")
     for marcador, medida in [("tem_populacao_ibge", "populacao_municipio_ibge"), ("tem_censo_escolar", "escolas_anos_iniciais_censo")]:
         if df[marcador].isna().any() or not df[marcador].eq(df[medida].notna()).all():
