@@ -1,5 +1,5 @@
 {
-  "run_id": "20260908T003806585513Z",
+  "run_id": "20260910T030117850091Z",
   "ano": 2024,
   "execution_date_gold": "2026-09-07",
   "base_sha256": "367c07ba239e6729daed79d965b0378cc8583aea9f2e952f08732bc7519d15d4",
@@ -19,7 +19,7 @@
     "criterio": "F1 macro de validação; tolerância 0.005 favorece logística",
     "limiar_risco": 0.5,
     "teste_usado_na_selecao": false,
-    "run_id": "20260908T003806585513Z"
+    "run_id": "20260910T030117850091Z"
   },
   "divisao": {
     "semente": 42,
@@ -89,6 +89,19 @@
         },
         {
           "parametros": {
+            "modelo__C": 0.1,
+            "modelo__class_weight": {
+              "0": 2,
+              "1": 1
+            }
+          },
+          "f1_treino": 0.5469020182145604,
+          "f1_validacao_media": 0.5471385267609968,
+          "f1_validacao_desvio": 0.004280355631540234,
+          "roc_auc_media": 0.658202381291702
+        },
+        {
+          "parametros": {
             "modelo__C": 1.0,
             "modelo__class_weight": null
           },
@@ -106,6 +119,19 @@
           "f1_validacao_media": 0.6012089827631496,
           "f1_validacao_desvio": 0.000760541392727779,
           "roc_auc_media": 0.6580667085925275
+        },
+        {
+          "parametros": {
+            "modelo__C": 1.0,
+            "modelo__class_weight": {
+              "0": 2,
+              "1": 1
+            }
+          },
+          "f1_treino": 0.5470754794283398,
+          "f1_validacao_media": 0.5474493891120334,
+          "f1_validacao_desvio": 0.00449869515063828,
+          "roc_auc_media": 0.6581165791730073
         }
       ]
     },
@@ -184,7 +210,7 @@
           220678
         ]
       ],
-      "tempo_busca_e_ajuste_segundos": 1.92
+      "tempo_busca_e_ajuste_segundos": 1.69
     },
     "logistica": {
       "n": 370443,
@@ -209,7 +235,7 @@
           124287
         ]
       ],
-      "tempo_busca_e_ajuste_segundos": 12.14
+      "tempo_busca_e_ajuste_segundos": 14.39
     },
     "gradient_boosting": {
       "n": 370443,
@@ -234,7 +260,7 @@
           181631
         ]
       ],
-      "tempo_busca_e_ajuste_segundos": 53.52
+      "tempo_busca_e_ajuste_segundos": 50.74
     }
   },
   "teste": {
@@ -914,17 +940,21 @@
     "src\\evaluation\\interpretabilidade.py": "9ab71b6c7d28f1dbfbdaae83c9dabd98b81e00d435bdea7f10b32658de41cd23",
     "src\\evaluation\\metricas.py": "1f8a7bb1d98d5e6f8d5c1be601596e39e1cad3be5eb5f29847e2381d41613d12",
     "src\\evaluation\\relatorio.py": "92501d2c272817f75c0952f159d658fd66c37a91053abe4246306e6d17a592e5",
+    "src\\evaluation\\relatorio_temporal.py": "8717e67715f9a3a3f755caca00a3e174e755a935a7c5185b39bc16c91c42c81e",
     "src\\modeling\\__init__.py": "1fff5be459583b8a5782456e3675c8297718d7a3201f283f4093fff613dc248c",
-    "src\\modeling\\pipelines.py": "a34f9b7a547ba03ed203ed0315cf4df0dc7bcae43243b713c656da07bf7caeb9",
+    "src\\modeling\\pipelines.py": "86aa0b7cc70f46900d5b5ee6d8dc9ade2e987c51b94ffa557413bb300ad989e4",
+    "src\\modeling\\temporal.py": "3f703ee0302a62ef71958b2e3f2faa846c627a28daad855be1c6d3968fecdd55",
     "src\\modeling\\treinar.py": "57219cfc745568ee42004c8271c750d0bb88606b72421b5a3b685870eef64477",
     "src\\preprocessing\\__init__.py": "dd5bf872c95593d79783c5e08dff196b08224584c8c31120c7d57f8851e739cc",
     "src\\preprocessing\\base.py": "a03b4f02039ffc409694ad555b8c6e9f56a91f166d95a296a5c9f5e92629e8bf",
     "src\\preprocessing\\divisao.py": "2e9e6a55db0bcd15ed2b010eb615076cbdbc4ef1e64a0adfc306173f5af8f05a",
+    "src\\preprocessing\\enriquecida.py": "c288921cbffbd9fac1659f99283cfecd418432a0e427901e997f8b3619cba58c",
     "src\\visualization\\__init__.py": "9b715d0452ee40b818ad7f75b056d54c5b1fe49818d66f910251b909af6e6fc4",
     "src\\visualization\\avaliacao.py": "f81a87b8b5eecd2ed197bb6f59631f14b377c727492a5750cdb483aef9e9b9da",
     "src\\visualization\\estilo.py": "5faf6b49b42938ede7df91ad3dc955b315a55d8ef569ab2a0e25da6eb0f440fa",
-    "src\\visualization\\exploratoria.py": "3be5ed064eaa86e8d1be4a246a9fd518e9e11eb8162715d346535cdb81c3cf9c"
+    "src\\visualization\\exploratoria.py": "3be5ed064eaa86e8d1be4a246a9fd518e9e11eb8162715d346535cdb81c3cf9c",
+    "src\\visualization\\exploratoria_enriquecida.py": "0f6d48364b1a458656fb50a230fae955a3dbc8d4004b474c32b9c2c18ec76f6d"
   },
-  "duracao_segundos": 98.69,
-  "modelo_sha256": "68f02bebe2ca52e3b3739fb8dbbf05888a733f51e46542416096f894d5d3b9b7"
+  "duracao_segundos": 95.77,
+  "modelo_sha256": "ccc45042ca702b4d105b9c9cae7700a3077897fb6ff2705bf4a14c4dedc3dee4"
 }

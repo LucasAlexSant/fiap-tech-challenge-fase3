@@ -1,5 +1,5 @@
 {
-  "run_id": "20260908T003806585513Z",
+  "run_id": "20260910T030117850091Z",
   "modelo": "logistica",
   "amostra_permutacao": 5000,
   "amostra_shap": 2000,

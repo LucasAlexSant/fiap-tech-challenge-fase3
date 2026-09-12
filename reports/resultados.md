@@ -1,6 +1,6 @@
 # Resultados da execução
 
-Execução: `20260908T003806585513Z`. Gold: `2026-09-07`, ano 2024.
+Execução: `20260910T030117850091Z`. Gold: `2026-09-07`, ano 2024.
 
 Modelo escolhido **antes do teste**: **logistica**. F1 macro de validação; tolerância 0.005 favorece logística. Limiar fixo 0,5.
 
