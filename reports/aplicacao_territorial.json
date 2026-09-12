@@ -1,0 +1,407 @@
+{
+  "run_id": "20260912T192155335461Z_aplicacao",
+  "ano_teste": 2025,
+  "execucao_gold": "2026-09-08",
+  "modelo": {
+    "run_id": "20260912T183839884363Z_municipal",
+    "sha256": "b403545eb00af06345f80769f53b1f91ebb573a60fa8b4a21519baaed076ca69",
+    "corte_desenvolvimento": 0.6191646191646192
+  },
+  "proveniencia": [
+    {
+      "arquivo": "gold/base_modelagem_aluno_enriquecida/execution_date=2026-09-08/ano=2025/base_modelagem_aluno_enriquecida.parquet",
+      "sha256": "08ad9fe5d0976c8991f49353aca72253bac5135837c7f2114600d59201b60d4f"
+    }
+  ],
+  "filtro": "avaliacoes >= 30 e escolas >= 2",
+  "territorios": 4547,
+  "avaliacoes_cobertas": 1885374,
+  "prioridades": [
+    {
+      "id_municipio_nome": "Mariana Pimentel",
+      "sigla_uf": "RS",
+      "rede": "Municipal",
+      "avaliacoes": 41,
+      "escolas": 3,
+      "score_risco": 0.9995758257092197,
+      "taxa_alfabetizacao": 0.8048780487804879,
+      "meta_municipal": null,
+      "risco_territorial": 0
+    },
+    {
+      "id_municipio_nome": "Porto Alegre",
+      "sigla_uf": "RS",
+      "rede": "Municipal",
+      "avaliacoes": 2677,
+      "escolas": 51,
+      "score_risco": 0.9995744176370961,
+      "taxa_alfabetizacao": 0.27269331341053415,
+      "meta_municipal": null,
+      "risco_territorial": 1
+    },
+    {
+      "id_municipio_nome": "Irará",
+      "sigla_uf": "BA",
+      "rede": "Municipal",
+      "avaliacoes": 236,
+      "escolas": 10,
+      "score_risco": 0.999175502863799,
+      "taxa_alfabetizacao": 0.5720338983050848,
+      "meta_municipal": null,
+      "risco_territorial": 1
+    },
+    {
+      "id_municipio_nome": "Arataca",
+      "sigla_uf": "BA",
+      "rede": "Municipal",
+      "avaliacoes": 74,
+      "escolas": 3,
+      "score_risco": 0.9990616480875123,
+      "taxa_alfabetizacao": 0.3108108108108108,
+      "meta_municipal": 0.3222,
+      "risco_territorial": 1
+    },
+    {
+      "id_municipio_nome": "Iramaia",
+      "sigla_uf": "BA",
+      "rede": "Municipal",
+      "avaliacoes": 87,
+      "escolas": 3,
+      "score_risco": 0.9988333228378966,
+      "taxa_alfabetizacao": 0.4367816091954023,
+      "meta_municipal": null,
+      "risco_territorial": 1
+    },
+    {
+      "id_municipio_nome": "Gravataí",
+      "sigla_uf": "RS",
+      "rede": "Municipal",
+      "avaliacoes": 2078,
+      "escolas": 57,
+      "score_risco": 0.9988175857164658,
+      "taxa_alfabetizacao": 0.4619826756496631,
+      "meta_municipal": 0.6890999999999999,
+      "risco_territorial": 1
+    },
+    {
+      "id_municipio_nome": "Barão do Triunfo",
+      "sigla_uf": "RS",
+      "rede": "Municipal",
+      "avaliacoes": 44,
+      "escolas": 3,
+      "score_risco": 0.9988038546086783,
+      "taxa_alfabetizacao": 0.7272727272727273,
+      "meta_municipal": 0.1405,
+      "risco_territorial": 0
+    },
+    {
+      "id_municipio_nome": "Porto Alegre",
+      "sigla_uf": "RS",
+      "rede": "Estadual",
+      "avaliacoes": 4701,
+      "escolas": 176,
+      "score_risco": 0.9986625842569166,
+      "taxa_alfabetizacao": 0.3337587747287811,
+      "meta_municipal": null,
+      "risco_territorial": 1
+    },
+    {
+      "id_municipio_nome": "Capão do Leão",
+      "sigla_uf": "RS",
+      "rede": "Municipal",
+      "avaliacoes": 265,
+      "escolas": 8,
+      "score_risco": 0.998479059916358,
+      "taxa_alfabetizacao": 0.3433962264150943,
+      "meta_municipal": 0.5886,
+      "risco_territorial": 1
+    },
+    {
+      "id_municipio_nome": "Casa Nova",
+      "sigla_uf": "BA",
+      "rede": "Municipal",
+      "avaliacoes": 651,
+      "escolas": 15,
+      "score_risco": 0.9983591854182056,
+      "taxa_alfabetizacao": 0.23963133640552994,
+      "meta_municipal": 0.2782,
+      "risco_territorial": 1
+    },
+    {
+      "id_municipio_nome": "Itaju do Colônia",
+      "sigla_uf": "BA",
+      "rede": "Municipal",
+      "avaliacoes": 81,
+      "escolas": 3,
+      "score_risco": 0.9983384008414856,
+      "taxa_alfabetizacao": 0.24691358024691357,
+      "meta_municipal": 0.3574,
+      "risco_territorial": 1
+    },
+    {
+      "id_municipio_nome": "Correntina",
+      "sigla_uf": "BA",
+      "rede": "Municipal",
+      "avaliacoes": 333,
+      "escolas": 11,
+      "score_risco": 0.9983147686536293,
+      "taxa_alfabetizacao": 0.5075075075075075,
+      "meta_municipal": 0.5018,
+      "risco_territorial": 1
+    },
+    {
+      "id_municipio_nome": "Itanagra",
+      "sigla_uf": "BA",
+      "rede": "Municipal",
+      "avaliacoes": 69,
+      "escolas": 2,
+      "score_risco": 0.9982852075978409,
+      "taxa_alfabetizacao": 0.5507246376811594,
+      "meta_municipal": null,
+      "risco_territorial": 1
+    },
+    {
+      "id_municipio_nome": "Alvorada",
+      "sigla_uf": "RS",
+      "rede": "Municipal",
+      "avaliacoes": 1568,
+      "escolas": 28,
+      "score_risco": 0.9982287283287402,
+      "taxa_alfabetizacao": 0.4107142857142857,
+      "meta_municipal": 0.5739,
+      "risco_territorial": 1
+    },
+    {
+      "id_municipio_nome": "Taquari",
+      "sigla_uf": "RS",
+      "rede": "Municipal",
+      "avaliacoes": 61,
+      "escolas": 4,
+      "score_risco": 0.9980920905310118,
+      "taxa_alfabetizacao": 0.39344262295081966,
+      "meta_municipal": 0.595,
+      "risco_territorial": 1
+    },
+    {
+      "id_municipio_nome": "Capão da Canoa",
+      "sigla_uf": "RS",
+      "rede": "Municipal",
+      "avaliacoes": 507,
+      "escolas": 12,
+      "score_risco": 0.998083607046529,
+      "taxa_alfabetizacao": 0.40631163708086787,
+      "meta_municipal": 0.4244,
+      "risco_territorial": 1
+    },
+    {
+      "id_municipio_nome": "Viamão",
+      "sigla_uf": "RS",
+      "rede": "Municipal",
+      "avaliacoes": 2107,
+      "escolas": 53,
+      "score_risco": 0.9978404467418467,
+      "taxa_alfabetizacao": 0.41385856668248694,
+      "meta_municipal": 0.6574,
+      "risco_territorial": 1
+    },
+    {
+      "id_municipio_nome": "Macajuba",
+      "sigla_uf": "BA",
+      "rede": "Municipal",
+      "avaliacoes": 142,
+      "escolas": 2,
+      "score_risco": 0.9976843357276416,
+      "taxa_alfabetizacao": 0.7253521126760564,
+      "meta_municipal": 0.3407,
+      "risco_territorial": 0
+    },
+    {
+      "id_municipio_nome": "Ibirapitanga",
+      "sigla_uf": "BA",
+      "rede": "Municipal",
+      "avaliacoes": 225,
+      "escolas": 7,
+      "score_risco": 0.9976811547154105,
+      "taxa_alfabetizacao": 0.6133333333333333,
+      "meta_municipal": 0.4582,
+      "risco_territorial": 1
+    },
+    {
+      "id_municipio_nome": "Eldorado do Sul",
+      "sigla_uf": "RS",
+      "rede": "Municipal",
+      "avaliacoes": 360,
+      "escolas": 10,
+      "score_risco": 0.997618831585923,
+      "taxa_alfabetizacao": 0.28888888888888886,
+      "meta_municipal": null,
+      "risco_territorial": 1
+    },
+    {
+      "id_municipio_nome": "Pelotas",
+      "sigla_uf": "RS",
+      "rede": "Municipal",
+      "avaliacoes": 1367,
+      "escolas": 48,
+      "score_risco": 0.9975947461112018,
+      "taxa_alfabetizacao": 0.3013899049012436,
+      "meta_municipal": 0.4681,
+      "risco_territorial": 1
+    },
+    {
+      "id_municipio_nome": "São Leopoldo",
+      "sigla_uf": "RS",
+      "rede": "Municipal",
+      "avaliacoes": 1639,
+      "escolas": 36,
+      "score_risco": 0.9975551324182061,
+      "taxa_alfabetizacao": 0.4100061012812691,
+      "meta_municipal": 0.6451,
+      "risco_territorial": 1
+    },
+    {
+      "id_municipio_nome": "Rio do Pires",
+      "sigla_uf": "BA",
+      "rede": "Municipal",
+      "avaliacoes": 82,
+      "escolas": 5,
+      "score_risco": 0.9974502892871393,
+      "taxa_alfabetizacao": 0.6951219512195121,
+      "meta_municipal": 0.5001,
+      "risco_territorial": 1
+    },
+    {
+      "id_municipio_nome": "Coração de Maria",
+      "sigla_uf": "BA",
+      "rede": "Municipal",
+      "avaliacoes": 215,
+      "escolas": 6,
+      "score_risco": 0.9974131582236032,
+      "taxa_alfabetizacao": 0.4883720930232558,
+      "meta_municipal": 0.4558,
+      "risco_territorial": 1
+    },
+    {
+      "id_municipio_nome": "Cabaceiras do Paraguaçu",
+      "sigla_uf": "BA",
+      "rede": "Municipal",
+      "avaliacoes": 168,
+      "escolas": 8,
+      "score_risco": 0.9973476122294133,
+      "taxa_alfabetizacao": 0.4107142857142857,
+      "meta_municipal": null,
+      "risco_territorial": 1
+    }
+  ],
+  "precisao_no_topo": {
+    "prevalencia_de_referencia": 0.4998900373872883,
+    "cortes": [
+      {
+        "k": 10,
+        "precisao": 0.8,
+        "ganho_sobre_o_acaso": 0.3001099626127117
+      },
+      {
+        "k": 25,
+        "precisao": 0.88,
+        "ganho_sobre_o_acaso": 0.3801099626127117
+      },
+      {
+        "k": 50,
+        "precisao": 0.9,
+        "ganho_sobre_o_acaso": 0.4001099626127117
+      },
+      {
+        "k": 100,
+        "precisao": 0.95,
+        "ganho_sobre_o_acaso": 0.45010996261271163
+      }
+    ]
+  },
+  "perfis": {
+    "k": 2,
+    "silhueta": 0.23352115144127056,
+    "criterio": "maior silhueta entre k de 2 a 6, exigindo grupo minimo de 1%",
+    "variaveis": "somente contexto estrutural numerico, sobre 10 componentes principais; UF, regiao, rede e o resultado observado ficam fora do agrupamento",
+    "grupos": [
+      {
+        "perfil": 0,
+        "territorios": 2143,
+        "taxa_media": 0.6791237253996906,
+        "pct_em_risco": 0.5501633224451703,
+        "idhm": 0.5974911296901917,
+        "pct_rural": 70.76719051009853,
+        "pct_internet": 86.55313764795542,
+        "pct_biblioteca": 32.5473680991855,
+        "populacao_mediana": 16691.0,
+        "regiao_predominante": "Nordeste",
+        "pct_da_regiao_predominante": 66.4
+      },
+      {
+        "perfil": 1,
+        "territorios": 2404,
+        "taxa_media": 0.7140458642631498,
+        "pct_em_risco": 0.4550748752079867,
+        "idhm": 0.7145404164741437,
+        "pct_rural": 25.605821771667344,
+        "pct_internet": 99.36034780653922,
+        "pct_biblioteca": 76.9570874814634,
+        "populacao_mediana": 21900.0,
+        "regiao_predominante": "Sudeste",
+        "pct_da_regiao_predominante": 45.3
+      }
+    ]
+  },
+  "metas": {
+    "territorios_com_meta": 3927,
+    "pct_abaixo_da_meta": 0.2831678125795773,
+    "distancia_mediana": 0.0701714285714285,
+    "auc_do_score_para_abaixo_da_meta": 0.6394367277048698,
+    "por_faixa_de_score": [
+      {
+        "faixa_de_score": "Q1",
+        "territorios": 786,
+        "pct_abaixo_da_meta": 0.12595419847328243,
+        "distancia_media": 0.10755100752392807,
+        "taxa_media": 0.840454569864895
+      },
+      {
+        "faixa_de_score": "Q2",
+        "territorios": 785,
+        "pct_abaixo_da_meta": 0.21910828025477708,
+        "distancia_media": 0.0729530835586941,
+        "taxa_media": 0.7752463319663374
+      },
+      {
+        "faixa_de_score": "Q3",
+        "territorios": 785,
+        "pct_abaixo_da_meta": 0.32229299363057323,
+        "distancia_media": 0.05636014778387237,
+        "taxa_media": 0.7094761987392864
+      },
+      {
+        "faixa_de_score": "Q4",
+        "territorios": 785,
+        "pct_abaixo_da_meta": 0.34394904458598724,
+        "distancia_media": 0.0614641499222152,
+        "taxa_media": 0.6529166339986483
+      },
+      {
+        "faixa_de_score": "Q5",
+        "territorios": 786,
+        "pct_abaixo_da_meta": 0.40458015267175573,
+        "distancia_media": 0.020793503059357944,
+        "taxa_media": 0.5529265819397651
+      }
+    ],
+    "leitura": "O score ordena quem fica abaixo da meta da própria edição. Não é previsão de meta futura: exigiria comprovar a data de publicação de cada meta e validar o erro fora do tempo."
+  },
+  "limites": [
+    "Score ordena risco; não é estimativa calibrada da taxa do território.",
+    "Prioridade é ponto de partida para diagnóstico local, não corte de recurso.",
+    "Meta municipal vale para a rede Municipal; outras redes ficam fora.",
+    "Agrupamento descreve contexto; não implica política comum.",
+    "Nenhum resultado autoriza classificar uma criança."
+  ],
+  "duracao_segundos": 16.9
+}
