@@ -34,8 +34,7 @@ Relatórios gerados: [diagnóstico e insights](reports/diagnostico_e_insights.md
 [resultados temporais](reports/resultados_temporais.md) ·
 [decisões analíticas](reports/decisoes_analiticas.md) ·
 [protocolo temporal](reports/protocolo_temporal.md) ·
-[aplicação estratégica](reports/aplicacao_estrategica.md) ·
-[roteiro do vídeo](reports/roteiro_video.md).
+[aplicação estratégica](reports/aplicacao_estrategica.md).
 Notebooks: [análise por aluno](notebooks/01_analise_alfabetizacao.ipynb) ·
 [validação temporal](notebooks/02_enriquecimento_validacao_temporal.ipynb).
 
@@ -675,7 +674,7 @@ src/modeling              pipelines, catálogo de algoritmos, busca e treinament
 src/evaluation            métricas, incerteza, SHAP, insights e relatórios
 src/visualization         EDA e figuras
 notebooks                 análise guiada em passos
-reports                   métricas, decisões, protocolo e roteiro
+reports                   métricas, decisões analíticas e protocolo
 images                    gráficos exportados
 modelos                   pipelines serializados, fora do Git
 tests                     30 testes de contrato e invariantes
