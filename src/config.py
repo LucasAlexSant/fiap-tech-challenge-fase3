@@ -3,7 +3,12 @@ from pathlib import Path
 import os
 
 RAIZ = Path(__file__).resolve().parents[1]
-LAKE = Path(os.getenv("FASE2_LAKE_PATH", RAIZ.parent / "fiap-tech-challenge-fase2/data"))
+# Cópia local das duas tabelas Gold que a Fase 3 lê, byte a byte idêntica à
+# origem: o repositório roda sozinho, sem exigir a Fase 3 lado a lado com a
+# Fase 2. Os hashes do manifesto são relativos à raiz do lake, então a árvore
+# `gold/<tabela>/execution_date=.../ano=...` precisa ser preservada.
+# FASE2_LAKE_PATH continua tendo precedência para apontar ao lake original.
+LAKE = Path(os.getenv("FASE2_LAKE_PATH", RAIZ / "data/lake"))
 TABELA_GOLD = "base_modelagem_aluno"
 SEMENTE = 42
 ANO_PADRAO = 2024
