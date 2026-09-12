@@ -1,0 +1,1885 @@
+{
+  "run_id": "20260912T190816181804Z_insights",
+  "modelo_explicado": "xgboost",
+  "ano_treino": 2024,
+  "ano_teste": 2025,
+  "unidade": "id_municipio x rede",
+  "execucao_gold": "2026-09-08",
+  "proveniencia_treino": [
+    {
+      "arquivo": "gold/base_modelagem_aluno_enriquecida/execution_date=2026-09-08/ano=2024/base_modelagem_aluno_enriquecida.parquet",
+      "sha256": "a7169fe7e91cf8d6e694c32dd4925d5f6d09181ab4b6a7c53ec22e0d8e273c83"
+    }
+  ],
+  "proveniencia_teste": [
+    {
+      "arquivo": "gold/base_modelagem_aluno_enriquecida/execution_date=2026-09-08/ano=2025/base_modelagem_aluno_enriquecida.parquet",
+      "sha256": "08ad9fe5d0976c8991f49353aca72253bac5135837c7f2114600d59201b60d4f"
+    }
+  ],
+  "corte_desenvolvimento": 0.6191646191646192,
+  "corte_teste": 0.7079207920792079,
+  "shap_versao": "0.51.0",
+  "shap_escala": "log-odds do risco territorial (taxa abaixo da mediana)",
+  "erro_maximo_reconstrucao_probabilidade": 7.152557373046875e-07,
+  "shap": [
+    {
+      "variavel": "taxa_alfabetizacao_municipio_anterior",
+      "pilar": "Histórico educacional",
+      "shap_absoluto_medio": 1.6443660186218039,
+      "shap_medio_com_sinal": -0.24883325758231084
+    },
+    {
+      "variavel": "sigla_uf",
+      "pilar": "Território e rede",
+      "shap_absoluto_medio": 0.7468518481706775,
+      "shap_medio_com_sinal": 0.029606529286761524
+    },
+    {
+      "variavel": "taxa_presenca_municipio_anterior",
+      "pilar": "Histórico educacional",
+      "shap_absoluto_medio": 0.45574533914319926,
+      "shap_medio_com_sinal": -0.12471039568153787
+    },
+    {
+      "variavel": "idhm_educacao_municipio",
+      "pilar": "Desenvolvimento humano",
+      "shap_absoluto_medio": 0.1921810726048601,
+      "shap_medio_com_sinal": 0.006675778576018248
+    },
+    {
+      "variavel": "regiao_brasil",
+      "pilar": "Território e rede",
+      "shap_absoluto_medio": 0.1708116048855588,
+      "shap_medio_com_sinal": -0.001255175442895849
+    },
+    {
+      "variavel": "pct_escolas_biblioteca_censo",
+      "pilar": "Espaços de aprendizagem",
+      "shap_absoluto_medio": 0.12505538515388515,
+      "shap_medio_com_sinal": 4.709633814080016e-05
+    },
+    {
+      "variavel": "total_pagamentos_bolsa_familia_anterior",
+      "pilar": "Transferência de renda",
+      "shap_absoluto_medio": 0.11929655445151457,
+      "shap_medio_com_sinal": 0.02596777506117842
+    },
+    {
+      "variavel": "pct_escolas_agua_cacimba_censo",
+      "pilar": "Infraestrutura básica",
+      "shap_absoluto_medio": 0.11789226004675035,
+      "shap_medio_com_sinal": -0.006601823839218274
+    },
+    {
+      "variavel": "idhm_longevidade_municipio",
+      "pilar": "Desenvolvimento humano",
+      "shap_absoluto_medio": 0.10761336753566562,
+      "shap_medio_com_sinal": -0.011738964795215712
+    },
+    {
+      "variavel": "alunos_avaliados_municipio_anterior",
+      "pilar": "Histórico educacional",
+      "shap_absoluto_medio": 0.10714218258376963,
+      "shap_medio_com_sinal": -0.03944185180104562
+    },
+    {
+      "variavel": "matriculas_por_turma_censo",
+      "pilar": "Porte e escala da rede",
+      "shap_absoluto_medio": 0.09997311047625286,
+      "shap_medio_com_sinal": 0.0026937247762768993
+    },
+    {
+      "variavel": "valor_total_bolsa_familia_anterior",
+      "pilar": "Transferência de renda",
+      "shap_absoluto_medio": 0.09648310826693446,
+      "shap_medio_com_sinal": 0.013086419307361489
+    },
+    {
+      "variavel": "pct_escolas_esgoto_fossa_septica_censo",
+      "pilar": "Infraestrutura básica",
+      "shap_absoluto_medio": 0.09545606227083625,
+      "shap_medio_com_sinal": -0.0010221169122874906
+    },
+    {
+      "variavel": "pct_escolas_quadra_esportes_coberta_censo",
+      "pilar": "Espaços de aprendizagem",
+      "shap_absoluto_medio": 0.09342129442434807,
+      "shap_medio_com_sinal": -0.006243201842514049
+    },
+    {
+      "variavel": "pct_escolas_sala_leitura_censo",
+      "pilar": "Espaços de aprendizagem",
+      "shap_absoluto_medio": 0.09157549533075406,
+      "shap_medio_com_sinal": -0.00943578259007041
+    },
+    {
+      "variavel": "valor_medio_pagamento_bolsa_familia_anterior",
+      "pilar": "Transferência de renda",
+      "shap_absoluto_medio": 0.09015629075900067,
+      "shap_medio_com_sinal": 0.003991147729840391
+    },
+    {
+      "variavel": "pct_escolas_acessibilidade_rampas_censo",
+      "pilar": "Acessibilidade",
+      "shap_absoluto_medio": 0.09004619311078832,
+      "shap_medio_com_sinal": 0.004389213759864615
+    },
+    {
+      "variavel": "matriculas_por_vinculo_docente_censo",
+      "pilar": "Porte e escala da rede",
+      "shap_absoluto_medio": 0.08995472796424386,
+      "shap_medio_com_sinal": -0.0012827644622042107
+    },
+    {
+      "variavel": "pct_escolas_com_prof_administrativos_censo",
+      "pilar": "Recursos humanos na escola",
+      "shap_absoluto_medio": 0.08914927092371809,
+      "shap_medio_com_sinal": 0.008730937398108648
+    },
+    {
+      "variavel": "salas_utilizadas_censo",
+      "pilar": "Porte e escala da rede",
+      "shap_absoluto_medio": 0.08406176480742311,
+      "shap_medio_com_sinal": 0.0033250547458210282
+    },
+    {
+      "variavel": "pct_escolas_quadra_esportes_censo",
+      "pilar": "Espaços de aprendizagem",
+      "shap_absoluto_medio": 0.08148246773000571,
+      "shap_medio_com_sinal": -0.004546483099102331
+    },
+    {
+      "variavel": "pct_escolas_com_prof_gestao_censo",
+      "pilar": "Recursos humanos na escola",
+      "shap_absoluto_medio": 0.0805278709443835,
+      "shap_medio_com_sinal": -0.005614091450328168
+    },
+    {
+      "variavel": "pct_escolas_esgoto_fossa_censo",
+      "pilar": "Infraestrutura básica",
+      "shap_absoluto_medio": 0.07828364493093136,
+      "shap_medio_com_sinal": 0.007173608152890872
+    },
+    {
+      "variavel": "pct_escolas_material_ped_jogos_censo",
+      "pilar": "Material pedagógico",
+      "shap_absoluto_medio": 0.07624851736630887,
+      "shap_medio_com_sinal": 0.013133768339532632
+    },
+    {
+      "variavel": "idhm_municipio",
+      "pilar": "Desenvolvimento humano",
+      "shap_absoluto_medio": 0.07555033296931186,
+      "shap_medio_com_sinal": 0.007105606232165641
+    },
+    {
+      "variavel": "salas_climatizadas_censo",
+      "pilar": "Infraestrutura básica",
+      "shap_absoluto_medio": 0.07225092410478538,
+      "shap_medio_com_sinal": -0.003107033855843134
+    },
+    {
+      "variavel": "pct_escolas_com_prof_monitores_censo",
+      "pilar": "Recursos humanos na escola",
+      "shap_absoluto_medio": 0.07204543649601378,
+      "shap_medio_com_sinal": 0.007640023533759132
+    },
+    {
+      "variavel": "pct_escolas_lab_informatica_censo",
+      "pilar": "Espaços de aprendizagem",
+      "shap_absoluto_medio": 0.06899043813187787,
+      "shap_medio_com_sinal": -0.016917011493800253
+    },
+    {
+      "variavel": "pct_escolas_quadra_esportes_descoberta_censo",
+      "pilar": "Espaços de aprendizagem",
+      "shap_absoluto_medio": 0.06739616101376335,
+      "shap_medio_com_sinal": -0.00951651168518319
+    },
+    {
+      "variavel": "turmas_anos_iniciais_censo",
+      "pilar": "Porte e escala da rede",
+      "shap_absoluto_medio": 0.06593572890111858,
+      "shap_medio_com_sinal": 0.005905794901351145
+    },
+    {
+      "variavel": "pct_escolas_material_ped_cientifico_censo",
+      "pilar": "Material pedagógico",
+      "shap_absoluto_medio": 0.06499888263063079,
+      "shap_medio_com_sinal": -0.0012823464802687488
+    },
+    {
+      "variavel": "salas_acessiveis_censo",
+      "pilar": "Infraestrutura básica",
+      "shap_absoluto_medio": 0.06412269312140838,
+      "shap_medio_com_sinal": -0.009740242654287072
+    },
+    {
+      "variavel": "pct_escolas_esgoto_fossa_comum_censo",
+      "pilar": "Infraestrutura básica",
+      "shap_absoluto_medio": 0.06241047157797594,
+      "shap_medio_com_sinal": 0.006078962522714225
+    },
+    {
+      "variavel": "salas_utilizadas_fora_censo",
+      "pilar": "Porte e escala da rede",
+      "shap_absoluto_medio": 0.060623439559368775,
+      "shap_medio_com_sinal": -0.006161246479782495
+    },
+    {
+      "variavel": "pct_escolas_biblioteca_sala_leitura_censo",
+      "pilar": "Espaços de aprendizagem",
+      "shap_absoluto_medio": 0.05950276802253197,
+      "shap_medio_com_sinal": 0.00609770683565654
+    },
+    {
+      "variavel": "pct_escolas_material_ped_multimidia_censo",
+      "pilar": "Material pedagógico",
+      "shap_absoluto_medio": 0.05812467059172842,
+      "shap_medio_com_sinal": 0.0006125396476863028
+    },
+    {
+      "variavel": "idhm_renda_municipio",
+      "pilar": "Desenvolvimento humano",
+      "shap_absoluto_medio": 0.057970028746558766,
+      "shap_medio_com_sinal": -0.0020592430938224555
+    },
+    {
+      "variavel": "matriculas_anos_iniciais_censo",
+      "pilar": "Porte e escala da rede",
+      "shap_absoluto_medio": 0.055971318180220934,
+      "shap_medio_com_sinal": 0.0009396422621247684
+    },
+    {
+      "variavel": "pct_escolas_internet_alunos_censo",
+      "pilar": "Infraestrutura básica",
+      "shap_absoluto_medio": 0.05585227150588098,
+      "shap_medio_com_sinal": -0.00025897610315615534
+    },
+    {
+      "variavel": "vinculos_docentes_anos_iniciais_censo",
+      "pilar": "Porte e escala da rede",
+      "shap_absoluto_medio": 0.054223841555962916,
+      "shap_medio_com_sinal": 0.001477455770899511
+    },
+    {
+      "variavel": "pct_escolas_com_prof_pedagogia_censo",
+      "pilar": "Recursos humanos na escola",
+      "shap_absoluto_medio": 0.05407666009667357,
+      "shap_medio_com_sinal": -0.006124873754421388
+    },
+    {
+      "variavel": "pct_escolas_acesso_internet_computador_censo",
+      "pilar": "Infraestrutura básica",
+      "shap_absoluto_medio": 0.05339473526080114,
+      "shap_medio_com_sinal": 0.0037161070655153507
+    },
+    {
+      "variavel": "pct_escolas_material_ped_infantil_censo",
+      "pilar": "Material pedagógico",
+      "shap_absoluto_medio": 0.05086990508357348,
+      "shap_medio_com_sinal": 0.0035424697956465915
+    },
+    {
+      "variavel": "pct_escolas_agua_poco_artesiano_censo",
+      "pilar": "Infraestrutura básica",
+      "shap_absoluto_medio": 0.050661468079239595,
+      "shap_medio_com_sinal": -0.009315713909402926
+    },
+    {
+      "variavel": "pct_escolas_rurais_censo",
+      "pilar": "Território e rede",
+      "shap_absoluto_medio": 0.05026227004475261,
+      "shap_medio_com_sinal": 0.004449726061928057
+    },
+    {
+      "variavel": "pct_escolas_esgoto_rede_publica_censo",
+      "pilar": "Infraestrutura básica",
+      "shap_absoluto_medio": 0.05002337552894181,
+      "shap_medio_com_sinal": 0.004380036588582826
+    },
+    {
+      "variavel": "pct_escolas_acessibilidade_sinal_visual_censo",
+      "pilar": "Acessibilidade",
+      "shap_absoluto_medio": 0.04927319635713324,
+      "shap_medio_com_sinal": 0.0014321520556056205
+    },
+    {
+      "variavel": "pct_escolas_acessibilidade_pisos_tateis_censo",
+      "pilar": "Acessibilidade",
+      "shap_absoluto_medio": 0.048474833700182324,
+      "shap_medio_com_sinal": -0.005368554966069745
+    },
+    {
+      "variavel": "pct_escolas_com_prof_coordenador_censo",
+      "pilar": "Recursos humanos na escola",
+      "shap_absoluto_medio": 0.047834844833373254,
+      "shap_medio_com_sinal": -0.002914649117401077
+    },
+    {
+      "variavel": "pct_escolas_acessibilidade_vao_livre_censo",
+      "pilar": "Acessibilidade",
+      "shap_absoluto_medio": 0.04768302731391409,
+      "shap_medio_com_sinal": 0.007337734334759731
+    },
+    {
+      "variavel": "populacao_municipio_ibge",
+      "pilar": "Porte e escala da rede",
+      "shap_absoluto_medio": 0.047403690243633965,
+      "shap_medio_com_sinal": -0.003383547541262728
+    },
+    {
+      "variavel": "pct_escolas_com_prof_nutricionista_censo",
+      "pilar": "Recursos humanos na escola",
+      "shap_absoluto_medio": 0.0465910296520926,
+      "shap_medio_com_sinal": 0.00318317641332187
+    },
+    {
+      "variavel": "pct_escolas_com_prof_alimentacao_censo",
+      "pilar": "Recursos humanos na escola",
+      "shap_absoluto_medio": 0.04658425099152062,
+      "shap_medio_com_sinal": -0.012318902916065995
+    },
+    {
+      "variavel": "pct_escolas_com_prof_bibliotecario_censo",
+      "pilar": "Recursos humanos na escola",
+      "shap_absoluto_medio": 0.04511591428984978,
+      "shap_medio_com_sinal": -0.009190814001517325
+    },
+    {
+      "variavel": "pct_escolas_internet_administrativo_censo",
+      "pilar": "Infraestrutura básica",
+      "shap_absoluto_medio": 0.04088705444761797,
+      "shap_medio_com_sinal": -0.0027063781713533254
+    },
+    {
+      "variavel": "pct_escolas_internet_aprendizagem_censo",
+      "pilar": "Infraestrutura básica",
+      "shap_absoluto_medio": 0.03886687430822581,
+      "shap_medio_com_sinal": -0.006302270594202797
+    },
+    {
+      "variavel": "escolas_anos_iniciais_censo",
+      "pilar": "Porte e escala da rede",
+      "shap_absoluto_medio": 0.037452945421464406,
+      "shap_medio_com_sinal": 0.008544242569550045
+    },
+    {
+      "variavel": "pct_escolas_agua_rede_publica_censo",
+      "pilar": "Infraestrutura básica",
+      "shap_absoluto_medio": 0.036195616968852116,
+      "shap_medio_com_sinal": 0.004119631307886159
+    },
+    {
+      "variavel": "rede",
+      "pilar": "Território e rede",
+      "shap_absoluto_medio": 0.03467932578370789,
+      "shap_medio_com_sinal": 0.0005119242021173513
+    },
+    {
+      "variavel": "pct_escolas_acessibilidade_corrimao_censo",
+      "pilar": "Acessibilidade",
+      "shap_absoluto_medio": 0.03406883236534265,
+      "shap_medio_com_sinal": -0.0038166341668005917
+    },
+    {
+      "variavel": "pct_escolas_com_prof_psicologo_censo",
+      "pilar": "Recursos humanos na escola",
+      "shap_absoluto_medio": 0.034043346551224,
+      "shap_medio_com_sinal": -0.0031149410731012702
+    },
+    {
+      "variavel": "pct_escolas_computador_censo",
+      "pilar": "Infraestrutura básica",
+      "shap_absoluto_medio": 0.032513139190667464,
+      "shap_medio_com_sinal": 0.0016867953490513296
+    },
+    {
+      "variavel": "pct_escolas_com_prof_assist_social_censo",
+      "pilar": "Recursos humanos na escola",
+      "shap_absoluto_medio": 0.028501369317976803,
+      "shap_medio_com_sinal": -0.003511643491253653
+    },
+    {
+      "variavel": "pct_escolas_acessibilidade_elevador_censo",
+      "pilar": "Acessibilidade",
+      "shap_absoluto_medio": 0.027088463889898957,
+      "shap_medio_com_sinal": 0.001678511710876502
+    },
+    {
+      "variavel": "pct_escolas_energia_renovavel_censo",
+      "pilar": "Infraestrutura básica",
+      "shap_absoluto_medio": 0.02660527745080931,
+      "shap_medio_com_sinal": 0.005626242506599014
+    },
+    {
+      "variavel": "pct_escolas_com_prof_fonoaudiologo_censo",
+      "pilar": "Recursos humanos na escola",
+      "shap_absoluto_medio": 0.02294279657481611,
+      "shap_medio_com_sinal": -0.0015882638619160098
+    },
+    {
+      "variavel": "pct_escolas_internet_censo",
+      "pilar": "Infraestrutura básica",
+      "shap_absoluto_medio": 0.02159988972885206,
+      "shap_medio_com_sinal": -0.0030177015246947757
+    },
+    {
+      "variavel": "pct_escolas_internet_comunidade_censo",
+      "pilar": "Infraestrutura básica",
+      "shap_absoluto_medio": 0.0202577008198549,
+      "shap_medio_com_sinal": -0.0014966694492716307
+    },
+    {
+      "variavel": "pct_escolas_esgoto_inexistente_censo",
+      "pilar": "Infraestrutura básica",
+      "shap_absoluto_medio": 0.016192405743498114,
+      "shap_medio_com_sinal": 0.0002908370883131536
+    },
+    {
+      "variavel": "pct_escolas_agua_fonte_rio_censo",
+      "pilar": "Infraestrutura básica",
+      "shap_absoluto_medio": 0.015747529353949213,
+      "shap_medio_com_sinal": 0.00035373890413998964
+    },
+    {
+      "variavel": "pct_escolas_com_professores_censo",
+      "pilar": "Recursos humanos na escola",
+      "shap_absoluto_medio": 0.015184854419523509,
+      "shap_medio_com_sinal": 0.0012794858425596435
+    },
+    {
+      "variavel": "pct_escolas_acessibilidade_sinal_tatil_censo",
+      "pilar": "Acessibilidade",
+      "shap_absoluto_medio": 0.014613475140220596,
+      "shap_medio_com_sinal": -0.0017541641586502213
+    },
+    {
+      "variavel": "pct_escolas_agua_potavel_censo",
+      "pilar": "Infraestrutura básica",
+      "shap_absoluto_medio": 0.012415832263660614,
+      "shap_medio_com_sinal": 0.0015940016629589627
+    },
+    {
+      "variavel": "pct_escolas_com_prof_saude_censo",
+      "pilar": "Recursos humanos na escola",
+      "shap_absoluto_medio": 0.010755120401204198,
+      "shap_medio_com_sinal": 0.0005526682748976709
+    },
+    {
+      "variavel": "pct_escolas_acessibilidade_sinal_sonoro_censo",
+      "pilar": "Acessibilidade",
+      "shap_absoluto_medio": 0.008043926208961723,
+      "shap_medio_com_sinal": -0.0022587477592222946
+    },
+    {
+      "variavel": "pct_escolas_agua_inexistente_censo",
+      "pilar": "Infraestrutura básica",
+      "shap_absoluto_medio": 0.0060578291335980795,
+      "shap_medio_com_sinal": -0.001584028090970593
+    },
+    {
+      "variavel": "pct_escolas_energia_inexistente_censo",
+      "pilar": "Infraestrutura básica",
+      "shap_absoluto_medio": 0.003748286006621335,
+      "shap_medio_com_sinal": 0.0007648154653492871
+    },
+    {
+      "variavel": "pct_escolas_energia_rede_publica_censo",
+      "pilar": "Infraestrutura básica",
+      "shap_absoluto_medio": 0.0031531261692919602,
+      "shap_medio_com_sinal": 4.86274282162268e-05
+    },
+    {
+      "variavel": "pct_escolas_energia_gerador_fossil_censo",
+      "pilar": "Infraestrutura básica",
+      "shap_absoluto_medio": 0.001030911665973779,
+      "shap_medio_com_sinal": 0.0006075423265559394
+    }
+  ],
+  "shap_por_pilar": [
+    {
+      "pilar": "Histórico educacional",
+      "variaveis": 3,
+      "shap_total": 2.207253540348773,
+      "shap_maximo": 1.6443660186218039,
+      "participacao_pct": 30.35844909469948
+    },
+    {
+      "pilar": "Território e rede",
+      "variaveis": 4,
+      "shap_total": 1.0026050488846967,
+      "shap_maximo": 0.7468518481706775,
+      "participacao_pct": 13.789777106369597
+    },
+    {
+      "pilar": "Infraestrutura básica",
+      "variaveis": 24,
+      "shap_total": 0.9756193796790239,
+      "shap_maximo": 0.11789226004675035,
+      "participacao_pct": 13.418617631533115
+    },
+    {
+      "pilar": "Porte e escala da rede",
+      "variaveis": 9,
+      "shap_total": 0.5956005671096894,
+      "shap_maximo": 0.09997311047625286,
+      "participacao_pct": 8.191858872051712
+    },
+    {
+      "pilar": "Recursos humanos na escola",
+      "variaveis": 13,
+      "shap_total": 0.5933527654923698,
+      "shap_maximo": 0.08914927092371809,
+      "participacao_pct": 8.160942726839144
+    },
+    {
+      "pilar": "Espaços de aprendizagem",
+      "variaveis": 7,
+      "shap_total": 0.5874240098071661,
+      "shap_maximo": 0.12505538515388515,
+      "participacao_pct": 8.07939893299128
+    },
+    {
+      "pilar": "Desenvolvimento humano",
+      "variaveis": 4,
+      "shap_total": 0.43331480185639637,
+      "shap_maximo": 0.1921810726048601,
+      "participacao_pct": 5.959788992821635
+    },
+    {
+      "pilar": "Acessibilidade",
+      "variaveis": 8,
+      "shap_total": 0.3192919480864419,
+      "shap_maximo": 0.09004619311078832,
+      "participacao_pct": 4.391524659554077
+    },
+    {
+      "pilar": "Transferência de renda",
+      "variaveis": 3,
+      "shap_total": 0.30593595347744973,
+      "shap_maximo": 0.11929655445151457,
+      "participacao_pct": 4.207827012213527
+    },
+    {
+      "pilar": "Material pedagógico",
+      "variaveis": 4,
+      "shap_total": 0.25024197567224155,
+      "shap_maximo": 0.07624851736630887,
+      "participacao_pct": 3.4418149709264294
+    }
+  ],
+  "permutacao": [
+    {
+      "variavel": "taxa_alfabetizacao_municipio_anterior",
+      "pilar": "Histórico educacional",
+      "queda_acuracia": 0.13510006597756768,
+      "desvio": 0.006832599300581286
+    },
+    {
+      "variavel": "sigla_uf",
+      "pilar": "Território e rede",
+      "queda_acuracia": 0.015372773257092609,
+      "desvio": 0.0043912960505694786
+    },
+    {
+      "variavel": "taxa_presenca_municipio_anterior",
+      "pilar": "Histórico educacional",
+      "queda_acuracia": 0.009478777215746659,
+      "desvio": 0.0020570945522714094
+    },
+    {
+      "variavel": "total_pagamentos_bolsa_familia_anterior",
+      "pilar": "Transferência de renda",
+      "queda_acuracia": 0.0011216186496591173,
+      "desvio": 0.001456994244561417
+    },
+    {
+      "variavel": "salas_acessiveis_censo",
+      "pilar": "Infraestrutura básica",
+      "queda_acuracia": 0.00046184297338904836,
+      "desvio": 0.0009758833398871265
+    },
+    {
+      "variavel": "pct_escolas_internet_comunidade_censo",
+      "pilar": "Infraestrutura básica",
+      "queda_acuracia": 0.00046184297338904836,
+      "desvio": 0.0003607041888466406
+    },
+    {
+      "variavel": "pct_escolas_agua_poco_artesiano_censo",
+      "pilar": "Infraestrutura básica",
+      "queda_acuracia": 0.00032988783813503453,
+      "desvio": 0.0005671342405202394
+    },
+    {
+      "variavel": "salas_utilizadas_censo",
+      "pilar": "Porte e escala da rede",
+      "queda_acuracia": 0.00028590279305036327,
+      "desvio": 0.0007747488433608339
+    },
+    {
+      "variavel": "pct_escolas_internet_aprendizagem_censo",
+      "pilar": "Infraestrutura básica",
+      "queda_acuracia": 0.00028590279305036327,
+      "desvio": 0.0005654260009756964
+    },
+    {
+      "variavel": "pct_escolas_com_prof_coordenador_censo",
+      "pilar": "Recursos humanos na escola",
+      "queda_acuracia": 0.0002639102705080276,
+      "desvio": 0.000499574079243482
+    },
+    {
+      "variavel": "pct_escolas_acessibilidade_vao_livre_censo",
+      "pilar": "Acessibilidade",
+      "queda_acuracia": 0.00019793270288102072,
+      "desvio": 0.0007190579601615059
+    },
+    {
+      "variavel": "pct_escolas_lab_informatica_censo",
+      "pilar": "Espaços de aprendizagem",
+      "queda_acuracia": 0.00019793270288102072,
+      "desvio": 0.0009405500233271662
+    },
+    {
+      "variavel": "pct_escolas_rurais_censo",
+      "pilar": "Território e rede",
+      "queda_acuracia": 0.00019793270288102072,
+      "desvio": 0.0004447712429328505
+    },
+    {
+      "variavel": "matriculas_por_vinculo_docente_censo",
+      "pilar": "Porte e escala da rede",
+      "queda_acuracia": 4.398504508467127e-05,
+      "desvio": 0.0011461459618029824
+    },
+    {
+      "variavel": "turmas_anos_iniciais_censo",
+      "pilar": "Porte e escala da rede",
+      "queda_acuracia": 0.0,
+      "desvio": 0.0006374038595200993
+    },
+    {
+      "variavel": "pct_escolas_acessibilidade_sinal_tatil_censo",
+      "pilar": "Acessibilidade",
+      "queda_acuracia": 0.0,
+      "desvio": 0.0004818320277151237
+    },
+    {
+      "variavel": "pct_escolas_energia_gerador_fossil_censo",
+      "pilar": "Infraestrutura básica",
+      "queda_acuracia": 0.0,
+      "desvio": 0.0
+    },
+    {
+      "variavel": "pct_escolas_acessibilidade_sinal_sonoro_censo",
+      "pilar": "Acessibilidade",
+      "queda_acuracia": -2.1992522542335637e-05,
+      "desvio": 0.000249787039621741
+    },
+    {
+      "variavel": "pct_escolas_acessibilidade_rampas_censo",
+      "pilar": "Acessibilidade",
+      "queda_acuracia": -4.398504508467127e-05,
+      "desvio": 0.0010352850051409577
+    },
+    {
+      "variavel": "pct_escolas_energia_inexistente_censo",
+      "pilar": "Infraestrutura básica",
+      "queda_acuracia": -4.398504508467127e-05,
+      "desvio": 0.00013195513525401383
+    },
+    {
+      "variavel": "pct_escolas_energia_renovavel_censo",
+      "pilar": "Infraestrutura básica",
+      "queda_acuracia": -4.398504508467127e-05,
+      "desvio": 0.000437645672798162
+    },
+    {
+      "variavel": "pct_escolas_esgoto_rede_publica_censo",
+      "pilar": "Infraestrutura básica",
+      "queda_acuracia": -6.59775676270069e-05,
+      "desvio": 0.0009639149769435302
+    },
+    {
+      "variavel": "pct_escolas_com_prof_administrativos_censo",
+      "pilar": "Recursos humanos na escola",
+      "queda_acuracia": -8.797009016934255e-05,
+      "desvio": 0.000800237756703773
+    },
+    {
+      "variavel": "pct_escolas_esgoto_fossa_septica_censo",
+      "pilar": "Infraestrutura básica",
+      "queda_acuracia": -0.00010996261271167818,
+      "desvio": 0.0004084929760502911
+    },
+    {
+      "variavel": "vinculos_docentes_anos_iniciais_censo",
+      "pilar": "Porte e escala da rede",
+      "queda_acuracia": -0.0001319551352540138,
+      "desvio": 0.0004737334336603924
+    },
+    {
+      "variavel": "pct_escolas_agua_inexistente_censo",
+      "pilar": "Infraestrutura básica",
+      "queda_acuracia": -0.0001319551352540138,
+      "desvio": 0.00014588189093272066
+    },
+    {
+      "variavel": "pct_escolas_esgoto_inexistente_censo",
+      "pilar": "Infraestrutura básica",
+      "queda_acuracia": -0.0001319551352540138,
+      "desvio": 0.00037062457766335477
+    },
+    {
+      "variavel": "pct_escolas_agua_cacimba_censo",
+      "pilar": "Infraestrutura básica",
+      "queda_acuracia": -0.0001319551352540138,
+      "desvio": 0.001087240562507877
+    },
+    {
+      "variavel": "pct_escolas_com_prof_alimentacao_censo",
+      "pilar": "Recursos humanos na escola",
+      "queda_acuracia": -0.00015394765779634944,
+      "desvio": 0.0003269423520413135
+    },
+    {
+      "variavel": "pct_escolas_esgoto_fossa_censo",
+      "pilar": "Infraestrutura básica",
+      "queda_acuracia": -0.00015394765779634944,
+      "desvio": 0.0006527742282672465
+    },
+    {
+      "variavel": "salas_climatizadas_censo",
+      "pilar": "Infraestrutura básica",
+      "queda_acuracia": -0.0001759401803386851,
+      "desvio": 0.0005632834165324704
+    },
+    {
+      "variavel": "pct_escolas_agua_fonte_rio_censo",
+      "pilar": "Infraestrutura básica",
+      "queda_acuracia": -0.00019793270288102072,
+      "desvio": 0.0003023471978198271
+    },
+    {
+      "variavel": "pct_escolas_energia_rede_publica_censo",
+      "pilar": "Infraestrutura básica",
+      "queda_acuracia": -0.00019793270288102072,
+      "desvio": 6.597756762700692e-05
+    },
+    {
+      "variavel": "rede",
+      "pilar": "Território e rede",
+      "queda_acuracia": -0.00021992522542335635,
+      "desvio": 0.00042871318868744127
+    },
+    {
+      "variavel": "pct_escolas_com_prof_psicologo_censo",
+      "pilar": "Recursos humanos na escola",
+      "queda_acuracia": -0.00028590279305036327,
+      "desvio": 0.0006377831537277334
+    },
+    {
+      "variavel": "pct_escolas_com_prof_assist_social_censo",
+      "pilar": "Recursos humanos na escola",
+      "queda_acuracia": -0.00030789531559269887,
+      "desvio": 0.0006898784755380754
+    },
+    {
+      "variavel": "pct_escolas_com_prof_pedagogia_censo",
+      "pilar": "Recursos humanos na escola",
+      "queda_acuracia": -0.00030789531559269887,
+      "desvio": 0.0014360965662911394
+    },
+    {
+      "variavel": "pct_escolas_acessibilidade_corrimao_censo",
+      "pilar": "Acessibilidade",
+      "queda_acuracia": -0.00032988783813503453,
+      "desvio": 0.000661605848097266
+    },
+    {
+      "variavel": "pct_escolas_acessibilidade_sinal_visual_censo",
+      "pilar": "Acessibilidade",
+      "queda_acuracia": -0.00039586540576204144,
+      "desvio": 0.0005632834165324704
+    },
+    {
+      "variavel": "pct_escolas_com_prof_saude_censo",
+      "pilar": "Recursos humanos na escola",
+      "queda_acuracia": -0.00039586540576204144,
+      "desvio": 0.00021548183354151585
+    },
+    {
+      "variavel": "pct_escolas_com_professores_censo",
+      "pilar": "Recursos humanos na escola",
+      "queda_acuracia": -0.00039586540576204144,
+      "desvio": 0.0002564746819813199
+    },
+    {
+      "variavel": "pct_escolas_com_prof_monitores_censo",
+      "pilar": "Recursos humanos na escola",
+      "queda_acuracia": -0.00039586540576204144,
+      "desvio": 0.0006434457373357297
+    },
+    {
+      "variavel": "populacao_municipio_ibge",
+      "pilar": "Porte e escala da rede",
+      "queda_acuracia": -0.0004398504508467127,
+      "desvio": 0.000755467958536076
+    },
+    {
+      "variavel": "matriculas_anos_iniciais_censo",
+      "pilar": "Porte e escala da rede",
+      "queda_acuracia": -0.0005058280184737196,
+      "desvio": 0.0008799757652844769
+    },
+    {
+      "variavel": "pct_escolas_computador_censo",
+      "pilar": "Infraestrutura básica",
+      "queda_acuracia": -0.0005278205410160552,
+      "desvio": 0.0006898784755380753
+    },
+    {
+      "variavel": "pct_escolas_internet_administrativo_censo",
+      "pilar": "Infraestrutura básica",
+      "queda_acuracia": -0.0005278205410160552,
+      "desvio": 0.00046341120531571376
+    },
+    {
+      "variavel": "pct_escolas_internet_alunos_censo",
+      "pilar": "Infraestrutura básica",
+      "queda_acuracia": -0.0006157906311853977,
+      "desvio": 0.0008158010552448398
+    },
+    {
+      "variavel": "pct_escolas_internet_censo",
+      "pilar": "Infraestrutura básica",
+      "queda_acuracia": -0.0006597756762700691,
+      "desvio": 0.00027818585090550986
+    },
+    {
+      "variavel": "valor_total_bolsa_familia_anterior",
+      "pilar": "Transferência de renda",
+      "queda_acuracia": -0.0006817681988124047,
+      "desvio": 0.0010613528490885128
+    },
+    {
+      "variavel": "pct_escolas_com_prof_fonoaudiologo_censo",
+      "pilar": "Recursos humanos na escola",
+      "queda_acuracia": -0.0007257532438970759,
+      "desvio": 0.0003117978200738475
+    },
+    {
+      "variavel": "pct_escolas_material_ped_infantil_censo",
+      "pilar": "Material pedagógico",
+      "queda_acuracia": -0.0007477457664394116,
+      "desvio": 0.001087240562507877
+    },
+    {
+      "variavel": "pct_escolas_com_prof_gestao_censo",
+      "pilar": "Recursos humanos na escola",
+      "queda_acuracia": -0.0008797009016934254,
+      "desvio": 0.0009382330770926576
+    },
+    {
+      "variavel": "pct_escolas_acesso_internet_computador_censo",
+      "pilar": "Infraestrutura básica",
+      "queda_acuracia": -0.0009016934242357611,
+      "desvio": 0.0006846000622948493
+    },
+    {
+      "variavel": "matriculas_por_turma_censo",
+      "pilar": "Porte e escala da rede",
+      "queda_acuracia": -0.0009016934242357611,
+      "desvio": 0.0011361857359216633
+    },
+    {
+      "variavel": "pct_escolas_acessibilidade_pisos_tateis_censo",
+      "pilar": "Acessibilidade",
+      "queda_acuracia": -0.0009456784693204323,
+      "desvio": 0.0010128505774945652
+    },
+    {
+      "variavel": "idhm_renda_municipio",
+      "pilar": "Desenvolvimento humano",
+      "queda_acuracia": -0.0009456784693204323,
+      "desvio": 0.0004721994843541658
+    },
+    {
+      "variavel": "pct_escolas_com_prof_nutricionista_censo",
+      "pilar": "Recursos humanos na escola",
+      "queda_acuracia": -0.0009456784693204323,
+      "desvio": 0.00045124883502712157
+    },
+    {
+      "variavel": "pct_escolas_agua_potavel_censo",
+      "pilar": "Infraestrutura básica",
+      "queda_acuracia": -0.0009676709918627679,
+      "desvio": 0.0003435341841172934
+    },
+    {
+      "variavel": "escolas_anos_iniciais_censo",
+      "pilar": "Porte e escala da rede",
+      "queda_acuracia": -0.0010116560369474391,
+      "desvio": 0.0005581076551770195
+    },
+    {
+      "variavel": "pct_escolas_material_ped_cientifico_censo",
+      "pilar": "Material pedagógico",
+      "queda_acuracia": -0.001033648559489775,
+      "desvio": 0.0007230825697283316
+    },
+    {
+      "variavel": "salas_utilizadas_fora_censo",
+      "pilar": "Porte e escala da rede",
+      "queda_acuracia": -0.0010556410820321104,
+      "desvio": 0.0007280820478226027
+    },
+    {
+      "variavel": "pct_escolas_esgoto_fossa_comum_censo",
+      "pilar": "Infraestrutura básica",
+      "queda_acuracia": -0.0011875962172861244,
+      "desvio": 0.0006464455006245475
+    },
+    {
+      "variavel": "alunos_avaliados_municipio_anterior",
+      "pilar": "Histórico educacional",
+      "queda_acuracia": -0.0012755663074554668,
+      "desvio": 0.0010674872310984485
+    },
+    {
+      "variavel": "idhm_longevidade_municipio",
+      "pilar": "Desenvolvimento humano",
+      "queda_acuracia": -0.0013195513525401381,
+      "desvio": 0.0009636640554302474
+    },
+    {
+      "variavel": "pct_escolas_agua_rede_publica_censo",
+      "pilar": "Infraestrutura básica",
+      "queda_acuracia": -0.0013195513525401381,
+      "desvio": 0.0006142177278983488
+    },
+    {
+      "variavel": "pct_escolas_acessibilidade_elevador_censo",
+      "pilar": "Acessibilidade",
+      "queda_acuracia": -0.0013415438750824737,
+      "desvio": 0.00034703615214558
+    },
+    {
+      "variavel": "pct_escolas_quadra_esportes_descoberta_censo",
+      "pilar": "Espaços de aprendizagem",
+      "queda_acuracia": -0.0014954915328788231,
+      "desvio": 0.0009626597153393146
+    },
+    {
+      "variavel": "valor_medio_pagamento_bolsa_familia_anterior",
+      "pilar": "Transferência de renda",
+      "queda_acuracia": -0.001517484055421159,
+      "desvio": 0.0009955109124923061
+    },
+    {
+      "variavel": "pct_escolas_biblioteca_sala_leitura_censo",
+      "pilar": "Espaços de aprendizagem",
+      "queda_acuracia": -0.00156146910050583,
+      "desvio": 0.0006774982098416267
+    },
+    {
+      "variavel": "pct_escolas_quadra_esportes_censo",
+      "pilar": "Espaços de aprendizagem",
+      "queda_acuracia": -0.0016714317132175082,
+      "desvio": 0.0009392635365763207
+    },
+    {
+      "variavel": "pct_escolas_material_ped_multimidia_censo",
+      "pilar": "Material pedagógico",
+      "queda_acuracia": -0.0017813943259291864,
+      "desvio": 0.0008313638958185979
+    },
+    {
+      "variavel": "pct_escolas_com_prof_bibliotecario_censo",
+      "pilar": "Recursos humanos na escola",
+      "queda_acuracia": -0.0018253793710138577,
+      "desvio": 0.0008689134051083543
+    },
+    {
+      "variavel": "pct_escolas_sala_leitura_censo",
+      "pilar": "Espaços de aprendizagem",
+      "queda_acuracia": -0.0019353419837255359,
+      "desvio": 0.0004897967330398091
+    },
+    {
+      "variavel": "pct_escolas_material_ped_jogos_censo",
+      "pilar": "Material pedagógico",
+      "queda_acuracia": -0.0019353419837255359,
+      "desvio": 0.0007794169846786617
+    },
+    {
+      "variavel": "pct_escolas_quadra_esportes_coberta_censo",
+      "pilar": "Espaços de aprendizagem",
+      "queda_acuracia": -0.001979327028810207,
+      "desvio": 0.0007744366334576218
+    },
+    {
+      "variavel": "pct_escolas_biblioteca_censo",
+      "pilar": "Espaços de aprendizagem",
+      "queda_acuracia": -0.0020013195513525427,
+      "desvio": 0.0010003576349719968
+    },
+    {
+      "variavel": "idhm_municipio",
+      "pilar": "Desenvolvimento humano",
+      "queda_acuracia": -0.0021332746866065564,
+      "desvio": 0.0008053588486298912
+    },
+    {
+      "variavel": "idhm_educacao_municipio",
+      "pilar": "Desenvolvimento humano",
+      "queda_acuracia": -0.004596437211348147,
+      "desvio": 0.0016819607481855217
+    },
+    {
+      "variavel": "regiao_brasil",
+      "pilar": "Território e rede",
+      "queda_acuracia": -0.005410160545414567,
+      "desvio": 0.0011562295516248018
+    }
+  ],
+  "associacoes": [
+    {
+      "variavel": "taxa_alfabetizacao_municipio_anterior",
+      "pilar": "Histórico educacional",
+      "spearman_bruto": 0.6945424696679717,
+      "spearman_parcial": 0.6589605408713174,
+      "cobertura": 0.9405345211581292,
+      "media_quintil_superior": 78.79747034984284,
+      "media_quintil_inferior": 42.53503504573584,
+      "diferenca_padronizada": 2.5563238290583175
+    },
+    {
+      "variavel": "taxa_presenca_municipio_anterior",
+      "pilar": "Histórico educacional",
+      "spearman_bruto": 0.3946983077914328,
+      "spearman_parcial": 0.41250111587197824,
+      "cobertura": 0.9407572383073497,
+      "media_quintil_superior": 93.26939810807913,
+      "media_quintil_inferior": 85.25284799905516,
+      "diferenca_padronizada": 1.075974011007409
+    },
+    {
+      "variavel": "pct_escolas_quadra_esportes_coberta_censo",
+      "pilar": "Espaços de aprendizagem",
+      "spearman_bruto": 0.22666974543650265,
+      "spearman_parcial": 0.183813371853333,
+      "cobertura": 0.9998886414253898,
+      "media_quintil_superior": 40.227573325441405,
+      "media_quintil_inferior": 20.99003790529508,
+      "diferenca_padronizada": 0.6450687738892845
+    },
+    {
+      "variavel": "pct_escolas_biblioteca_sala_leitura_censo",
+      "pilar": "Espaços de aprendizagem",
+      "spearman_bruto": 0.20207102050788409,
+      "spearman_parcial": 0.1486137384291695,
+      "cobertura": 0.9998886414253898,
+      "media_quintil_superior": 60.781589693810616,
+      "media_quintil_inferior": 43.25202252269444,
+      "diferenca_padronizada": 0.5447035576825909
+    },
+    {
+      "variavel": "pct_escolas_com_prof_gestao_censo",
+      "pilar": "Recursos humanos na escola",
+      "spearman_bruto": -0.1411256321149558,
+      "spearman_parcial": -0.14499145505848288,
+      "cobertura": 0.9998886414253898,
+      "media_quintil_superior": 33.905058914572415,
+      "media_quintil_inferior": 48.13011951831058,
+      "diferenca_padronizada": -0.4123706711939759
+    },
+    {
+      "variavel": "pct_escolas_com_prof_pedagogia_censo",
+      "pilar": "Recursos humanos na escola",
+      "spearman_bruto": 0.17927747831937557,
+      "spearman_parcial": 0.13603105356385997,
+      "cobertura": 0.9998886414253898,
+      "media_quintil_superior": 77.74571304958843,
+      "media_quintil_inferior": 66.27144596806492,
+      "diferenca_padronizada": 0.37795722406226406
+    },
+    {
+      "variavel": "pct_escolas_quadra_esportes_censo",
+      "pilar": "Espaços de aprendizagem",
+      "spearman_bruto": 0.19091638610463088,
+      "spearman_parcial": 0.13455244676180372,
+      "cobertura": 0.9998886414253898,
+      "media_quintil_superior": 49.04146786838521,
+      "media_quintil_inferior": 31.76677561116375,
+      "diferenca_padronizada": 0.546438594258665
+    },
+    {
+      "variavel": "pct_escolas_material_ped_jogos_censo",
+      "pilar": "Material pedagógico",
+      "spearman_bruto": 0.2063436685462484,
+      "spearman_parcial": 0.1251223790352115,
+      "cobertura": 0.9998886414253898,
+      "media_quintil_superior": 90.0476248836783,
+      "media_quintil_inferior": 79.4595750640478,
+      "diferenca_padronizada": 0.4713918652671731
+    },
+    {
+      "variavel": "pct_escolas_acessibilidade_rampas_censo",
+      "pilar": "Acessibilidade",
+      "spearman_bruto": 0.16892252527891807,
+      "spearman_parcial": 0.12250625979222575,
+      "cobertura": 0.9998886414253898,
+      "media_quintil_superior": 69.47866161806006,
+      "media_quintil_inferior": 56.41169725670219,
+      "diferenca_padronizada": 0.4669948096023721
+    },
+    {
+      "variavel": "pct_escolas_acessibilidade_corrimao_censo",
+      "pilar": "Acessibilidade",
+      "spearman_bruto": 0.14383704701544242,
+      "spearman_parcial": 0.11770382034426395,
+      "cobertura": 0.9998886414253898,
+      "media_quintil_superior": 30.990886660206616,
+      "media_quintil_inferior": 19.52203480319935,
+      "diferenca_padronizada": 0.4474052465893818
+    },
+    {
+      "variavel": "pct_escolas_internet_censo",
+      "pilar": "Infraestrutura básica",
+      "spearman_bruto": 0.1960057205473493,
+      "spearman_parcial": 0.11768390648510911,
+      "cobertura": 0.9998886414253898,
+      "media_quintil_superior": 95.32998734290885,
+      "media_quintil_inferior": 88.05962734219801,
+      "diferenca_padronizada": 0.4153963443331839
+    },
+    {
+      "variavel": "idhm_renda_municipio",
+      "pilar": "Desenvolvimento humano",
+      "spearman_bruto": 0.06724834424688585,
+      "spearman_parcial": -0.11401118444567616,
+      "cobertura": 0.9989977728285078,
+      "media_quintil_superior": 0.6312876254519492,
+      "media_quintil_inferior": 0.61565131571536,
+      "diferenca_padronizada": 0.19570796717312097
+    },
+    {
+      "variavel": "pct_escolas_computador_censo",
+      "pilar": "Infraestrutura básica",
+      "spearman_bruto": 0.19361814275192002,
+      "spearman_parcial": 0.10695431295651214,
+      "cobertura": 0.9998886414253898,
+      "media_quintil_superior": 89.51224775075248,
+      "media_quintil_inferior": 79.0752990583013,
+      "diferenca_padronizada": 0.44184039960778904
+    },
+    {
+      "variavel": "salas_acessiveis_censo",
+      "pilar": "Infraestrutura básica",
+      "spearman_bruto": 0.014411660807799598,
+      "spearman_parcial": 0.10685963105447428,
+      "cobertura": 0.9998886414253898,
+      "media_quintil_superior": 24.99442896935933,
+      "media_quintil_inferior": 32.44633077765608,
+      "diferenca_padronizada": -0.1351822534546193
+    },
+    {
+      "variavel": "pct_escolas_internet_administrativo_censo",
+      "pilar": "Infraestrutura básica",
+      "spearman_bruto": 0.18403125982085483,
+      "spearman_parcial": 0.10287080505173019,
+      "cobertura": 0.9998886414253898,
+      "media_quintil_superior": 92.44829761616698,
+      "media_quintil_inferior": 83.82086965157717,
+      "diferenca_padronizada": 0.41307229633749776
+    },
+    {
+      "variavel": "idhm_educacao_municipio",
+      "pilar": "Desenvolvimento humano",
+      "spearman_bruto": 0.12315981721200649,
+      "spearman_parcial": 0.10115421943558298,
+      "cobertura": 0.9989977728285078,
+      "media_quintil_superior": 0.5547134891700585,
+      "media_quintil_inferior": 0.5219660089759711,
+      "diferenca_padronizada": 0.37726046452921386
+    },
+    {
+      "variavel": "pct_escolas_agua_potavel_censo",
+      "pilar": "Infraestrutura básica",
+      "spearman_bruto": 0.1669546206907893,
+      "spearman_parcial": 0.10009071819779555,
+      "cobertura": 0.9998886414253898,
+      "media_quintil_superior": 97.9605222128228,
+      "media_quintil_inferior": 93.97180632869882,
+      "diferenca_padronizada": 0.3013330660022193
+    },
+    {
+      "variavel": "pct_escolas_energia_rede_publica_censo",
+      "pilar": "Infraestrutura básica",
+      "spearman_bruto": 0.15413138730354503,
+      "spearman_parcial": 0.09477377719187513,
+      "cobertura": 0.9998886414253898,
+      "media_quintil_superior": 99.37576713668271,
+      "media_quintil_inferior": 96.30202888136756,
+      "diferenca_padronizada": 0.29016502531209215
+    },
+    {
+      "variavel": "pct_escolas_material_ped_infantil_censo",
+      "pilar": "Material pedagógico",
+      "spearman_bruto": 0.13576203240066906,
+      "spearman_parcial": 0.0917563394406251,
+      "cobertura": 0.9998886414253898,
+      "media_quintil_superior": 50.902679312992895,
+      "media_quintil_inferior": 38.94715570688639,
+      "diferenca_padronizada": 0.38496777901755386
+    },
+    {
+      "variavel": "pct_escolas_energia_inexistente_censo",
+      "pilar": "Infraestrutura básica",
+      "spearman_bruto": -0.14290561837739965,
+      "spearman_parcial": -0.0853010692472826,
+      "cobertura": 0.9998886414253898,
+      "media_quintil_superior": 0.20605593962921737,
+      "media_quintil_inferior": 1.536743042568257,
+      "diferenca_padronizada": -0.23286467556052162
+    },
+    {
+      "variavel": "escolas_anos_iniciais_censo",
+      "pilar": "Porte e escala da rede",
+      "spearman_bruto": -0.24214485813886044,
+      "spearman_parcial": -0.08436214140370041,
+      "cobertura": 0.9998886414253898,
+      "media_quintil_superior": 9.881894150417827,
+      "media_quintil_inferior": 21.532311062431546,
+      "diferenca_padronizada": -0.5324080375198889
+    },
+    {
+      "variavel": "alunos_avaliados_municipio_anterior",
+      "pilar": "Histórico educacional",
+      "spearman_bruto": -0.12739873414920377,
+      "spearman_parcial": 0.08367832346967179,
+      "cobertura": 0.9405345211581292,
+      "media_quintil_superior": 272.04745762711866,
+      "media_quintil_inferior": 478.47704822777456,
+      "diferenca_padronizada": -0.23782953207852334
+    },
+    {
+      "variavel": "pct_escolas_com_prof_bibliotecario_censo",
+      "pilar": "Recursos humanos na escola",
+      "spearman_bruto": 0.08196232541215774,
+      "spearman_parcial": 0.07900976581163607,
+      "cobertura": 0.9998886414253898,
+      "media_quintil_superior": 25.733927831676343,
+      "media_quintil_inferior": 17.45700164607686,
+      "diferenca_padronizada": 0.29636122718122265
+    },
+    {
+      "variavel": "pct_escolas_acessibilidade_vao_livre_censo",
+      "pilar": "Acessibilidade",
+      "spearman_bruto": 0.11730855215400988,
+      "spearman_parcial": 0.07825268749879302,
+      "cobertura": 0.9998886414253898,
+      "media_quintil_superior": 48.361488986613026,
+      "media_quintil_inferior": 37.502573028059935,
+      "diferenca_padronizada": 0.33696740824524724
+    },
+    {
+      "variavel": "pct_escolas_com_prof_monitores_censo",
+      "pilar": "Recursos humanos na escola",
+      "spearman_bruto": -0.0698510144232149,
+      "spearman_parcial": -0.07423985816896232,
+      "cobertura": 0.9998886414253898,
+      "media_quintil_superior": 12.23737690847232,
+      "media_quintil_inferior": 13.43413274298623,
+      "diferenca_padronizada": -0.05306782698289966
+    },
+    {
+      "variavel": "pct_escolas_quadra_esportes_descoberta_censo",
+      "pilar": "Espaços de aprendizagem",
+      "spearman_bruto": -0.07512741140360472,
+      "spearman_parcial": -0.07323586282673471,
+      "cobertura": 0.9998886414253898,
+      "media_quintil_superior": 11.421299764107196,
+      "media_quintil_inferior": 13.515759686389602,
+      "diferenca_padronizada": -0.1140545511827522
+    },
+    {
+      "variavel": "pct_escolas_esgoto_inexistente_censo",
+      "pilar": "Infraestrutura básica",
+      "spearman_bruto": -0.14766829748519913,
+      "spearman_parcial": -0.07319218923189168,
+      "cobertura": 0.9998886414253898,
+      "media_quintil_superior": 2.1549308801427856,
+      "media_quintil_inferior": 4.577182436368029,
+      "diferenca_padronizada": -0.21649342093428522
+    },
+    {
+      "variavel": "pct_escolas_internet_aprendizagem_censo",
+      "pilar": "Infraestrutura básica",
+      "spearman_bruto": 0.14918799325774282,
+      "spearman_parcial": 0.07096613194619501,
+      "cobertura": 0.9998886414253898,
+      "media_quintil_superior": 71.57627080104477,
+      "media_quintil_inferior": 57.76083079075108,
+      "diferenca_padronizada": 0.4152816658193953
+    },
+    {
+      "variavel": "pct_escolas_material_ped_multimidia_censo",
+      "pilar": "Material pedagógico",
+      "spearman_bruto": 0.10474058191556293,
+      "spearman_parcial": 0.07070875753609489,
+      "cobertura": 0.9998886414253898,
+      "media_quintil_superior": 34.658011970347346,
+      "media_quintil_inferior": 25.332035950834886,
+      "diferenca_padronizada": 0.32623029258726166
+    },
+    {
+      "variavel": "pct_escolas_sala_leitura_censo",
+      "pilar": "Espaços de aprendizagem",
+      "spearman_bruto": 0.07349210591656141,
+      "spearman_parcial": 0.07029058936590929,
+      "cobertura": 0.9998886414253898,
+      "media_quintil_superior": 28.3846353403373,
+      "media_quintil_inferior": 20.58905910241121,
+      "diferenca_padronizada": 0.2935380629285417
+    },
+    {
+      "variavel": "pct_escolas_agua_fonte_rio_censo",
+      "pilar": "Infraestrutura básica",
+      "spearman_bruto": -0.11872868842880639,
+      "spearman_parcial": -0.0701914532623952,
+      "cobertura": 0.9998886414253898,
+      "media_quintil_superior": 2.658921818148791,
+      "media_quintil_inferior": 6.138875455121221,
+      "diferenca_padronizada": -0.2670114217607431
+    },
+    {
+      "variavel": "pct_escolas_energia_gerador_fossil_censo",
+      "pilar": "Infraestrutura básica",
+      "spearman_bruto": -0.12087047704184575,
+      "spearman_parcial": -0.06901263265056165,
+      "cobertura": 0.9998886414253898,
+      "media_quintil_superior": 0.11794557199504714,
+      "media_quintil_inferior": 1.397230440365132,
+      "diferenca_padronizada": -0.22019369905871647
+    },
+    {
+      "variavel": "pct_escolas_rurais_censo",
+      "pilar": "Território e rede",
+      "spearman_bruto": -0.1264582071518583,
+      "spearman_parcial": -0.06741919359054072,
+      "cobertura": 0.9998886414253898,
+      "media_quintil_superior": 46.68241381333067,
+      "media_quintil_inferior": 57.23975932082367,
+      "diferenca_padronizada": -0.3437799495352084
+    },
+    {
+      "variavel": "matriculas_por_vinculo_docente_censo",
+      "pilar": "Porte e escala da rede",
+      "spearman_bruto": -0.16049895405858305,
+      "spearman_parcial": -0.06377752240291355,
+      "cobertura": 0.9998886414253898,
+      "media_quintil_superior": 16.19860518861946,
+      "media_quintil_inferior": 18.569079191765674,
+      "diferenca_padronizada": -0.43978315763401793
+    },
+    {
+      "variavel": "pct_escolas_biblioteca_censo",
+      "pilar": "Espaços de aprendizagem",
+      "spearman_bruto": 0.11018699844466204,
+      "spearman_parcial": 0.06350284239436502,
+      "cobertura": 0.9998886414253898,
+      "media_quintil_superior": 41.395700484663664,
+      "media_quintil_inferior": 29.669002639503102,
+      "diferenca_padronizada": 0.34405211351239706
+    },
+    {
+      "variavel": "pct_escolas_com_prof_psicologo_censo",
+      "pilar": "Recursos humanos na escola",
+      "spearman_bruto": 0.10498061829075729,
+      "spearman_parcial": 0.06301164382939545,
+      "cobertura": 0.9998886414253898,
+      "media_quintil_superior": 26.432480559641274,
+      "media_quintil_inferior": 13.84963539219895,
+      "diferenca_padronizada": 0.36776603834728194
+    },
+    {
+      "variavel": "pct_escolas_com_prof_alimentacao_censo",
+      "pilar": "Recursos humanos na escola",
+      "spearman_bruto": 0.12379453461672855,
+      "spearman_parcial": 0.06063916624084773,
+      "cobertura": 0.9998886414253898,
+      "media_quintil_superior": 85.11549838552236,
+      "media_quintil_inferior": 79.4592948807944,
+      "diferenca_padronizada": 0.21932560163484216
+    },
+    {
+      "variavel": "valor_total_bolsa_familia_anterior",
+      "pilar": "Transferência de renda",
+      "spearman_bruto": -0.2372333145306896,
+      "spearman_parcial": -0.04857873747282684,
+      "cobertura": 0.9998886414253898,
+      "media_quintil_superior": 22585236.36713092,
+      "media_quintil_inferior": 50330463.20427163,
+      "diferenca_padronizada": -0.2322816514834252
+    },
+    {
+      "variavel": "total_pagamentos_bolsa_familia_anterior",
+      "pilar": "Transferência de renda",
+      "spearman_bruto": -0.2358414067205343,
+      "spearman_parcial": -0.04719460764076308,
+      "cobertura": 0.9998886414253898,
+      "media_quintil_superior": 34457.212813370475,
+      "media_quintil_inferior": 76556.42606790799,
+      "diferenca_padronizada": -0.22795705177300615
+    },
+    {
+      "variavel": "pct_escolas_agua_inexistente_censo",
+      "pilar": "Infraestrutura básica",
+      "spearman_bruto": -0.11107230651818666,
+      "spearman_parcial": -0.046632129458383104,
+      "cobertura": 0.9998886414253898,
+      "media_quintil_superior": 1.1977339362035555,
+      "media_quintil_inferior": 2.2778628939540337,
+      "diferenca_padronizada": -0.13355250978875566
+    },
+    {
+      "variavel": "pct_escolas_acessibilidade_elevador_censo",
+      "pilar": "Acessibilidade",
+      "spearman_bruto": -0.04987884319869681,
+      "spearman_parcial": -0.04648095396182284,
+      "cobertura": 0.9998886414253898,
+      "media_quintil_superior": 0.5924335494346937,
+      "media_quintil_inferior": 0.7539072638665206,
+      "diferenca_padronizada": -0.040061650998583886
+    },
+    {
+      "variavel": "pct_escolas_acesso_internet_computador_censo",
+      "pilar": "Infraestrutura básica",
+      "spearman_bruto": 0.10967268764171284,
+      "spearman_parcial": 0.04633748168600892,
+      "cobertura": 0.9993318485523385,
+      "media_quintil_superior": 38.04525349160091,
+      "media_quintil_inferior": 26.974241354607805,
+      "diferenca_padronizada": 0.32031064804773784
+    },
+    {
+      "variavel": "pct_escolas_com_prof_coordenador_censo",
+      "pilar": "Recursos humanos na escola",
+      "spearman_bruto": -0.05713910040165598,
+      "spearman_parcial": -0.045645592554044885,
+      "cobertura": 0.9998886414253898,
+      "media_quintil_superior": 22.045694150698882,
+      "media_quintil_inferior": 21.72638449774645,
+      "diferenca_padronizada": 0.011324720854185028
+    },
+    {
+      "variavel": "pct_escolas_com_prof_nutricionista_censo",
+      "pilar": "Recursos humanos na escola",
+      "spearman_bruto": 0.10509248900814483,
+      "spearman_parcial": 0.04230111802636641,
+      "cobertura": 0.9998886414253898,
+      "media_quintil_superior": 34.85238403111779,
+      "media_quintil_inferior": 21.437765038646717,
+      "diferenca_padronizada": 0.34832324539075654
+    },
+    {
+      "variavel": "pct_escolas_lab_informatica_censo",
+      "pilar": "Espaços de aprendizagem",
+      "spearman_bruto": 0.0910721636429236,
+      "spearman_parcial": 0.039784906892239395,
+      "cobertura": 0.9998886414253898,
+      "media_quintil_superior": 33.98293431489248,
+      "media_quintil_inferior": 24.62050666592338,
+      "diferenca_padronizada": 0.2846865189678541
+    },
+    {
+      "variavel": "pct_escolas_internet_comunidade_censo",
+      "pilar": "Infraestrutura básica",
+      "spearman_bruto": -0.08962601929130756,
+      "spearman_parcial": -0.03778283849514809,
+      "cobertura": 0.9998886414253898,
+      "media_quintil_superior": 4.940623404587876,
+      "media_quintil_inferior": 5.415136738909818,
+      "diferenca_padronizada": -0.036652030428368954
+    },
+    {
+      "variavel": "pct_escolas_agua_cacimba_censo",
+      "pilar": "Infraestrutura básica",
+      "spearman_bruto": -0.0641685120248905,
+      "spearman_parcial": 0.037008259285077415,
+      "cobertura": 0.9998886414253898,
+      "media_quintil_superior": 15.130215669873698,
+      "media_quintil_inferior": 15.466037486723716,
+      "diferenca_padronizada": -0.013613039618208114
+    },
+    {
+      "variavel": "salas_climatizadas_censo",
+      "pilar": "Infraestrutura básica",
+      "spearman_bruto": -0.08953216188598953,
+      "spearman_parcial": -0.0330547332100803,
+      "cobertura": 0.9998886414253898,
+      "media_quintil_superior": 23.86183844011142,
+      "media_quintil_inferior": 37.34063526834611,
+      "diferenca_padronizada": -0.2544328676515251
+    },
+    {
+      "variavel": "pct_escolas_energia_renovavel_censo",
+      "pilar": "Infraestrutura básica",
+      "spearman_bruto": -0.06741903434025623,
+      "spearman_parcial": -0.03264399546464594,
+      "cobertura": 0.9998886414253898,
+      "media_quintil_superior": 1.1993745987129742,
+      "media_quintil_inferior": 1.463699679483067,
+      "diferenca_padronizada": -0.03782032273976046
+    },
+    {
+      "variavel": "vinculos_docentes_anos_iniciais_censo",
+      "pilar": "Porte e escala da rede",
+      "spearman_bruto": -0.13556843125441953,
+      "spearman_parcial": 0.03166123309362626,
+      "cobertura": 0.9998886414253898,
+      "media_quintil_superior": 72.40947075208913,
+      "media_quintil_inferior": 136.56133625410735,
+      "diferenca_padronizada": -0.24384239616149647
+    },
+    {
+      "variavel": "pct_escolas_esgoto_fossa_septica_censo",
+      "pilar": "Infraestrutura básica",
+      "spearman_bruto": -0.034149470592859686,
+      "spearman_parcial": -0.030936290897782544,
+      "cobertura": 0.9998886414253898,
+      "media_quintil_superior": 33.93643120869289,
+      "media_quintil_inferior": 35.26714801317466,
+      "diferenca_padronizada": -0.040092086723922664
+    },
+    {
+      "variavel": "salas_utilizadas_fora_censo",
+      "pilar": "Porte e escala da rede",
+      "spearman_bruto": -0.08174280507904644,
+      "spearman_parcial": 0.0306349684123297,
+      "cobertura": 0.9998886414253898,
+      "media_quintil_superior": 5.172144846796657,
+      "media_quintil_inferior": 8.54709748083242,
+      "diferenca_padronizada": -0.20625937766268668
+    },
+    {
+      "variavel": "pct_escolas_esgoto_rede_publica_censo",
+      "pilar": "Infraestrutura básica",
+      "spearman_bruto": 0.05956164812786096,
+      "spearman_parcial": 0.02970294656468875,
+      "cobertura": 0.9998886414253898,
+      "media_quintil_superior": 36.387095736394684,
+      "media_quintil_inferior": 30.593183355256997,
+      "diferenca_padronizada": 0.17052604697540755
+    },
+    {
+      "variavel": "pct_escolas_com_professores_censo",
+      "pilar": "Recursos humanos na escola",
+      "spearman_bruto": -0.04883821197428182,
+      "spearman_parcial": -0.029544911771974696,
+      "cobertura": 0.9998886414253898,
+      "media_quintil_superior": 1.5125689466683645,
+      "media_quintil_inferior": 1.7659446144025663,
+      "diferenca_padronizada": -0.027872750612637665
+    },
+    {
+      "variavel": "pct_escolas_com_prof_administrativos_censo",
+      "pilar": "Recursos humanos na escola",
+      "spearman_bruto": 0.005248267075892384,
+      "spearman_parcial": 0.02758302120573683,
+      "cobertura": 0.9998886414253898,
+      "media_quintil_superior": 52.4747992056658,
+      "media_quintil_inferior": 51.66672582240512,
+      "diferenca_padronizada": 0.024791949761222676
+    },
+    {
+      "variavel": "pct_escolas_agua_poco_artesiano_censo",
+      "pilar": "Infraestrutura básica",
+      "spearman_bruto": -0.012555687144806564,
+      "spearman_parcial": 0.027008372311512163,
+      "cobertura": 0.9998886414253898,
+      "media_quintil_superior": 21.837492717939497,
+      "media_quintil_inferior": 21.46679530778302,
+      "diferenca_padronizada": 0.015116009465964624
+    },
+    {
+      "variavel": "pct_escolas_material_ped_cientifico_censo",
+      "pilar": "Material pedagógico",
+      "spearman_bruto": -0.03642458011540754,
+      "spearman_parcial": -0.025454324987749074,
+      "cobertura": 0.9998886414253898,
+      "media_quintil_superior": 11.252302421766403,
+      "media_quintil_inferior": 10.397527857227628,
+      "diferenca_padronizada": 0.04506487301046331
+    },
+    {
+      "variavel": "pct_escolas_acessibilidade_sinal_tatil_censo",
+      "pilar": "Acessibilidade",
+      "spearman_bruto": -0.04346931553611379,
+      "spearman_parcial": -0.024886133580241384,
+      "cobertura": 0.9998886414253898,
+      "media_quintil_superior": 2.641650958579231,
+      "media_quintil_inferior": 2.044903087916275,
+      "diferenca_padronizada": 0.06964456590432
+    },
+    {
+      "variavel": "salas_utilizadas_censo",
+      "pilar": "Porte e escala da rede",
+      "spearman_bruto": -0.19322058904482756,
+      "spearman_parcial": -0.02430077241995055,
+      "cobertura": 0.9998886414253898,
+      "media_quintil_superior": 70.44735376044568,
+      "media_quintil_inferior": 137.92059145673605,
+      "diferenca_padronizada": -0.3399685323718943
+    },
+    {
+      "variavel": "pct_escolas_acessibilidade_sinal_visual_censo",
+      "pilar": "Acessibilidade",
+      "spearman_bruto": 0.0016879111667681451,
+      "spearman_parcial": 0.023881836025714486,
+      "cobertura": 0.9998886414253898,
+      "media_quintil_superior": 5.618263500447393,
+      "media_quintil_inferior": 3.6460669480696697,
+      "diferenca_padronizada": 0.16128259203180823
+    },
+    {
+      "variavel": "pct_escolas_com_prof_fonoaudiologo_censo",
+      "pilar": "Recursos humanos na escola",
+      "spearman_bruto": 0.03981332455124598,
+      "spearman_parcial": 0.020392601349148352,
+      "cobertura": 0.9998886414253898,
+      "media_quintil_superior": 6.999546074668013,
+      "media_quintil_inferior": 2.818759345864675,
+      "diferenca_padronizada": 0.22449362571961387
+    },
+    {
+      "variavel": "idhm_longevidade_municipio",
+      "pilar": "Desenvolvimento humano",
+      "spearman_bruto": 0.09166506213169233,
+      "spearman_parcial": -0.020272960645859997,
+      "cobertura": 0.9989977728285078,
+      "media_quintil_superior": 0.7962993311975047,
+      "media_quintil_inferior": 0.7856260959973984,
+      "diferenca_padronizada": 0.2384608562226589
+    },
+    {
+      "variavel": "pct_escolas_esgoto_fossa_censo",
+      "pilar": "Infraestrutura básica",
+      "spearman_bruto": -0.0362459666434943,
+      "spearman_parcial": -0.019302439711470734,
+      "cobertura": 0.9998886414253898,
+      "media_quintil_superior": 63.23193577365291,
+      "media_quintil_inferior": 67.27117506726385,
+      "diferenca_padronizada": -0.11991298904923656
+    },
+    {
+      "variavel": "pct_escolas_acessibilidade_sinal_sonoro_censo",
+      "pilar": "Acessibilidade",
+      "spearman_bruto": -0.018233203640740554,
+      "spearman_parcial": 0.01741743662550031,
+      "cobertura": 0.9998886414253898,
+      "media_quintil_superior": 2.496268221129946,
+      "media_quintil_inferior": 1.351479526409249,
+      "diferenca_padronizada": 0.1444857835203668
+    },
+    {
+      "variavel": "pct_escolas_acessibilidade_pisos_tateis_censo",
+      "pilar": "Acessibilidade",
+      "spearman_bruto": -0.040627129358934796,
+      "spearman_parcial": -0.01580956358260552,
+      "cobertura": 0.9998886414253898,
+      "media_quintil_superior": 6.645355507922372,
+      "media_quintil_inferior": 6.496012827848683,
+      "diferenca_padronizada": 0.010602869777067597
+    },
+    {
+      "variavel": "pct_escolas_internet_alunos_censo",
+      "pilar": "Infraestrutura básica",
+      "spearman_bruto": 0.056508084554495144,
+      "spearman_parcial": -0.010685717487353726,
+      "cobertura": 0.9998886414253898,
+      "media_quintil_superior": 47.341294852936834,
+      "media_quintil_inferior": 41.349839645728615,
+      "diferenca_padronizada": 0.17344125296719926
+    },
+    {
+      "variavel": "pct_escolas_esgoto_fossa_comum_censo",
+      "pilar": "Infraestrutura básica",
+      "spearman_bruto": -0.07423807440993499,
+      "spearman_parcial": -0.008921972274286687,
+      "cobertura": 0.9998886414253898,
+      "media_quintil_superior": 29.2955044220417,
+      "media_quintil_inferior": 32.00402693138718,
+      "diferenca_padronizada": -0.08191786362556291
+    },
+    {
+      "variavel": "pct_escolas_com_prof_saude_censo",
+      "pilar": "Recursos humanos na escola",
+      "spearman_bruto": -0.013498328597078228,
+      "spearman_parcial": 0.006408563402879107,
+      "cobertura": 0.9998886414253898,
+      "media_quintil_superior": 1.3911203948900228,
+      "media_quintil_inferior": 0.6298765021764958,
+      "diferenca_padronizada": 0.11419931129817437
+    },
+    {
+      "variavel": "matriculas_anos_iniciais_censo",
+      "pilar": "Porte e escala da rede",
+      "spearman_bruto": -0.1726853301596885,
+      "spearman_parcial": 0.006029668496969161,
+      "cobertura": 0.9998886414253898,
+      "media_quintil_superior": 1194.5777158774374,
+      "media_quintil_inferior": 2638.8515881708654,
+      "diferenca_padronizada": -0.2821985338626931
+    },
+    {
+      "variavel": "pct_escolas_com_prof_assist_social_censo",
+      "pilar": "Recursos humanos na escola",
+      "spearman_bruto": -0.004052150859484652,
+      "spearman_parcial": -0.003962183288827506,
+      "cobertura": 0.9998886414253898,
+      "media_quintil_superior": 10.591111624340494,
+      "media_quintil_inferior": 7.149782905997739,
+      "diferenca_padronizada": 0.14821083921910927
+    },
+    {
+      "variavel": "matriculas_por_turma_censo",
+      "pilar": "Porte e escala da rede",
+      "spearman_bruto": -0.0948867433554036,
+      "spearman_parcial": 0.0028844570961294716,
+      "cobertura": 0.9998886414253898,
+      "media_quintil_superior": 20.48347371746903,
+      "media_quintil_inferior": 21.46156503519641,
+      "diferenca_padronizada": -0.22750066697282909
+    },
+    {
+      "variavel": "pct_escolas_agua_rede_publica_censo",
+      "pilar": "Infraestrutura básica",
+      "spearman_bruto": 0.07988006767061959,
+      "spearman_parcial": -0.0025145957909267643,
+      "cobertura": 0.9998886414253898,
+      "media_quintil_superior": 69.8285044624945,
+      "media_quintil_inferior": 63.849180438660845,
+      "diferenca_padronizada": 0.19812322801393137
+    },
+    {
+      "variavel": "turmas_anos_iniciais_censo",
+      "pilar": "Porte e escala da rede",
+      "spearman_bruto": -0.16925701090999432,
+      "spearman_parcial": -0.0016294286712751744,
+      "cobertura": 0.9998886414253898,
+      "media_quintil_superior": 55.53091922005571,
+      "media_quintil_inferior": 114.36254107338445,
+      "diferenca_padronizada": -0.3094092912689684
+    },
+    {
+      "variavel": "valor_medio_pagamento_bolsa_familia_anterior",
+      "pilar": "Transferência de renda",
+      "spearman_bruto": -0.04215872135103903,
+      "spearman_parcial": -0.0016079764169437212,
+      "cobertura": 0.9998886414253898,
+      "media_quintil_superior": 656.8095995229246,
+      "media_quintil_inferior": 662.4096958911491,
+      "diferenca_padronizada": -0.18955886026957952
+    }
+  ],
+  "controles_da_parcial": [
+    "idhm_municipio",
+    "populacao_municipio_ibge"
+  ],
+  "n_territorios_associacao": 8980,
+  "contrastes_categoricos": [
+    {
+      "grupo": "Estadual",
+      "territorios": 1030,
+      "taxa_media": 0.6473106068446609,
+      "pct_em_risco": 0.5223300970873787,
+      "variavel": "rede"
+    },
+    {
+      "grupo": "Municipal",
+      "territorios": 7950,
+      "taxa_media": 0.6573266131693312,
+      "pct_em_risco": 0.4969811320754717,
+      "variavel": "rede"
+    },
+    {
+      "grupo": "Centro-Oeste",
+      "territorios": 637,
+      "taxa_media": 0.7280834197729706,
+      "pct_em_risco": 0.3202511773940345,
+      "variavel": "regiao_brasil"
+    },
+    {
+      "grupo": "Nordeste",
+      "territorios": 3138,
+      "taxa_media": 0.6249195517757986,
+      "pct_em_risco": 0.5873167622689611,
+      "variavel": "regiao_brasil"
+    },
+    {
+      "grupo": "Norte",
+      "territorios": 826,
+      "taxa_media": 0.5673222680641187,
+      "pct_em_risco": 0.7312348668280871,
+      "variavel": "regiao_brasil"
+    },
+    {
+      "grupo": "Sudeste",
+      "territorios": 2575,
+      "taxa_media": 0.7051125132744808,
+      "pct_em_risco": 0.36815533980582527,
+      "variavel": "regiao_brasil"
+    },
+    {
+      "grupo": "Sul",
+      "territorios": 1804,
+      "taxa_media": 0.6559960602968927,
+      "pct_em_risco": 0.4933481152993348,
+      "variavel": "regiao_brasil"
+    }
+  ],
+  "codigo_sha256": {
+    "src\\__init__.py": "cbea5e7cc8f14d92aec5932f307ffb2a4075ccbfd5a14f63a47ba98710e49186",
+    "src\\artefatos.py": "1667fe62e1661cd79f7141ddf6a8b62403d38cf48c5d01cbc457c7d336225141",
+    "src\\config.py": "9fb503c82f659b017e3afad6107e191d9a58bd26248b029ecf5c54b9f7e5ab55",
+    "src\\evaluation\\__init__.py": "89dbffc0c4b3d88833822c0fa6bdbb9559a21697e4c6eae144541d8d7880124e",
+    "src\\evaluation\\insights.py": "8261326e753a196f5b489875954e761e751c77284a3f0ee8e7f8d2d446b7e960",
+    "src\\evaluation\\interpretabilidade.py": "9ab71b6c7d28f1dbfbdaae83c9dabd98b81e00d435bdea7f10b32658de41cd23",
+    "src\\evaluation\\metricas.py": "1f8a7bb1d98d5e6f8d5c1be601596e39e1cad3be5eb5f29847e2381d41613d12",
+    "src\\evaluation\\metricas_ponderadas.py": "f55a3abca75e22df969bb9b95c1f6bc290995d646010ca265287cd25810f32be",
+    "src\\evaluation\\relatorio.py": "92501d2c272817f75c0952f159d658fd66c37a91053abe4246306e6d17a592e5",
+    "src\\evaluation\\relatorio_insights.py": "cbbd2b754e6a2f161eeaa6710903eccddec8a8bfc5cf5dcab1fac1d81e3135c1",
+    "src\\evaluation\\relatorio_temporal.py": "8717e67715f9a3a3f755caca00a3e174e755a935a7c5185b39bc16c91c42c81e",
+    "src\\modeling\\__init__.py": "1fff5be459583b8a5782456e3675c8297718d7a3201f283f4093fff613dc248c",
+    "src\\modeling\\amostragem.py": "0fee34e26f38ca427688505787d7eb004abb43dac4b98021df0750adf25d70e9",
+    "src\\modeling\\benchmark.py": "f1d9f368aa65fe2010ddfa6f70986da48c652192d254987a34fd37080d449d59",
+    "src\\modeling\\municipal.py": "ed58cc8cb3f6433e8d22a1394e96afe47838c009891f7ecce26e30a2841f9e64",
+    "src\\modeling\\pipelines.py": "86aa0b7cc70f46900d5b5ee6d8dc9ade2e987c51b94ffa557413bb300ad989e4",
+    "src\\modeling\\temporal.py": "3f703ee0302a62ef71958b2e3f2faa846c627a28daad855be1c6d3968fecdd55",
+    "src\\modeling\\treinar.py": "57219cfc745568ee42004c8271c750d0bb88606b72421b5a3b685870eef64477",
+    "src\\modeling\\zoologico.py": "f56fbb06b2f296e0222debb95752c0ac03e30c1a42db6797eeb3561dea5effe1",
+    "src\\preprocessing\\__init__.py": "dd5bf872c95593d79783c5e08dff196b08224584c8c31120c7d57f8851e739cc",
+    "src\\preprocessing\\base.py": "a03b4f02039ffc409694ad555b8c6e9f56a91f166d95a296a5c9f5e92629e8bf",
+    "src\\preprocessing\\divisao.py": "2e9e6a55db0bcd15ed2b010eb615076cbdbc4ef1e64a0adfc306173f5af8f05a",
+    "src\\preprocessing\\enriquecida.py": "c288921cbffbd9fac1659f99283cfecd418432a0e427901e997f8b3619cba58c",
+    "src\\preprocessing\\unidades.py": "9ca9ce8fc9f955e85fcc20c0bb78cb6ad751e9b8daae8b5119009c7af8920d27",
+    "src\\visualization\\__init__.py": "9b715d0452ee40b818ad7f75b056d54c5b1fe49818d66f910251b909af6e6fc4",
+    "src\\visualization\\avaliacao.py": "f81a87b8b5eecd2ed197bb6f59631f14b377c727492a5750cdb483aef9e9b9da",
+    "src\\visualization\\estilo.py": "5faf6b49b42938ede7df91ad3dc955b315a55d8ef569ab2a0e25da6eb0f440fa",
+    "src\\visualization\\exploratoria.py": "3be5ed064eaa86e8d1be4a246a9fd518e9e11eb8162715d346535cdb81c3cf9c",
+    "src\\visualization\\exploratoria_enriquecida.py": "0f6d48364b1a458656fb50a230fae955a3dbc8d4004b474c32b9c2c18ec76f6d"
+  },
+  "duracao_segundos": 79.4,
+  "limites": [
+    "Associacao agregada por territorio; nao vale para individuos (falacia ecologica).",
+    "SHAP e permutacao explicam o modelo, nao o mundo; variaveis correlacionadas dividem credito.",
+    "A parcial controla IDHM e populacao, nao todo o confundimento.",
+    "Censo e IDHM sao do ano anterior e do ultimo levantamento disponivel, respectivamente."
+  ]
+}
